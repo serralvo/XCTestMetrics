@@ -9,11 +9,11 @@
 /* Begin PBXAggregateTarget section */
 		"Tractor::TractorPackageTests::ProductTarget" /* TractorPackageTests */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = OBJ_172 /* Build configuration list for PBXAggregateTarget "TractorPackageTests" */;
+			buildConfigurationList = OBJ_177 /* Build configuration list for PBXAggregateTarget "TractorPackageTests" */;
 			buildPhases = (
 			);
 			dependencies = (
-				OBJ_175 /* PBXTargetDependency */,
+				OBJ_180 /* PBXTargetDependency */,
 			);
 			name = TractorPackageTests;
 			productName = TractorPackageTests;
@@ -21,139 +21,140 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		02D90D042431319F009136A4 /* XCResultOutputFileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D90D032431319F009136A4 /* XCResultOutputFileParser.swift */; };
-		OBJ_100 /* ParsedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* ParsedValues.swift */; };
-		OBJ_101 /* ParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* ParserError.swift */; };
-		OBJ_102 /* SplitArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* SplitArguments.swift */; };
-		OBJ_103 /* HelpCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* HelpCommand.swift */; };
-		OBJ_104 /* HelpGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* HelpGenerator.swift */; };
-		OBJ_105 /* MessageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_51 /* MessageInfo.swift */; };
-		OBJ_106 /* UsageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* UsageGenerator.swift */; };
-		OBJ_107 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* StringExtensions.swift */; };
-		OBJ_108 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* Tree.swift */; };
-		OBJ_115 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* Files.swift */; };
-		OBJ_122 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* Package.swift */; };
-		OBJ_128 /* ShellOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* ShellOut.swift */; };
-		OBJ_135 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_62 /* Package.swift */; };
-		OBJ_141 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
-		OBJ_143 /* ArgumentParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "swift-argument-parser::ArgumentParser::Product" /* ArgumentParser.framework */; };
-		OBJ_144 /* TractorCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tractor::TractorCore::Product" /* TractorCore.framework */; };
-		OBJ_145 /* ShellOut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ShellOut::ShellOut::Product" /* ShellOut.framework */; };
-		OBJ_146 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Files::Files::Product" /* Files.framework */; };
-		OBJ_156 /* ReportModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* ReportModels.swift */; };
-		OBJ_157 /* TractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* TractorOutput.swift */; };
-		OBJ_158 /* Tractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* Tractor.swift */; };
-		OBJ_159 /* XCResultProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* XCResultProcessor.swift */; };
-		OBJ_161 /* ShellOut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ShellOut::ShellOut::Product" /* ShellOut.framework */; };
-		OBJ_162 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Files::Files::Product" /* Files.framework */; };
-		OBJ_170 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_181 /* TractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* TractorTests.swift */; };
-		OBJ_182 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* XCTestManifests.swift */; };
-		OBJ_184 /* ArgumentParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "swift-argument-parser::ArgumentParser::Product" /* ArgumentParser.framework */; };
-		OBJ_185 /* TractorCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tractor::TractorCore::Product" /* TractorCore.framework */; };
-		OBJ_186 /* ShellOut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ShellOut::ShellOut::Product" /* ShellOut.framework */; };
-		OBJ_187 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Files::Files::Product" /* Files.framework */; };
-		OBJ_198 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_60 /* Package.swift */; };
-		OBJ_81 /* Argument.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* Argument.swift */; };
-		OBJ_82 /* ArgumentHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* ArgumentHelp.swift */; };
-		OBJ_83 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* Errors.swift */; };
-		OBJ_84 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Flag.swift */; };
-		OBJ_85 /* NameSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* NameSpecification.swift */; };
-		OBJ_86 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* Option.swift */; };
-		OBJ_87 /* OptionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* OptionGroup.swift */; };
-		OBJ_88 /* CommandConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* CommandConfiguration.swift */; };
-		OBJ_89 /* ExpressibleByArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* ExpressibleByArgument.swift */; };
-		OBJ_90 /* ParsableArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_34 /* ParsableArguments.swift */; };
-		OBJ_91 /* ParsableCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* ParsableCommand.swift */; };
-		OBJ_92 /* ArgumentDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* ArgumentDecoder.swift */; };
-		OBJ_93 /* ArgumentDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* ArgumentDefinition.swift */; };
-		OBJ_94 /* ArgumentSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_39 /* ArgumentSet.swift */; };
-		OBJ_95 /* ArgumentSetSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* ArgumentSetSequence.swift */; };
-		OBJ_96 /* CommandParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* CommandParser.swift */; };
-		OBJ_97 /* InputOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* InputOrigin.swift */; };
-		OBJ_98 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* Name.swift */; };
-		OBJ_99 /* Parsed.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* Parsed.swift */; };
+		02D90D1224313A5D009136A4 /* OutputPersistor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D90D1124313A5D009136A4 /* OutputPersistor.swift */; };
+		OBJ_100 /* InputOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* InputOrigin.swift */; };
+		OBJ_101 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Name.swift */; };
+		OBJ_102 /* Parsed.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* Parsed.swift */; };
+		OBJ_103 /* ParsedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* ParsedValues.swift */; };
+		OBJ_104 /* ParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* ParserError.swift */; };
+		OBJ_105 /* SplitArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_50 /* SplitArguments.swift */; };
+		OBJ_106 /* HelpCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_52 /* HelpCommand.swift */; };
+		OBJ_107 /* HelpGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_53 /* HelpGenerator.swift */; };
+		OBJ_108 /* MessageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* MessageInfo.swift */; };
+		OBJ_109 /* UsageGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_55 /* UsageGenerator.swift */; };
+		OBJ_110 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_57 /* StringExtensions.swift */; };
+		OBJ_111 /* Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* Tree.swift */; };
+		OBJ_118 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_69 /* Files.swift */; };
+		OBJ_125 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_68 /* Package.swift */; };
+		OBJ_131 /* ShellOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* ShellOut.swift */; };
+		OBJ_138 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* Package.swift */; };
+		OBJ_144 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* main.swift */; };
+		OBJ_146 /* ArgumentParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "swift-argument-parser::ArgumentParser::Product" /* ArgumentParser.framework */; };
+		OBJ_147 /* TractorCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tractor::TractorCore::Product" /* TractorCore.framework */; };
+		OBJ_148 /* ShellOut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ShellOut::ShellOut::Product" /* ShellOut.framework */; };
+		OBJ_149 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Files::Files::Product" /* Files.framework */; };
+		OBJ_160 /* TractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* TractorOutput.swift */; };
+		OBJ_161 /* ReportModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* ReportModels.swift */; };
+		OBJ_162 /* XCResultOutputFileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* XCResultOutputFileParser.swift */; };
+		OBJ_163 /* XCResultProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* XCResultProcessor.swift */; };
+		OBJ_164 /* TractorRegister.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* TractorRegister.swift */; };
+		OBJ_166 /* ShellOut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ShellOut::ShellOut::Product" /* ShellOut.framework */; };
+		OBJ_167 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Files::Files::Product" /* Files.framework */; };
+		OBJ_175 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
+		OBJ_186 /* TractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* TractorTests.swift */; };
+		OBJ_187 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* XCTestManifests.swift */; };
+		OBJ_189 /* ArgumentParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "swift-argument-parser::ArgumentParser::Product" /* ArgumentParser.framework */; };
+		OBJ_190 /* TractorCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Tractor::TractorCore::Product" /* TractorCore.framework */; };
+		OBJ_191 /* ShellOut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "ShellOut::ShellOut::Product" /* ShellOut.framework */; };
+		OBJ_192 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Files::Files::Product" /* Files.framework */; };
+		OBJ_203 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_63 /* Package.swift */; };
+		OBJ_84 /* Argument.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* Argument.swift */; };
+		OBJ_85 /* ArgumentHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* ArgumentHelp.swift */; };
+		OBJ_86 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* Errors.swift */; };
+		OBJ_87 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* Flag.swift */; };
+		OBJ_88 /* NameSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* NameSpecification.swift */; };
+		OBJ_89 /* Option.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* Option.swift */; };
+		OBJ_90 /* OptionGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_33 /* OptionGroup.swift */; };
+		OBJ_91 /* CommandConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* CommandConfiguration.swift */; };
+		OBJ_92 /* ExpressibleByArgument.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* ExpressibleByArgument.swift */; };
+		OBJ_93 /* ParsableArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* ParsableArguments.swift */; };
+		OBJ_94 /* ParsableCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* ParsableCommand.swift */; };
+		OBJ_95 /* ArgumentDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_40 /* ArgumentDecoder.swift */; };
+		OBJ_96 /* ArgumentDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_41 /* ArgumentDefinition.swift */; };
+		OBJ_97 /* ArgumentSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_42 /* ArgumentSet.swift */; };
+		OBJ_98 /* ArgumentSetSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_43 /* ArgumentSetSequence.swift */; };
+		OBJ_99 /* CommandParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_44 /* CommandParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		02D90CF62430DC6D009136A4 /* PBXContainerItemProxy */ = {
+		02D90D052431398A009136A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "swift-argument-parser::ArgumentParser";
 			remoteInfo = ArgumentParser;
 		};
-		02D90CF72430DC6D009136A4 /* PBXContainerItemProxy */ = {
+		02D90D062431398A009136A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Tractor::TractorCore";
 			remoteInfo = TractorCore;
 		};
-		02D90CF82430DC6D009136A4 /* PBXContainerItemProxy */ = {
+		02D90D072431398A009136A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "ShellOut::ShellOut";
 			remoteInfo = ShellOut;
 		};
-		02D90CF92430DC6D009136A4 /* PBXContainerItemProxy */ = {
+		02D90D082431398A009136A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Files::Files";
 			remoteInfo = Files;
 		};
-		02D90CFA2430DC6D009136A4 /* PBXContainerItemProxy */ = {
+		02D90D092431398A009136A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "ShellOut::ShellOut";
 			remoteInfo = ShellOut;
 		};
-		02D90CFB2430DC6D009136A4 /* PBXContainerItemProxy */ = {
+		02D90D0A2431398A009136A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Files::Files";
 			remoteInfo = Files;
 		};
-		02D90CFC2430DC6D009136A4 /* PBXContainerItemProxy */ = {
+		02D90D0B2431398A009136A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Tractor::Tractor";
 			remoteInfo = Tractor;
 		};
-		02D90CFD2430DC6D009136A4 /* PBXContainerItemProxy */ = {
+		02D90D0C2431398A009136A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "swift-argument-parser::ArgumentParser";
 			remoteInfo = ArgumentParser;
 		};
-		02D90CFE2430DC6D009136A4 /* PBXContainerItemProxy */ = {
+		02D90D0D2431398A009136A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Tractor::TractorCore";
 			remoteInfo = TractorCore;
 		};
-		02D90CFF2430DC6D009136A4 /* PBXContainerItemProxy */ = {
+		02D90D0E2431398A009136A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "ShellOut::ShellOut";
 			remoteInfo = ShellOut;
 		};
-		02D90D002430DC6D009136A4 /* PBXContainerItemProxy */ = {
+		02D90D0F2431398A009136A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "Files::Files";
 			remoteInfo = Files;
 		};
-		02D90D012430DC6D009136A4 /* PBXContainerItemProxy */ = {
+		02D90D102431398B009136A4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -163,50 +164,51 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02D90D032431319F009136A4 /* XCResultOutputFileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCResultOutputFileParser.swift; sourceTree = "<group>"; };
+		02D90D1124313A5D009136A4 /* OutputPersistor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputPersistor.swift; sourceTree = "<group>"; };
 		"Files::Files::Product" /* Files.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Files.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_12 /* ReportModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportModels.swift; sourceTree = "<group>"; };
 		OBJ_13 /* TractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TractorOutput.swift; sourceTree = "<group>"; };
-		OBJ_14 /* Tractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tractor.swift; sourceTree = "<group>"; };
-		OBJ_15 /* XCResultProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCResultProcessor.swift; sourceTree = "<group>"; };
-		OBJ_18 /* TractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TractorTests.swift; sourceTree = "<group>"; };
-		OBJ_19 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
-		OBJ_24 /* Argument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Argument.swift; sourceTree = "<group>"; };
-		OBJ_25 /* ArgumentHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentHelp.swift; sourceTree = "<group>"; };
-		OBJ_26 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
-		OBJ_27 /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
-		OBJ_28 /* NameSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSpecification.swift; sourceTree = "<group>"; };
-		OBJ_29 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
-		OBJ_30 /* OptionGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionGroup.swift; sourceTree = "<group>"; };
-		OBJ_32 /* CommandConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandConfiguration.swift; sourceTree = "<group>"; };
-		OBJ_33 /* ExpressibleByArgument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressibleByArgument.swift; sourceTree = "<group>"; };
-		OBJ_34 /* ParsableArguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsableArguments.swift; sourceTree = "<group>"; };
-		OBJ_35 /* ParsableCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsableCommand.swift; sourceTree = "<group>"; };
-		OBJ_37 /* ArgumentDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentDecoder.swift; sourceTree = "<group>"; };
-		OBJ_38 /* ArgumentDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentDefinition.swift; sourceTree = "<group>"; };
-		OBJ_39 /* ArgumentSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentSet.swift; sourceTree = "<group>"; };
-		OBJ_40 /* ArgumentSetSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentSetSequence.swift; sourceTree = "<group>"; };
-		OBJ_41 /* CommandParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandParser.swift; sourceTree = "<group>"; };
-		OBJ_42 /* InputOrigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputOrigin.swift; sourceTree = "<group>"; };
-		OBJ_43 /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
-		OBJ_44 /* Parsed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsed.swift; sourceTree = "<group>"; };
-		OBJ_45 /* ParsedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsedValues.swift; sourceTree = "<group>"; };
-		OBJ_46 /* ParserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserError.swift; sourceTree = "<group>"; };
-		OBJ_47 /* SplitArguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitArguments.swift; sourceTree = "<group>"; };
-		OBJ_49 /* HelpCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCommand.swift; sourceTree = "<group>"; };
-		OBJ_50 /* HelpGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpGenerator.swift; sourceTree = "<group>"; };
-		OBJ_51 /* MessageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInfo.swift; sourceTree = "<group>"; };
-		OBJ_52 /* UsageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageGenerator.swift; sourceTree = "<group>"; };
-		OBJ_54 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
-		OBJ_55 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
+		OBJ_15 /* ReportModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportModels.swift; sourceTree = "<group>"; };
+		OBJ_16 /* XCResultOutputFileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCResultOutputFileParser.swift; sourceTree = "<group>"; };
+		OBJ_17 /* XCResultProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCResultProcessor.swift; sourceTree = "<group>"; };
+		OBJ_18 /* TractorRegister.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TractorRegister.swift; sourceTree = "<group>"; };
+		OBJ_21 /* TractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TractorTests.swift; sourceTree = "<group>"; };
+		OBJ_22 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
+		OBJ_27 /* Argument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Argument.swift; sourceTree = "<group>"; };
+		OBJ_28 /* ArgumentHelp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentHelp.swift; sourceTree = "<group>"; };
+		OBJ_29 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		OBJ_30 /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
+		OBJ_31 /* NameSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSpecification.swift; sourceTree = "<group>"; };
+		OBJ_32 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		OBJ_33 /* OptionGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionGroup.swift; sourceTree = "<group>"; };
+		OBJ_35 /* CommandConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandConfiguration.swift; sourceTree = "<group>"; };
+		OBJ_36 /* ExpressibleByArgument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpressibleByArgument.swift; sourceTree = "<group>"; };
+		OBJ_37 /* ParsableArguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsableArguments.swift; sourceTree = "<group>"; };
+		OBJ_38 /* ParsableCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsableCommand.swift; sourceTree = "<group>"; };
+		OBJ_40 /* ArgumentDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentDecoder.swift; sourceTree = "<group>"; };
+		OBJ_41 /* ArgumentDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentDefinition.swift; sourceTree = "<group>"; };
+		OBJ_42 /* ArgumentSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentSet.swift; sourceTree = "<group>"; };
+		OBJ_43 /* ArgumentSetSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgumentSetSequence.swift; sourceTree = "<group>"; };
+		OBJ_44 /* CommandParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandParser.swift; sourceTree = "<group>"; };
+		OBJ_45 /* InputOrigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputOrigin.swift; sourceTree = "<group>"; };
+		OBJ_46 /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
+		OBJ_47 /* Parsed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsed.swift; sourceTree = "<group>"; };
+		OBJ_48 /* ParsedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParsedValues.swift; sourceTree = "<group>"; };
+		OBJ_49 /* ParserError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserError.swift; sourceTree = "<group>"; };
+		OBJ_50 /* SplitArguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitArguments.swift; sourceTree = "<group>"; };
+		OBJ_52 /* HelpCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCommand.swift; sourceTree = "<group>"; };
+		OBJ_53 /* HelpGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpGenerator.swift; sourceTree = "<group>"; };
+		OBJ_54 /* MessageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInfo.swift; sourceTree = "<group>"; };
+		OBJ_55 /* UsageGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageGenerator.swift; sourceTree = "<group>"; };
+		OBJ_57 /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		OBJ_58 /* Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tree.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
-		OBJ_60 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/fabricioserralvo/Desktop/Flaky/FlakyTestsProject/Tractor/Tractor/.build/checkouts/swift-argument-parser/Package.swift"; sourceTree = "<group>"; };
-		OBJ_62 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/fabricioserralvo/Desktop/Flaky/FlakyTestsProject/Tractor/Tractor/.build/checkouts/ShellOut/Package.swift; sourceTree = "<group>"; };
-		OBJ_63 /* ShellOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellOut.swift; sourceTree = "<group>"; };
-		OBJ_65 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/fabricioserralvo/Desktop/Flaky/FlakyTestsProject/Tractor/Tractor/.build/checkouts/Files/Package.swift; sourceTree = "<group>"; };
-		OBJ_66 /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
-		OBJ_74 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		OBJ_75 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		OBJ_63 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/fabricioserralvo/Desktop/Flaky/FlakyTestsProject/Tractor/Tractor/.build/checkouts/swift-argument-parser/Package.swift"; sourceTree = "<group>"; };
+		OBJ_65 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/fabricioserralvo/Desktop/Flaky/FlakyTestsProject/Tractor/Tractor/.build/checkouts/ShellOut/Package.swift; sourceTree = "<group>"; };
+		OBJ_66 /* ShellOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShellOut.swift; sourceTree = "<group>"; };
+		OBJ_68 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = /Users/fabricioserralvo/Desktop/Flaky/FlakyTestsProject/Tractor/Tractor/.build/checkouts/Files/Package.swift; sourceTree = "<group>"; };
+		OBJ_69 /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
+		OBJ_77 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		OBJ_78 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		OBJ_9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		"ShellOut::ShellOut::Product" /* ShellOut.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShellOut.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Tractor::Tractor::Product" /* Tractor */ = {isa = PBXFileReference; lastKnownFileType = text; path = Tractor; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,196 +218,186 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		OBJ_109 /* Frameworks */ = {
+		OBJ_112 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_116 /* Frameworks */ = {
+		OBJ_119 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_129 /* Frameworks */ = {
+		OBJ_132 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_142 /* Frameworks */ = {
+		OBJ_145 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_143 /* ArgumentParser.framework in Frameworks */,
-				OBJ_144 /* TractorCore.framework in Frameworks */,
-				OBJ_145 /* ShellOut.framework in Frameworks */,
-				OBJ_146 /* Files.framework in Frameworks */,
+				OBJ_146 /* ArgumentParser.framework in Frameworks */,
+				OBJ_147 /* TractorCore.framework in Frameworks */,
+				OBJ_148 /* ShellOut.framework in Frameworks */,
+				OBJ_149 /* Files.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_160 /* Frameworks */ = {
+		OBJ_165 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_161 /* ShellOut.framework in Frameworks */,
-				OBJ_162 /* Files.framework in Frameworks */,
+				OBJ_166 /* ShellOut.framework in Frameworks */,
+				OBJ_167 /* Files.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_183 /* Frameworks */ = {
+		OBJ_188 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_184 /* ArgumentParser.framework in Frameworks */,
-				OBJ_185 /* TractorCore.framework in Frameworks */,
-				OBJ_186 /* ShellOut.framework in Frameworks */,
-				OBJ_187 /* Files.framework in Frameworks */,
+				OBJ_189 /* ArgumentParser.framework in Frameworks */,
+				OBJ_190 /* TractorCore.framework in Frameworks */,
+				OBJ_191 /* ShellOut.framework in Frameworks */,
+				OBJ_192 /* Files.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02D90D022430F0E0009136A4 /* Output */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_13 /* TractorOutput.swift */,
-			);
-			path = Output;
-			sourceTree = "<group>";
-		};
 		OBJ_10 /* TractorCore */ = {
 			isa = PBXGroup;
 			children = (
-				02D90D022430F0E0009136A4 /* Output */,
-				OBJ_11 /* Parser */,
-				OBJ_14 /* Tractor.swift */,
+				OBJ_11 /* Output */,
+				OBJ_14 /* Parser */,
+				OBJ_18 /* TractorRegister.swift */,
 			);
 			name = TractorCore;
 			path = Sources/TractorCore;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_11 /* Parser */ = {
+		OBJ_11 /* Output */ = {
 			isa = PBXGroup;
 			children = (
-				02D90D032431319F009136A4 /* XCResultOutputFileParser.swift */,
-				OBJ_12 /* ReportModels.swift */,
-				OBJ_15 /* XCResultProcessor.swift */,
+				OBJ_13 /* TractorOutput.swift */,
+				02D90D1124313A5D009136A4 /* OutputPersistor.swift */,
+			);
+			path = Output;
+			sourceTree = "<group>";
+		};
+		OBJ_14 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_15 /* ReportModels.swift */,
+				OBJ_16 /* XCResultOutputFileParser.swift */,
+				OBJ_17 /* XCResultProcessor.swift */,
 			);
 			path = Parser;
 			sourceTree = "<group>";
 		};
-		OBJ_16 /* Tests */ = {
+		OBJ_19 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_17 /* TractorTests */,
+				OBJ_20 /* TractorTests */,
 			);
 			name = Tests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_17 /* TractorTests */ = {
+		OBJ_20 /* TractorTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_18 /* TractorTests.swift */,
-				OBJ_19 /* XCTestManifests.swift */,
+				OBJ_21 /* TractorTests.swift */,
+				OBJ_22 /* XCTestManifests.swift */,
 			);
 			name = TractorTests;
 			path = Tests/TractorTests;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_20 /* Dependencies */ = {
+		OBJ_23 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_21 /* swift-argument-parser 0.0.4 */,
-				OBJ_61 /* ShellOut 2.3.0 */,
-				OBJ_64 /* Files 4.1.1 */,
+				OBJ_24 /* swift-argument-parser 0.0.4 */,
+				OBJ_64 /* ShellOut 2.3.0 */,
+				OBJ_67 /* Files 4.1.1 */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		OBJ_21 /* swift-argument-parser 0.0.4 */ = {
+		OBJ_24 /* swift-argument-parser 0.0.4 */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_22 /* ArgumentParser */,
-				OBJ_56 /* ArgumentParserTestHelpers */,
-				OBJ_57 /* math */,
-				OBJ_58 /* repeat */,
-				OBJ_59 /* roll */,
-				OBJ_60 /* Package.swift */,
+				OBJ_25 /* ArgumentParser */,
+				OBJ_59 /* ArgumentParserTestHelpers */,
+				OBJ_60 /* math */,
+				OBJ_61 /* repeat */,
+				OBJ_62 /* roll */,
+				OBJ_63 /* Package.swift */,
 			);
 			name = "swift-argument-parser 0.0.4";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_22 /* ArgumentParser */ = {
+		OBJ_25 /* ArgumentParser */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_23 /* Parsable Properties */,
-				OBJ_31 /* Parsable Types */,
-				OBJ_36 /* Parsing */,
-				OBJ_48 /* Usage */,
-				OBJ_53 /* Utilities */,
+				OBJ_26 /* Parsable Properties */,
+				OBJ_34 /* Parsable Types */,
+				OBJ_39 /* Parsing */,
+				OBJ_51 /* Usage */,
+				OBJ_56 /* Utilities */,
 			);
 			name = ArgumentParser;
 			path = ".build/checkouts/swift-argument-parser/Sources/ArgumentParser";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_23 /* Parsable Properties */ = {
+		OBJ_26 /* Parsable Properties */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_24 /* Argument.swift */,
-				OBJ_25 /* ArgumentHelp.swift */,
-				OBJ_26 /* Errors.swift */,
-				OBJ_27 /* Flag.swift */,
-				OBJ_28 /* NameSpecification.swift */,
-				OBJ_29 /* Option.swift */,
-				OBJ_30 /* OptionGroup.swift */,
+				OBJ_27 /* Argument.swift */,
+				OBJ_28 /* ArgumentHelp.swift */,
+				OBJ_29 /* Errors.swift */,
+				OBJ_30 /* Flag.swift */,
+				OBJ_31 /* NameSpecification.swift */,
+				OBJ_32 /* Option.swift */,
+				OBJ_33 /* OptionGroup.swift */,
 			);
 			path = "Parsable Properties";
 			sourceTree = "<group>";
 		};
-		OBJ_31 /* Parsable Types */ = {
+		OBJ_34 /* Parsable Types */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_32 /* CommandConfiguration.swift */,
-				OBJ_33 /* ExpressibleByArgument.swift */,
-				OBJ_34 /* ParsableArguments.swift */,
-				OBJ_35 /* ParsableCommand.swift */,
+				OBJ_35 /* CommandConfiguration.swift */,
+				OBJ_36 /* ExpressibleByArgument.swift */,
+				OBJ_37 /* ParsableArguments.swift */,
+				OBJ_38 /* ParsableCommand.swift */,
 			);
 			path = "Parsable Types";
 			sourceTree = "<group>";
 		};
-		OBJ_36 /* Parsing */ = {
+		OBJ_39 /* Parsing */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_37 /* ArgumentDecoder.swift */,
-				OBJ_38 /* ArgumentDefinition.swift */,
-				OBJ_39 /* ArgumentSet.swift */,
-				OBJ_40 /* ArgumentSetSequence.swift */,
-				OBJ_41 /* CommandParser.swift */,
-				OBJ_42 /* InputOrigin.swift */,
-				OBJ_43 /* Name.swift */,
-				OBJ_44 /* Parsed.swift */,
-				OBJ_45 /* ParsedValues.swift */,
-				OBJ_46 /* ParserError.swift */,
-				OBJ_47 /* SplitArguments.swift */,
+				OBJ_40 /* ArgumentDecoder.swift */,
+				OBJ_41 /* ArgumentDefinition.swift */,
+				OBJ_42 /* ArgumentSet.swift */,
+				OBJ_43 /* ArgumentSetSequence.swift */,
+				OBJ_44 /* CommandParser.swift */,
+				OBJ_45 /* InputOrigin.swift */,
+				OBJ_46 /* Name.swift */,
+				OBJ_47 /* Parsed.swift */,
+				OBJ_48 /* ParsedValues.swift */,
+				OBJ_49 /* ParserError.swift */,
+				OBJ_50 /* SplitArguments.swift */,
 			);
 			path = Parsing;
-			sourceTree = "<group>";
-		};
-		OBJ_48 /* Usage */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_49 /* HelpCommand.swift */,
-				OBJ_50 /* HelpGenerator.swift */,
-				OBJ_51 /* MessageInfo.swift */,
-				OBJ_52 /* UsageGenerator.swift */,
-			);
-			path = Usage;
 			sourceTree = "<group>";
 		};
 		OBJ_5 /*  */ = {
@@ -413,25 +405,36 @@
 			children = (
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
-				OBJ_16 /* Tests */,
-				OBJ_20 /* Dependencies */,
-				OBJ_67 /* Products */,
-				OBJ_74 /* LICENSE */,
-				OBJ_75 /* README.md */,
+				OBJ_19 /* Tests */,
+				OBJ_23 /* Dependencies */,
+				OBJ_70 /* Products */,
+				OBJ_77 /* LICENSE */,
+				OBJ_78 /* README.md */,
 			);
 			name = "";
 			sourceTree = "<group>";
 		};
-		OBJ_53 /* Utilities */ = {
+		OBJ_51 /* Usage */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_54 /* StringExtensions.swift */,
-				OBJ_55 /* Tree.swift */,
+				OBJ_52 /* HelpCommand.swift */,
+				OBJ_53 /* HelpGenerator.swift */,
+				OBJ_54 /* MessageInfo.swift */,
+				OBJ_55 /* UsageGenerator.swift */,
+			);
+			path = Usage;
+			sourceTree = "<group>";
+		};
+		OBJ_56 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_57 /* StringExtensions.swift */,
+				OBJ_58 /* Tree.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		OBJ_56 /* ArgumentParserTestHelpers */ = {
+		OBJ_59 /* ArgumentParserTestHelpers */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -439,7 +442,7 @@
 			path = ".build/checkouts/swift-argument-parser/Sources/ArgumentParserTestHelpers";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_57 /* math */ = {
+		OBJ_60 /* math */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -447,7 +450,7 @@
 			path = ".build/checkouts/swift-argument-parser/Examples/math";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_58 /* repeat */ = {
+		OBJ_61 /* repeat */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -455,7 +458,7 @@
 			path = ".build/checkouts/swift-argument-parser/Examples/repeat";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_59 /* roll */ = {
+		OBJ_62 /* roll */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -463,38 +466,25 @@
 			path = ".build/checkouts/swift-argument-parser/Examples/roll";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_61 /* ShellOut 2.3.0 */ = {
+		OBJ_64 /* ShellOut 2.3.0 */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_62 /* Package.swift */,
-				OBJ_63 /* ShellOut.swift */,
+				OBJ_65 /* Package.swift */,
+				OBJ_66 /* ShellOut.swift */,
 			);
 			name = "ShellOut 2.3.0";
 			path = .build/checkouts/ShellOut/Sources;
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_64 /* Files 4.1.1 */ = {
+		OBJ_67 /* Files 4.1.1 */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_65 /* Package.swift */,
-				OBJ_66 /* Files.swift */,
+				OBJ_68 /* Package.swift */,
+				OBJ_69 /* Files.swift */,
 			);
 			name = "Files 4.1.1";
 			path = .build/checkouts/Files/Sources;
 			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_67 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				"swift-argument-parser::ArgumentParser::Product" /* ArgumentParser.framework */,
-				"Tractor::Tractor::Product" /* Tractor */,
-				"Tractor::TractorCore::Product" /* TractorCore.framework */,
-				"ShellOut::ShellOut::Product" /* ShellOut.framework */,
-				"Files::Files::Product" /* Files.framework */,
-				"Tractor::TractorTests::Product" /* TractorTests.xctest */,
-			);
-			name = Products;
-			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		OBJ_7 /* Sources */ = {
 			isa = PBXGroup;
@@ -504,6 +494,19 @@
 			);
 			name = Sources;
 			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_70 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"swift-argument-parser::ArgumentParser::Product" /* ArgumentParser.framework */,
+				"Tractor::TractorCore::Product" /* TractorCore.framework */,
+				"Files::Files::Product" /* Files.framework */,
+				"ShellOut::ShellOut::Product" /* ShellOut.framework */,
+				"Tractor::TractorTests::Product" /* TractorTests.xctest */,
+				"Tractor::Tractor::Product" /* Tractor */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		OBJ_8 /* Tractor */ = {
 			isa = PBXGroup;
@@ -519,10 +522,10 @@
 /* Begin PBXNativeTarget section */
 		"Files::Files" /* Files */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_111 /* Build configuration list for PBXNativeTarget "Files" */;
+			buildConfigurationList = OBJ_114 /* Build configuration list for PBXNativeTarget "Files" */;
 			buildPhases = (
-				OBJ_114 /* Sources */,
-				OBJ_116 /* Frameworks */,
+				OBJ_117 /* Sources */,
+				OBJ_119 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -535,9 +538,9 @@
 		};
 		"Files::SwiftPMPackageDescription" /* FilesPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_118 /* Build configuration list for PBXNativeTarget "FilesPackageDescription" */;
+			buildConfigurationList = OBJ_121 /* Build configuration list for PBXNativeTarget "FilesPackageDescription" */;
 			buildPhases = (
-				OBJ_121 /* Sources */,
+				OBJ_124 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -549,10 +552,10 @@
 		};
 		"ShellOut::ShellOut" /* ShellOut */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_124 /* Build configuration list for PBXNativeTarget "ShellOut" */;
+			buildConfigurationList = OBJ_127 /* Build configuration list for PBXNativeTarget "ShellOut" */;
 			buildPhases = (
-				OBJ_127 /* Sources */,
-				OBJ_129 /* Frameworks */,
+				OBJ_130 /* Sources */,
+				OBJ_132 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -565,9 +568,9 @@
 		};
 		"ShellOut::SwiftPMPackageDescription" /* ShellOutPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_131 /* Build configuration list for PBXNativeTarget "ShellOutPackageDescription" */;
+			buildConfigurationList = OBJ_134 /* Build configuration list for PBXNativeTarget "ShellOutPackageDescription" */;
 			buildPhases = (
-				OBJ_134 /* Sources */,
+				OBJ_137 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -579,9 +582,9 @@
 		};
 		"Tractor::SwiftPMPackageDescription" /* TractorPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_166 /* Build configuration list for PBXNativeTarget "TractorPackageDescription" */;
+			buildConfigurationList = OBJ_171 /* Build configuration list for PBXNativeTarget "TractorPackageDescription" */;
 			buildPhases = (
-				OBJ_169 /* Sources */,
+				OBJ_174 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -593,18 +596,18 @@
 		};
 		"Tractor::Tractor" /* Tractor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_137 /* Build configuration list for PBXNativeTarget "Tractor" */;
+			buildConfigurationList = OBJ_140 /* Build configuration list for PBXNativeTarget "Tractor" */;
 			buildPhases = (
-				OBJ_140 /* Sources */,
-				OBJ_142 /* Frameworks */,
+				OBJ_143 /* Sources */,
+				OBJ_145 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_147 /* PBXTargetDependency */,
-				OBJ_148 /* PBXTargetDependency */,
 				OBJ_150 /* PBXTargetDependency */,
 				OBJ_151 /* PBXTargetDependency */,
+				OBJ_153 /* PBXTargetDependency */,
+				OBJ_154 /* PBXTargetDependency */,
 			);
 			name = Tractor;
 			productName = Tractor;
@@ -613,16 +616,16 @@
 		};
 		"Tractor::TractorCore" /* TractorCore */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_152 /* Build configuration list for PBXNativeTarget "TractorCore" */;
+			buildConfigurationList = OBJ_155 /* Build configuration list for PBXNativeTarget "TractorCore" */;
 			buildPhases = (
-				OBJ_155 /* Sources */,
-				OBJ_160 /* Frameworks */,
+				OBJ_158 /* Sources */,
+				OBJ_165 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_163 /* PBXTargetDependency */,
-				OBJ_164 /* PBXTargetDependency */,
+				OBJ_168 /* PBXTargetDependency */,
+				OBJ_169 /* PBXTargetDependency */,
 			);
 			name = TractorCore;
 			productName = TractorCore;
@@ -631,19 +634,19 @@
 		};
 		"Tractor::TractorTests" /* TractorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_177 /* Build configuration list for PBXNativeTarget "TractorTests" */;
+			buildConfigurationList = OBJ_182 /* Build configuration list for PBXNativeTarget "TractorTests" */;
 			buildPhases = (
-				OBJ_180 /* Sources */,
-				OBJ_183 /* Frameworks */,
+				OBJ_185 /* Sources */,
+				OBJ_188 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				OBJ_188 /* PBXTargetDependency */,
-				OBJ_189 /* PBXTargetDependency */,
-				OBJ_190 /* PBXTargetDependency */,
-				OBJ_191 /* PBXTargetDependency */,
-				OBJ_192 /* PBXTargetDependency */,
+				OBJ_193 /* PBXTargetDependency */,
+				OBJ_194 /* PBXTargetDependency */,
+				OBJ_195 /* PBXTargetDependency */,
+				OBJ_196 /* PBXTargetDependency */,
+				OBJ_197 /* PBXTargetDependency */,
 			);
 			name = TractorTests;
 			productName = TractorTests;
@@ -652,10 +655,10 @@
 		};
 		"swift-argument-parser::ArgumentParser" /* ArgumentParser */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_77 /* Build configuration list for PBXNativeTarget "ArgumentParser" */;
+			buildConfigurationList = OBJ_80 /* Build configuration list for PBXNativeTarget "ArgumentParser" */;
 			buildPhases = (
-				OBJ_80 /* Sources */,
-				OBJ_109 /* Frameworks */,
+				OBJ_83 /* Sources */,
+				OBJ_112 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -668,9 +671,9 @@
 		};
 		"swift-argument-parser::SwiftPMPackageDescription" /* swift-argument-parserPackageDescription */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = OBJ_194 /* Build configuration list for PBXNativeTarget "swift-argument-parserPackageDescription" */;
+			buildConfigurationList = OBJ_199 /* Build configuration list for PBXNativeTarget "swift-argument-parserPackageDescription" */;
 			buildPhases = (
-				OBJ_197 /* Sources */,
+				OBJ_202 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -697,7 +700,7 @@
 				en,
 			);
 			mainGroup = OBJ_5 /*  */;
-			productRefGroup = OBJ_67 /* Products */;
+			productRefGroup = OBJ_70 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -717,185 +720,186 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		OBJ_114 /* Sources */ = {
+		OBJ_117 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_115 /* Files.swift in Sources */,
+				OBJ_118 /* Files.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_121 /* Sources */ = {
+		OBJ_124 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_122 /* Package.swift in Sources */,
+				OBJ_125 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_127 /* Sources */ = {
+		OBJ_130 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_128 /* ShellOut.swift in Sources */,
+				OBJ_131 /* ShellOut.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_134 /* Sources */ = {
+		OBJ_137 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_135 /* Package.swift in Sources */,
+				OBJ_138 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_140 /* Sources */ = {
+		OBJ_143 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_141 /* main.swift in Sources */,
+				OBJ_144 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_155 /* Sources */ = {
+		OBJ_158 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				02D90D042431319F009136A4 /* XCResultOutputFileParser.swift in Sources */,
-				OBJ_156 /* ReportModels.swift in Sources */,
-				OBJ_157 /* TractorOutput.swift in Sources */,
-				OBJ_158 /* Tractor.swift in Sources */,
-				OBJ_159 /* XCResultProcessor.swift in Sources */,
+				02D90D1224313A5D009136A4 /* OutputPersistor.swift in Sources */,
+				OBJ_160 /* TractorOutput.swift in Sources */,
+				OBJ_161 /* ReportModels.swift in Sources */,
+				OBJ_162 /* XCResultOutputFileParser.swift in Sources */,
+				OBJ_163 /* XCResultProcessor.swift in Sources */,
+				OBJ_164 /* TractorRegister.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_169 /* Sources */ = {
+		OBJ_174 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_170 /* Package.swift in Sources */,
+				OBJ_175 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_180 /* Sources */ = {
+		OBJ_185 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_181 /* TractorTests.swift in Sources */,
-				OBJ_182 /* XCTestManifests.swift in Sources */,
+				OBJ_186 /* TractorTests.swift in Sources */,
+				OBJ_187 /* XCTestManifests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_197 /* Sources */ = {
+		OBJ_202 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_198 /* Package.swift in Sources */,
+				OBJ_203 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		OBJ_80 /* Sources */ = {
+		OBJ_83 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_81 /* Argument.swift in Sources */,
-				OBJ_82 /* ArgumentHelp.swift in Sources */,
-				OBJ_83 /* Errors.swift in Sources */,
-				OBJ_84 /* Flag.swift in Sources */,
-				OBJ_85 /* NameSpecification.swift in Sources */,
-				OBJ_86 /* Option.swift in Sources */,
-				OBJ_87 /* OptionGroup.swift in Sources */,
-				OBJ_88 /* CommandConfiguration.swift in Sources */,
-				OBJ_89 /* ExpressibleByArgument.swift in Sources */,
-				OBJ_90 /* ParsableArguments.swift in Sources */,
-				OBJ_91 /* ParsableCommand.swift in Sources */,
-				OBJ_92 /* ArgumentDecoder.swift in Sources */,
-				OBJ_93 /* ArgumentDefinition.swift in Sources */,
-				OBJ_94 /* ArgumentSet.swift in Sources */,
-				OBJ_95 /* ArgumentSetSequence.swift in Sources */,
-				OBJ_96 /* CommandParser.swift in Sources */,
-				OBJ_97 /* InputOrigin.swift in Sources */,
-				OBJ_98 /* Name.swift in Sources */,
-				OBJ_99 /* Parsed.swift in Sources */,
-				OBJ_100 /* ParsedValues.swift in Sources */,
-				OBJ_101 /* ParserError.swift in Sources */,
-				OBJ_102 /* SplitArguments.swift in Sources */,
-				OBJ_103 /* HelpCommand.swift in Sources */,
-				OBJ_104 /* HelpGenerator.swift in Sources */,
-				OBJ_105 /* MessageInfo.swift in Sources */,
-				OBJ_106 /* UsageGenerator.swift in Sources */,
-				OBJ_107 /* StringExtensions.swift in Sources */,
-				OBJ_108 /* Tree.swift in Sources */,
+				OBJ_84 /* Argument.swift in Sources */,
+				OBJ_85 /* ArgumentHelp.swift in Sources */,
+				OBJ_86 /* Errors.swift in Sources */,
+				OBJ_87 /* Flag.swift in Sources */,
+				OBJ_88 /* NameSpecification.swift in Sources */,
+				OBJ_89 /* Option.swift in Sources */,
+				OBJ_90 /* OptionGroup.swift in Sources */,
+				OBJ_91 /* CommandConfiguration.swift in Sources */,
+				OBJ_92 /* ExpressibleByArgument.swift in Sources */,
+				OBJ_93 /* ParsableArguments.swift in Sources */,
+				OBJ_94 /* ParsableCommand.swift in Sources */,
+				OBJ_95 /* ArgumentDecoder.swift in Sources */,
+				OBJ_96 /* ArgumentDefinition.swift in Sources */,
+				OBJ_97 /* ArgumentSet.swift in Sources */,
+				OBJ_98 /* ArgumentSetSequence.swift in Sources */,
+				OBJ_99 /* CommandParser.swift in Sources */,
+				OBJ_100 /* InputOrigin.swift in Sources */,
+				OBJ_101 /* Name.swift in Sources */,
+				OBJ_102 /* Parsed.swift in Sources */,
+				OBJ_103 /* ParsedValues.swift in Sources */,
+				OBJ_104 /* ParserError.swift in Sources */,
+				OBJ_105 /* SplitArguments.swift in Sources */,
+				OBJ_106 /* HelpCommand.swift in Sources */,
+				OBJ_107 /* HelpGenerator.swift in Sources */,
+				OBJ_108 /* MessageInfo.swift in Sources */,
+				OBJ_109 /* UsageGenerator.swift in Sources */,
+				OBJ_110 /* StringExtensions.swift in Sources */,
+				OBJ_111 /* Tree.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		OBJ_147 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "swift-argument-parser::ArgumentParser" /* ArgumentParser */;
-			targetProxy = 02D90CF62430DC6D009136A4 /* PBXContainerItemProxy */;
-		};
-		OBJ_148 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = "Tractor::TractorCore" /* TractorCore */;
-			targetProxy = 02D90CF72430DC6D009136A4 /* PBXContainerItemProxy */;
-		};
 		OBJ_150 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "ShellOut::ShellOut" /* ShellOut */;
-			targetProxy = 02D90CFA2430DC6D009136A4 /* PBXContainerItemProxy */;
+			target = "swift-argument-parser::ArgumentParser" /* ArgumentParser */;
+			targetProxy = 02D90D052431398A009136A4 /* PBXContainerItemProxy */;
 		};
 		OBJ_151 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = "Files::Files" /* Files */;
-			targetProxy = 02D90CFB2430DC6D009136A4 /* PBXContainerItemProxy */;
+			target = "Tractor::TractorCore" /* TractorCore */;
+			targetProxy = 02D90D062431398A009136A4 /* PBXContainerItemProxy */;
 		};
-		OBJ_163 /* PBXTargetDependency */ = {
+		OBJ_153 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "ShellOut::ShellOut" /* ShellOut */;
-			targetProxy = 02D90CF82430DC6D009136A4 /* PBXContainerItemProxy */;
+			targetProxy = 02D90D092431398A009136A4 /* PBXContainerItemProxy */;
 		};
-		OBJ_164 /* PBXTargetDependency */ = {
+		OBJ_154 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Files::Files" /* Files */;
-			targetProxy = 02D90CF92430DC6D009136A4 /* PBXContainerItemProxy */;
+			targetProxy = 02D90D0A2431398A009136A4 /* PBXContainerItemProxy */;
 		};
-		OBJ_175 /* PBXTargetDependency */ = {
+		OBJ_168 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "ShellOut::ShellOut" /* ShellOut */;
+			targetProxy = 02D90D072431398A009136A4 /* PBXContainerItemProxy */;
+		};
+		OBJ_169 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "Files::Files" /* Files */;
+			targetProxy = 02D90D082431398A009136A4 /* PBXContainerItemProxy */;
+		};
+		OBJ_180 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Tractor::TractorTests" /* TractorTests */;
-			targetProxy = 02D90D012430DC6D009136A4 /* PBXContainerItemProxy */;
+			targetProxy = 02D90D102431398B009136A4 /* PBXContainerItemProxy */;
 		};
-		OBJ_188 /* PBXTargetDependency */ = {
+		OBJ_193 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Tractor::Tractor" /* Tractor */;
-			targetProxy = 02D90CFC2430DC6D009136A4 /* PBXContainerItemProxy */;
+			targetProxy = 02D90D0B2431398A009136A4 /* PBXContainerItemProxy */;
 		};
-		OBJ_189 /* PBXTargetDependency */ = {
+		OBJ_194 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "swift-argument-parser::ArgumentParser" /* ArgumentParser */;
-			targetProxy = 02D90CFD2430DC6D009136A4 /* PBXContainerItemProxy */;
+			targetProxy = 02D90D0C2431398A009136A4 /* PBXContainerItemProxy */;
 		};
-		OBJ_190 /* PBXTargetDependency */ = {
+		OBJ_195 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Tractor::TractorCore" /* TractorCore */;
-			targetProxy = 02D90CFE2430DC6D009136A4 /* PBXContainerItemProxy */;
+			targetProxy = 02D90D0D2431398A009136A4 /* PBXContainerItemProxy */;
 		};
-		OBJ_191 /* PBXTargetDependency */ = {
+		OBJ_196 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "ShellOut::ShellOut" /* ShellOut */;
-			targetProxy = 02D90CFF2430DC6D009136A4 /* PBXContainerItemProxy */;
+			targetProxy = 02D90D0E2431398A009136A4 /* PBXContainerItemProxy */;
 		};
-		OBJ_192 /* PBXTargetDependency */ = {
+		OBJ_197 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Files::Files" /* Files */;
-			targetProxy = 02D90D002430DC6D009136A4 /* PBXContainerItemProxy */;
+			targetProxy = 02D90D0F2431398A009136A4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		OBJ_112 /* Debug */ = {
+		OBJ_115 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -923,7 +927,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_113 /* Release */ = {
+		OBJ_116 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -951,7 +955,7 @@
 			};
 			name = Release;
 		};
-		OBJ_119 /* Debug */ = {
+		OBJ_122 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -960,7 +964,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_120 /* Release */ = {
+		OBJ_123 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -969,7 +973,7 @@
 			};
 			name = Release;
 		};
-		OBJ_125 /* Debug */ = {
+		OBJ_128 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -993,7 +997,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_126 /* Release */ = {
+		OBJ_129 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1017,7 +1021,7 @@
 			};
 			name = Release;
 		};
-		OBJ_132 /* Debug */ = {
+		OBJ_135 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -1026,7 +1030,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_133 /* Release */ = {
+		OBJ_136 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -1035,7 +1039,7 @@
 			};
 			name = Release;
 		};
-		OBJ_138 /* Debug */ = {
+		OBJ_141 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1060,7 +1064,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_139 /* Release */ = {
+		OBJ_142 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1085,7 +1089,7 @@
 			};
 			name = Release;
 		};
-		OBJ_153 /* Debug */ = {
+		OBJ_156 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1113,7 +1117,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_154 /* Release */ = {
+		OBJ_157 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1141,7 +1145,7 @@
 			};
 			name = Release;
 		};
-		OBJ_167 /* Debug */ = {
+		OBJ_172 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -1150,30 +1154,30 @@
 			};
 			name = Debug;
 		};
-		OBJ_168 /* Release */ = {
+		OBJ_173 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
 				OTHER_SWIFT_FLAGS = "-swift-version 5 -I $(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2 -target x86_64-apple-macosx10.10 -sdk /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -package-description-version 5.1";
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		OBJ_173 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-			};
-			name = Debug;
-		};
-		OBJ_174 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
 			};
 			name = Release;
 		};
 		OBJ_178 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_179 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		OBJ_183 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1196,7 +1200,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_179 /* Release */ = {
+		OBJ_184 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -1221,7 +1225,7 @@
 			};
 			name = Release;
 		};
-		OBJ_195 /* Debug */ = {
+		OBJ_200 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -1230,7 +1234,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_196 /* Release */ = {
+		OBJ_201 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				LD = /usr/bin/true;
@@ -1290,7 +1294,7 @@
 			};
 			name = Release;
 		};
-		OBJ_78 /* Debug */ = {
+		OBJ_81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1318,7 +1322,7 @@
 			};
 			name = Debug;
 		};
-		OBJ_79 /* Release */ = {
+		OBJ_82 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
@@ -1349,79 +1353,70 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		OBJ_111 /* Build configuration list for PBXNativeTarget "Files" */ = {
+		OBJ_114 /* Build configuration list for PBXNativeTarget "Files" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_112 /* Debug */,
-				OBJ_113 /* Release */,
+				OBJ_115 /* Debug */,
+				OBJ_116 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_118 /* Build configuration list for PBXNativeTarget "FilesPackageDescription" */ = {
+		OBJ_121 /* Build configuration list for PBXNativeTarget "FilesPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_119 /* Debug */,
-				OBJ_120 /* Release */,
+				OBJ_122 /* Debug */,
+				OBJ_123 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_124 /* Build configuration list for PBXNativeTarget "ShellOut" */ = {
+		OBJ_127 /* Build configuration list for PBXNativeTarget "ShellOut" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_125 /* Debug */,
-				OBJ_126 /* Release */,
+				OBJ_128 /* Debug */,
+				OBJ_129 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_131 /* Build configuration list for PBXNativeTarget "ShellOutPackageDescription" */ = {
+		OBJ_134 /* Build configuration list for PBXNativeTarget "ShellOutPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_132 /* Debug */,
-				OBJ_133 /* Release */,
+				OBJ_135 /* Debug */,
+				OBJ_136 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_137 /* Build configuration list for PBXNativeTarget "Tractor" */ = {
+		OBJ_140 /* Build configuration list for PBXNativeTarget "Tractor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_138 /* Debug */,
-				OBJ_139 /* Release */,
+				OBJ_141 /* Debug */,
+				OBJ_142 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_152 /* Build configuration list for PBXNativeTarget "TractorCore" */ = {
+		OBJ_155 /* Build configuration list for PBXNativeTarget "TractorCore" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_153 /* Debug */,
-				OBJ_154 /* Release */,
+				OBJ_156 /* Debug */,
+				OBJ_157 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_166 /* Build configuration list for PBXNativeTarget "TractorPackageDescription" */ = {
+		OBJ_171 /* Build configuration list for PBXNativeTarget "TractorPackageDescription" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_167 /* Debug */,
-				OBJ_168 /* Release */,
+				OBJ_172 /* Debug */,
+				OBJ_173 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_172 /* Build configuration list for PBXAggregateTarget "TractorPackageTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				OBJ_173 /* Debug */,
-				OBJ_174 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		OBJ_177 /* Build configuration list for PBXNativeTarget "TractorTests" */ = {
+		OBJ_177 /* Build configuration list for PBXAggregateTarget "TractorPackageTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				OBJ_178 /* Debug */,
@@ -1430,11 +1425,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_194 /* Build configuration list for PBXNativeTarget "swift-argument-parserPackageDescription" */ = {
+		OBJ_182 /* Build configuration list for PBXNativeTarget "TractorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_195 /* Debug */,
-				OBJ_196 /* Release */,
+				OBJ_183 /* Debug */,
+				OBJ_184 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		OBJ_199 /* Build configuration list for PBXNativeTarget "swift-argument-parserPackageDescription" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_200 /* Debug */,
+				OBJ_201 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1448,11 +1452,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		OBJ_77 /* Build configuration list for PBXNativeTarget "ArgumentParser" */ = {
+		OBJ_80 /* Build configuration list for PBXNativeTarget "ArgumentParser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				OBJ_78 /* Debug */,
-				OBJ_79 /* Release */,
+				OBJ_81 /* Debug */,
+				OBJ_82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

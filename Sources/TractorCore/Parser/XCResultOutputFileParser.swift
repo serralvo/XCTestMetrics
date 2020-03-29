@@ -21,7 +21,7 @@ final class XCResultOutputFileParser {
             let data = try readOutputFile()
             
             let output = try JSONDecoder().decode(Output.self, from: data)
-            let failures = output.issues.testFailureSummaries.failures
+            let failures = output.issues.testFailureSummaries?.failures ?? []
             let metrics = try createTestMetrics(with: output.metrics)
             
             let tractorOutput: TractorOutput
@@ -45,8 +45,14 @@ final class XCResultOutputFileParser {
             throw OutputReaderError.cannotGetTestNumberForMetrics
         }
         
-        guard let failedCount = Int(metrics.testsFailedCount.value) else {
-            throw OutputReaderError.cannotGetFailedTestNumberForMetrics
+        let failedCount: Int
+        if let value = metrics.testsFailedCount?.value {
+            guard let count = Int(value) else {
+                throw OutputReaderError.cannotGetFailedTestNumberForMetrics
+            }
+            failedCount = count
+        } else {
+            failedCount = 0
         }
         
         return TestMetrics(count: testCount, failedCount: failedCount)

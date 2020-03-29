@@ -5,8 +5,8 @@ struct Tractor: ParsableCommand {
     @Option() var XCReportPath: String
     
     func run() throws {
-        let gen = TractorGen(reportFileName: XCReportPath)
-        gen.log()
+        let register = TractorRegister(reportFileName: XCReportPath)
+        try register.createTestRegister()
     }
 }
 

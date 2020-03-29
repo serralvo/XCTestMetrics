@@ -21,7 +21,7 @@ struct ID: Codable {
 
 // MARK: - Issues
 struct Issues: Codable {
-    let testFailureSummaries: TestFailureSummaries
+    let testFailureSummaries: TestFailureSummaries?
 
     enum CodingKeys: String, CodingKey {
         case testFailureSummaries
@@ -53,5 +53,5 @@ struct TestFailureSummariesValue: Codable {
 // MARK: - Metrics
 struct Metrics: Codable {
     let testsCount: ID
-    let testsFailedCount: ID
+    let testsFailedCount: ID?
 }
