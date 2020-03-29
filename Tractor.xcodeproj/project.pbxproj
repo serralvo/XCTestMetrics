@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		02D90D042431319F009136A4 /* XCResultOutputFileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D90D032431319F009136A4 /* XCResultOutputFileParser.swift */; };
 		OBJ_100 /* ParsedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_45 /* ParsedValues.swift */; };
 		OBJ_101 /* ParserError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* ParserError.swift */; };
 		OBJ_102 /* SplitArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* SplitArguments.swift */; };
@@ -162,6 +163,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02D90D032431319F009136A4 /* XCResultOutputFileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCResultOutputFileParser.swift; sourceTree = "<group>"; };
 		"Files::Files::Product" /* Files.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Files.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_12 /* ReportModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportModels.swift; sourceTree = "<group>"; };
 		OBJ_13 /* TractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TractorOutput.swift; sourceTree = "<group>"; };
@@ -291,6 +293,7 @@
 		OBJ_11 /* Parser */ = {
 			isa = PBXGroup;
 			children = (
+				02D90D032431319F009136A4 /* XCResultOutputFileParser.swift */,
 				OBJ_12 /* ReportModels.swift */,
 				OBJ_15 /* XCResultProcessor.swift */,
 			);
@@ -758,6 +761,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				02D90D042431319F009136A4 /* XCResultOutputFileParser.swift in Sources */,
 				OBJ_156 /* ReportModels.swift in Sources */,
 				OBJ_157 /* TractorOutput.swift in Sources */,
 				OBJ_158 /* Tractor.swift in Sources */,

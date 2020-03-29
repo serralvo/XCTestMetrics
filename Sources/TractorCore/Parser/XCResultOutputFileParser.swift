@@ -4,6 +4,9 @@ import Files
 enum OutputReaderError: Error {
     case cannotReadFile
     case getEmptyData
+    
+    case cannotGetTestNumberForMetrics
+    case cannotGetFailedTestNumberForMetrics
 }
 
 final class XCResultOutputFileParser {
@@ -12,9 +15,44 @@ final class XCResultOutputFileParser {
     
     init() {}
     
-    private func get() {
+    func getOutput() throws -> TractorOutput {
         
+        do {
+            let data = try readOutputFile()
+            
+            let output = try JSONDecoder().decode(Output.self, from: data)
+            let failures = output.issues.testFailureSummaries.failures
+            let metrics = try createTestMetrics(with: output.metrics)
+            
+            let tractorOutput: TractorOutput
+            if failures.isEmpty == true {
+                tractorOutput = TractorOutput(testMetrics: metrics, failures: [], date: Date())
+            } else {
+                let mapped = failures.map {
+                    FailureTest(name: $0.testCaseName.value, target: $0.producingTarget.value)
+                }
+                tractorOutput = TractorOutput(testMetrics: metrics, failures: mapped, date: Date())
+            }
+            
+            return tractorOutput
+        } catch {
+            throw error
+        }
     }
+    
+    private func createTestMetrics(with metrics: Metrics) throws -> TestMetrics {
+        guard let testCount = Int(metrics.testsCount.value) else {
+            throw OutputReaderError.cannotGetTestNumberForMetrics
+        }
+        
+        guard let failedCount = Int(metrics.testsFailedCount.value) else {
+            throw OutputReaderError.cannotGetFailedTestNumberForMetrics
+        }
+        
+        return TestMetrics(count: testCount, failedCount: failedCount)
+    }
+    
+    // MARK: - Output file
     
     private func readOutputFile() throws -> Data {
         do {
