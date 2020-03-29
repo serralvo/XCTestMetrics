@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Tractor::TractorCore"
-               BuildableName = "TractorCore.framework"
-               BlueprintName = "TractorCore"
+               BlueprintIdentifier = "Tractor::Tractor"
+               BuildableName = "Tractor"
+               BlueprintName = "Tractor"
                ReferencedContainer = "container:Tractor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,9 +28,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Tractor::Tractor"
-               BuildableName = "Tractor"
-               BlueprintName = "Tractor"
+               BlueprintIdentifier = "Tractor::TractorCore"
+               BuildableName = "TractorCore.framework"
+               BlueprintName = "TractorCore"
                ReferencedContainer = "container:Tractor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
