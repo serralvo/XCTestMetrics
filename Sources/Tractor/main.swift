@@ -1,4 +1,5 @@
 import TractorCore
+import TractorReport
 import ArgumentParser
 
 struct Tractor: ParsableCommand {
@@ -10,7 +11,8 @@ struct Tractor: ParsableCommand {
             let register = TractorRegister(reportFileName: path)
             try register.createTestRegister()
         } else if report != nil {
-            print("🚜 should generate report")
+            let report = TractorReportGenerator()
+            report.generate()
         }
         
     }
@@ -19,5 +21,5 @@ struct Tractor: ParsableCommand {
 // Test-FlakyTestsProject-2020.03.28_19-49-19--0300 success
 // Test-FlakyTestsProject-2020.03.28_19-49-24--0300 failure
 
-// Tractor.main(["report"])
-Tractor.main(["--xc-report-path", "Test-FlakyTestsProject-2020.03.28_19-49-24--0300"])
+Tractor.main(["report"])
+// Tractor.main(["--xc-report-path", "Test-FlakyTestsProject-2020.03.28_19-49-24--0300"])
