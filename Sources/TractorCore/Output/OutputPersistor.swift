@@ -1,5 +1,6 @@
 import Foundation
 import Files
+import TractorEntity
 
 enum OutputPersistorError: Error {
     case cannotPersistFile
@@ -30,13 +31,7 @@ final class OutputPersistor {
     }
     
     private func getEncoder() -> JSONEncoder {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        
-        let encoder = JSONEncoder()
-        encoder.dateEncodingStrategy = .formatted(dateFormatter)
-
-        return encoder
+        return TractorOutput.encoder
     }
     
 }

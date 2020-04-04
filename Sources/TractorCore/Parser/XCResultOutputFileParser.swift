@@ -1,5 +1,6 @@
 import Foundation
 import Files
+import TractorEntity
 
 enum OutputReaderError: Error {
     case cannotReadFile

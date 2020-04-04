@@ -1,35 +1,12 @@
 import Files
 import Foundation
 import Plot
-
-// should create a module with this one :point-down:
-
-struct TractorOutput: Codable {
-    let testMetrics: TestMetrics
-    let failures: [FailureTest]
-    let date: Date
-}
-
-struct TestMetrics: Codable {
-    let count: Int
-    let failedCount: Int
-}
-
-struct FailureTest: Codable {
-    let name: String
-    let target: String
-}
+import TractorEntity
 
 public class TractorReportGenerator {
     
     private func getDecoder() -> JSONDecoder {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .formatted(dateFormatter)
-        
-        return decoder
+        return TractorOutput.decoder
     }
  
     public init() {}
