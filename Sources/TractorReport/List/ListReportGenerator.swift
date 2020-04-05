@@ -18,10 +18,7 @@ final class ListReportGenerator {
                 .div(
                     .h1("Tractor Report")
                 ),
-                .wrapped(wrapper),
-                .div(
-                    .p("Made with love")
-                )
+                .wrapped(wrapper)
             )
         )
         
@@ -38,7 +35,7 @@ private extension Node where Context: HTML.BodyContext {
             .summary(report),
             .h3("Failure Tests"),
             .ul(.forEach(tests) {
-                .li("\($0.name) - \($0.target)")
+                .li("\($0.numberOfOccurrences) - \($0.failureTest.name)")
             })
         )
     }

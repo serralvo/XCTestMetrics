@@ -2,7 +2,7 @@ import Foundation
 
 public extension TractorOutput {
     
-    public static var encoder: JSONEncoder {
+    static var encoder: JSONEncoder {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
@@ -12,7 +12,7 @@ public extension TractorOutput {
         return encoder
     }
     
-    public static var decoder: JSONDecoder {
+    static var decoder: JSONDecoder {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         

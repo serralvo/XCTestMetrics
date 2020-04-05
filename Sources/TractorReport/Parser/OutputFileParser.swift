@@ -7,10 +7,14 @@ enum OutputFileParserError: Error {
     case cannotGenerateReportWrapper
 }
 
+struct FailureTestReport {
+    let failureTest: FailureTest
+    let numberOfOccurrences: Int
+}
+
 struct ReportWrapper {
     let numberOfSuccess: Int
-    // TODO: Include the number of failures by each test
-    let failureTests: [FailureTest]
+    let failureTests: [FailureTestReport]
     
     var numberOfFailures: Int {
         return failureTests.count
@@ -30,15 +34,30 @@ final class OutputFileParser {
             let content = getRawContent(for: folder)
             let outputs = getTractorOutput(with: content)
             
+            // TODO: Move this logic to a expecific one
             let success = outputs.map { $0.testMetrics }.reduce(0, { count, testMetrics in
                 count + testMetrics.count
             })
             
             let failureTests = outputs.map { $0.failures }.flatMap { $0 }
             
+            var failureTestsReportAsDict: [FailureTest : Int] = [:]
+            
+            for test in failureTests {
+                if let count = failureTestsReportAsDict[test] {
+                    failureTestsReportAsDict[test] = count + 1
+                } else {
+                    failureTestsReportAsDict[test] = 1
+                }
+            }
+            
+            let failureTestsReport = failureTestsReportAsDict.map { (key: FailureTest, value: Int) -> FailureTestReport in
+                return FailureTestReport(failureTest: key, numberOfOccurrences: value)
+            }.sorted { $0.numberOfOccurrences > $1.numberOfOccurrences }
+            
             return ReportWrapper(
                 numberOfSuccess: success,
-                failureTests: failureTests
+                failureTests: failureTestsReport
             )
         } catch {
             throw OutputFileParserError.cannotGenerateReportWrapper

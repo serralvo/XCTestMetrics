@@ -31,3 +31,16 @@ public struct FailureTest: Codable {
         self.target = target
     }
 }
+
+extension FailureTest: Equatable {
+    public static func == (lhs: FailureTest, rhs: FailureTest) -> Bool {
+        return lhs.name == rhs.name && lhs.target == rhs.target
+    }
+}
+
+extension FailureTest: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(self.name)
+        hasher.combine(self.target)
+    }
+}
