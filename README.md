@@ -10,5 +10,8 @@
 
 ## FAQ
 
+## License 
+MIT.
+
 ## Credits
 Made with ❤️ by [Fabrício Serralvo](https://twitter.com/serralvo_)
