@@ -10,14 +10,10 @@ final class ListReportGenerator {
         let wrapper = try! parser.getReportWrapper()
         
         let html = HTML(
-            .head(
-                .title("Tractor Report"),
-                .stylesheet("styles.css")
+            .head(.title("Tractor Report"), .stylesheet("styles.css")
             ),
             .body(
-                .div(
-                    .h1("Tractor Report")
-                ),
+                .div(.h1("Tractor Report")),
                 .wrapped(wrapper)
             )
         )
@@ -34,13 +30,19 @@ private extension Node where Context: HTML.BodyContext {
         return .div(
             .summary(report),
             .h3("Failure Tests"),
-            .ul(.forEach(tests) {
-                .li("\($0.numberOfOccurrences) - \($0.failureTest.name)")
-            })
+            .table(
+                .tr(.td("Quantity"), .td("Test Name"), .td("Target")),
+                .forEach(tests) {
+                    .tr(.td("\($0.numberOfOccurrences)"),
+                        .td("\($0.failureTest.name)"),
+                        .td("\($0.failureTest.target)")
+                    )
+                }
+            )
         )
     }
     
     static func summary(_ report: ReportWrapper) -> Self {
-        return .h2("Status - Success: \(report.numberOfSuccess) - Failure: \(report.numberOfFailures)")
+        return .h2("Status - Success: \(report.numberOfSuccess) - Failure Tests: \(report.numberOfFailures)")
     }
 }
