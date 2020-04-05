@@ -1,22 +1,28 @@
 # Tractor
-Welcome to **Tractor**, a command line that provides metrics about your project tests, specially the flakys.  
-
-It’s primarily aimed at Swift scripting and tooling, but can also be embedded in applications that need to access the file system. It's essentially a thin wrapper around the FileManager APIs that Foundation provides.
+Welcome to **Tractor**, a command line that provides metrics about your project tests, specially the flakys. 
 
 ## Features
-- [x] 🕵️‍♂️ Helps to identify flaky tests.
-- [x] 📊 Gives the big picture of project tests, number of failures, when it happened, percentage of flakiness.
-
+- [x] 🕵️‍♂️ Help to identify flaky tests.
+- [x] 📊 Give the big picture of project tests, number of failures, when it happened, percentage of flakiness.
+- [x] ⚡️ Easy and fast setup.
 
 ## Requirements 
 - Xcode 11 
 
 ## Installation 
+Using [Homebrew](http://brew.sh/):
+
+## Usage
+
+### CI Step:
+
+### Reports
 
 ## Motivation
 
+
 ## License 
-MIT
+Tractor is released under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Credits
 Made with ❤️ by [Fabrício Serralvo](https://twitter.com/serralvo_)
