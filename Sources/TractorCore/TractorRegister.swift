@@ -2,6 +2,10 @@ import Foundation
 import Files
 import ShellOut
 
+enum TractorRegisterError: Error {
+    case cannotGetResultFilePath
+}
+
 public class TractorRegister {
     
     private let path: String
@@ -12,25 +16,34 @@ public class TractorRegister {
     
     public func createTestRegister() throws {
         do {
-            let filePath = getResultFilePath()
-            try generateOutputFile(reportFileName: filePath)
+            let resultFilePath = try getResultFilePath()
+            
+            let processor = XCResultProcessor(resultFilePath: resultFilePath)
+            try processor.persistOutputFile()
+            
             try persistOutputJSON()
+            
+            try processor.removeJSONFileFromXCResult()
         } catch {
             throw error
         }
     }
     
-    private func getResultFilePath() -> String {
-        // TODO: Refactor this one
-        guard let derivedData = try? Folder.init(path: self.path + "/Logs/Test/") else { return "" }
-        guard let resultName = derivedData.subfolders.first(where: { $0.name.contains(".xcresult") } )?.path else { return "" }
+    private func getResultFilePath() throws -> String {
+        let testFolderPath = "/Logs/Test/"
+        let xcResultExtension = ".xcresult"
         
-        return resultName
+        guard let derivedData = try? Folder.init(path: self.path + testFolderPath) else {
+            throw TractorRegisterError.cannotGetResultFilePath
+        }
+        
+        guard let resultFilePath = derivedData.subfolders.first(where: { $0.name.contains(xcResultExtension) } )?.path else {
+            throw TractorRegisterError.cannotGetResultFilePath
+        }
+        
+        return resultFilePath
     }
     
-    private func generateOutputFile(reportFileName: String) throws {
-        try XCResultProcessor(resultName: reportFileName).persistOutputFile()
-    }
     
     private func persistOutputJSON() throws {
         let tractorOutput = try XCResultOutputFileParser().getOutput()

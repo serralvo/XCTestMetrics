@@ -33,7 +33,9 @@ extension Tractor {
     
 }
 
-Tractor.main(["help"])
+// Tractor.main()
+
+// Tractor.main(["help"])
 //Tractor.main(["report"])
 // Tractor.main(["log", "/Users/fabricioserralvo/Library/Developer/Xcode/DerivedData/FlakyTestsProject-gybqxibuurferncjaxlbxkwsptqj"])
 
