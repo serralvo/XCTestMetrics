@@ -15,7 +15,7 @@ final class XCResultProcessor {
     
     func persistOutputFile() throws {
         do {
-            try shellOut(to: ["xcrun xcresulttool get --format json --path \(resultName).xcresult > output.json"])
+            try shellOut(to: ["xcrun xcresulttool get --format json --path \(resultName) > output.json"])
         } catch {
             // TODO: Use error one to throw
             throw XCResultProcessorError.cannotExecuteCommand

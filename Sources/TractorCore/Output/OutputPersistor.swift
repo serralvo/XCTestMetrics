@@ -1,9 +1,11 @@
 import Foundation
 import Files
+import ShellOut
 import TractorEntity
 
 enum OutputPersistorError: Error {
     case cannotPersistFile
+    case cannotCommitOutputFile
 }
 
 final class OutputPersistor {
@@ -18,7 +20,7 @@ final class OutputPersistor {
     
     func persistJSON() throws {
         do {
-            let encoder = getEncoder()
+            let encoder = TractorOutput.encoder
             let fileToSave = try encoder.encode(tractorOutputToPersist)
 
             try Folder.current.createFile(
@@ -30,8 +32,13 @@ final class OutputPersistor {
         }
     }
     
-    private func getEncoder() -> JSONEncoder {
-        return TractorOutput.encoder
+    func commitOutputFile() throws {
+        do {
+            try shellOut(to: .gitCommit(message: "Added tractor register"))
+            try shellOut(to: .gitPush())
+        } catch {
+            throw OutputPersistorError.cannotCommitOutputFile
+        }
     }
     
 }
