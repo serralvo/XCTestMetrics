@@ -3,23 +3,37 @@ import TractorReport
 import ArgumentParser
 
 struct Tractor: ParsableCommand {
-    @Option() var XCReportPath: String?
-    @Argument() var report: String?
+    static var configuration = CommandConfiguration(
+        abstract: "The best way to get flaky tests on your project.",
+        subcommands: [Log.self, Report.self]
+    )
+}
+
+extension Tractor {
     
-    func run() throws {
-        if let path = XCReportPath {
-            let register = TractorRegister(reportFileName: path)
+    struct Log: ParsableCommand {
+        static var configuration = CommandConfiguration(abstract: "Creates a register about last project build.")
+        
+        @Argument() var derivedDataPath: String
+        
+        func run() throws {
+            let register = TractorRegister(path: derivedDataPath)
             try register.createTestRegister()
-        } else if report != nil {
+        }
+    }
+    
+    struct Report: ParsableCommand {
+        static var configuration = CommandConfiguration(abstract: "Generates a report with collected registers.")
+        
+        func run() throws {
             let report = TractorReportGenerator()
             report.generate()
         }
-        
     }
+    
 }
 
-// Test-FlakyTestsProject-2020.03.28_19-49-19--0300 success
-// Test-FlakyTestsProject-2020.03.28_19-49-24--0300 failure
+//Tractor.main(["help"])
+//Tractor.main(["report"])
+Tractor.main(["log", "/Users/fabricioserralvo/Library/Developer/Xcode/DerivedData/FlakyTestsProject-gybqxibuurferncjaxlbxkwsptqj"])
 
-Tractor.main(["report"])
-// Tractor.main(["--xc-report-path", "Test-FlakyTestsProject-2020.03.28_19-49-24--0300"])
