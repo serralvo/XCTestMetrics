@@ -6,6 +6,15 @@ import TractorEntity
 enum OutputPersistorError: Error {
     case cannotPersistFile
     case cannotCommitOutputFile
+    
+    var localizedDescription: String {
+        switch self {
+        case .cannotCommitOutputFile:
+            return "Cannot commit output file. Check git permissions."
+        case .cannotPersistFile:
+            return "Cannot save output file. Check disk permissions."
+        }
+    }
 }
 
 final class OutputPersistor {

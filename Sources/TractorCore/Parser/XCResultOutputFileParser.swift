@@ -8,6 +8,19 @@ enum OutputReaderError: Error {
     
     case cannotGetTestNumberForMetrics
     case cannotGetFailedTestNumberForMetrics
+    
+    var localizedDescription: String {
+        switch self {
+        case .cannotReadFile:
+            return "Cannot read output.json file. Check if it exists and disk read permissions."
+        case .getEmptyData:
+            return "Cannot get any data from output.json. Check if it is empty."
+        case .cannotGetFailedTestNumberForMetrics:
+            return ""
+        case .cannotGetTestNumberForMetrics:
+            return ""
+        }
+    }
 }
 
 final class XCResultOutputFileParser {
