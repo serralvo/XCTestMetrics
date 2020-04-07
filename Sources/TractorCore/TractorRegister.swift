@@ -1,6 +1,7 @@
 import Foundation
 import Files
 import ShellOut
+import TractorDisplay
 
 enum TractorRegisterError: Error {
     case cannotGetResultFilePath
@@ -57,7 +58,7 @@ public class TractorRegister {
         try persistor.persistJSON()
         // try persistor.commitOutputFile()
         
-        print("🚜 Test register has been saved. Check it on tractor-output folder.")
+        Display.success(message: "Log has been saved. Check it on tractor-output folder.")
     }
     
 }

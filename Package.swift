@@ -12,8 +12,19 @@ let package = Package(
         .package(url: "https://github.com/johnsundell/plot.git", from: "0.1.0")
     ],
     targets: [
-        .target(name: "TractorCore", dependencies: ["Files", "ShellOut", "TractorEntity"]),
-        .target(name: "TractorReport", dependencies: ["Files", "Plot", "TractorEntity"]),
+        .target(name: "TractorCore", dependencies: [
+            "Files",
+            "ShellOut",
+            "TractorEntity",
+            "TractorDisplay"
+        ]),
+        .target(name: "TractorReport", dependencies: [
+            "Files",
+            "Plot",
+            "TractorEntity",
+            "TractorDisplay"
+        ]),
+        .target(name: "TractorDisplay", dependencies: []),
         .target(name: "TractorEntity", dependencies: []),
         .target(name: "Tractor", dependencies: [
             "TractorCore",
