@@ -7,6 +7,7 @@ final class ListReportGenerator {
         
         let parser = OutputFileParser()
         
+        // TODO: Remove ! cast
         let wrapper = try! parser.getReportWrapper()
         
         let html = HTML(
@@ -31,7 +32,7 @@ private extension Node where Context: HTML.BodyContext {
             .summary(report),
             .h3("Failure Tests"),
             .table(
-                .tr(.td("Quantity"), .td("Test Name"), .td("Target")),
+                .tr(.class("head"), .td("Quantity"), .td("Test Name"), .td("Target")),
                 .forEach(tests) {
                     .tr(.td("\($0.numberOfOccurrences)"),
                         .td("\($0.failureTest.name)"),
@@ -43,6 +44,12 @@ private extension Node where Context: HTML.BodyContext {
     }
     
     static func summary(_ report: ReportWrapper) -> Self {
-        return .h2("Status - Success: \(report.numberOfSuccess) - Failure Tests: \(report.numberOfFailures)")
+        let numberOfTests = "Tests: \(report.numberOfTests)"
+        let success = "Success: \(report.numberOfSuccess)"
+        let failures = "Failure Tests: \(report.numberOfFailures)"
+        let flakyness = Double(report.numberOfTests / report.numberOfFailures)
+        let flaky = "Flaky Index: \(flakyness)%"
+        
+        return .h3("\(numberOfTests) - \(success) - \(failures) - \(flaky)")
     }
 }

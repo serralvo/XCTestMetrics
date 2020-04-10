@@ -6,6 +6,8 @@ import TractorDisplay
 
 public class TractorReportGenerator {
     
+    public init() {}
+    
     public func generate() {
         let report = ListReportGenerator()
         let content = report.generate()

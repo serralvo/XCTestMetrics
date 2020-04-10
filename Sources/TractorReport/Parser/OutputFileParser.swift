@@ -17,7 +17,9 @@ struct ReportWrapper {
     let failureTests: [FailureTestReport]
     
     var numberOfFailures: Int {
-        return failureTests.count
+        return failureTests.reduce(0, { count, test in
+            count + test.numberOfOccurrences
+        })
     }
     
     var numberOfTests: Int {
