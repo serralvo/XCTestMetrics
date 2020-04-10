@@ -30,7 +30,7 @@ private extension Node where Context: HTML.BodyContext {
         
         return .div(
             .summary(report),
-            .h3("Failure Tests"),
+            .h4("Failure Tests"),
             .table(
                 .tr(.class("head"), .td("Quantity"), .td("Test Name"), .td("Target")),
                 .forEach(tests) {
@@ -44,12 +44,17 @@ private extension Node where Context: HTML.BodyContext {
     }
     
     static func summary(_ report: ReportWrapper) -> Self {
-        let numberOfTests = "Tests: \(report.numberOfTests)"
-        let success = "Success: \(report.numberOfSuccess)"
-        let failures = "Failure Tests: \(report.numberOfFailures)"
-        let flakyness = Double(report.numberOfTests / report.numberOfFailures)
-        let flaky = "Flaky Index: \(flakyness)%"
+        let failurePercentage = report.numberOfTests / report.numberOfFailures
         
-        return .h3("\(numberOfTests) - \(success) - \(failures) - \(flaky)")
+        let numberOfTests = "🛠 Executed Tests: \(report.numberOfTests)"
+        let success = "✅ Passed Tests: \(report.numberOfSuccess)"
+        let failures = "🚫 Failed Tests: \(report.numberOfFailures) - \(failurePercentage)%"
+        
+        return .div(
+            .class("summary"),
+            .span("\(numberOfTests)"),
+            .span("\(success)"),
+            .span("\(failures)")
+        )
     }
 }
