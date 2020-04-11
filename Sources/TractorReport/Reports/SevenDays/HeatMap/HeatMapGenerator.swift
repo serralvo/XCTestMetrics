@@ -2,16 +2,19 @@ import Foundation
 import TractorEntity
 import Plot
 
-enum HeatMapStyle {
-    case sevenDays
-}
-
 enum HeatMapIndex {
     case unavailable
     case withValue(value: Double)
 }
 
-typealias SevenDays = (day: Int, available: Bool)
+struct SevenDaysHeatMapDataSource {
+    let day: Int
+    let available: Bool
+}
+
+enum HeatMapGeneratorError: Error {
+    case cannotGetOutput
+}
 
 final class HeatMapGenerator {
     
@@ -21,29 +24,23 @@ final class HeatMapGenerator {
         self.dataSource = dataSource
     }
     
-    func generate() -> Node<HTML.BodyContext> {
-
-        // TODO: Remove ! cast
-        let output = try! dataSource.getOutput()
-        
-        let days = getDaysOfReport(with: output)
-        
-        var indexes: [HeatMapIndex] = []
-        var weekDays: [String] = []
-        
-        for day in days {
-            let index = indexByDay(with: day, output: output)
-            indexes.append(index)
+    func generate() throws -> Node<HTML.BodyContext> {
+        do {
+            let output = try dataSource.getOutput()
+            let days = getDaysOfReport(with: output)
+            
+            let indexes: [HeatMapIndex] = days.map {
+                indexByDay(with: $0, output: output)
+            }
+            
+            return Node.div(.wrapped(indexes))
+        } catch {
+            throw HeatMapGeneratorError.cannotGetOutput
         }
         
-        let node = Node.div(
-            .wrapped(indexes)
-        )
-        
-        return node
     }
     
-    private func getDaysOfReport(with output: [TractorOutput]) -> [SevenDays] {
+    private func getDaysOfReport(with output: [TractorOutput]) -> [SevenDaysHeatMapDataSource] {
         
         // TODO: Refactor this one, please.
         
@@ -60,9 +57,9 @@ final class HeatMapGenerator {
             }
         }
         
-        var sevenDays: [SevenDays] = []
+        var sevenDays: [SevenDaysHeatMapDataSource] = []
         for day in days {
-            sevenDays.append(SevenDays(day: day, available: true))
+            sevenDays.append(SevenDaysHeatMapDataSource(day: day, available: true))
         }
         
         if sevenDays.count < 7 {
@@ -71,7 +68,7 @@ final class HeatMapGenerator {
             let target = 7
             
             for _ in size...target {
-                sevenDays.append(SevenDays(day: 0, available: false))
+                sevenDays.append(SevenDaysHeatMapDataSource(day: 0, available: false))
             }
             
         }
@@ -79,7 +76,7 @@ final class HeatMapGenerator {
         return sevenDays
     }
     
-    private func indexByDay(with day: SevenDays, output: [TractorOutput]) -> HeatMapIndex {
+    private func indexByDay(with day: SevenDaysHeatMapDataSource, output: [TractorOutput]) -> HeatMapIndex {
         
         guard day.available else {
             return HeatMapIndex.unavailable
@@ -118,7 +115,7 @@ private extension Node where Context: HTML.BodyContext {
     static func wrapped(_ indexes: [HeatMapIndex]) -> Self {
         
         return .div(
-            .h4("Failure Tests"),
+            .h4("Heat Map - Seven Days"),
             .table(
                 .class("heatmap"),
                 .tr(
@@ -132,7 +129,7 @@ private extension Node where Context: HTML.BodyContext {
     
 }
 
-extension HeatMapIndex {
+private extension HeatMapIndex {
     
     func value() -> String {
         switch self {

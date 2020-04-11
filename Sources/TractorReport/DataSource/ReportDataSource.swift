@@ -1,14 +1,19 @@
 import Foundation
 import TractorEntity
 
-struct ReportWrapper {
-    let numberOfSuccess: Int
-    let failureTests: [FailureTestReport]
+protocol ReportDataSource {
+    func getReportWrapper() throws -> ReportWrapper
+    func getOutput() throws -> [TractorOutput]
 }
 
 struct FailureTestReport {
     let failureTest: FailureTest
     let numberOfOccurrences: Int
+}
+
+struct ReportWrapper {
+    let numberOfSuccess: Int
+    let failureTests: [FailureTestReport]
 }
 
 extension ReportWrapper {
@@ -21,9 +26,4 @@ extension ReportWrapper {
     var numberOfTests: Int {
         return numberOfSuccess + numberOfFailures
     }
-}
-
-protocol ReportDataSource {
-    func getReportWrapper() throws -> ReportWrapper
-    func getOutput() throws -> [TractorOutput]
 }

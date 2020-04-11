@@ -16,6 +16,7 @@ public class TractorReportGenerator {
         let content = report.generate()
         let htmlData = content.data(using: .utf8)
         
+        
         do {
             try Folder.current.createFile(at: "tractor-report/report.html", contents: htmlData)
             Display.success(message: "Report has been saved. Check it on tractor-report folder.")

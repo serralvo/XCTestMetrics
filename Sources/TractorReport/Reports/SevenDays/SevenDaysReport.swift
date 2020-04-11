@@ -15,7 +15,7 @@ final class SevenDaysReport {
         let heatMap = HeatMapGenerator(withDataSource: dataSource)
         
         let listNode = list.generate()
-        let heatMapNode = heatMap.generate()
+        let heatMapNode = try! heatMap.generate()
         
         let html = HTML(
             .head(.title("Tractor Report"), .stylesheet("styles.css")

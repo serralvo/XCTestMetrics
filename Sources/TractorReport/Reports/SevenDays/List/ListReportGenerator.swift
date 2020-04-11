@@ -45,9 +45,9 @@ private extension Node where Context: HTML.BodyContext {
     static func summary(_ report: ReportWrapper) -> Self {
         let failurePercentage = report.numberOfTests / report.numberOfFailures
         
-        let numberOfTests = "🛠 Executed Tests: \(report.numberOfTests)"
-        let success = "✅ Passed Tests: \(report.numberOfSuccess)"
-        let failures = "🚫 Failed Tests: \(report.numberOfFailures) - \(failurePercentage)%"
+        let numberOfTests = " 🛠 Executed Tests: \(report.numberOfTests)"
+        let success = " ✅ Passed Tests: \(report.numberOfSuccess)"
+        let failures = " 🚫 Failed Tests: \(report.numberOfFailures) - \(failurePercentage)%"
         
         return .div(
             .class("summary"),
