@@ -15,12 +15,16 @@ typealias SevenDays = (day: Int, available: Bool)
 
 final class HeatMapGenerator {
     
-    func generate() -> String {
-
-        let parser = OutputFileParser()
+    private let dataSource: ReportDataSource
+    
+    init(withDataSource dataSource: ReportDataSource) {
+        self.dataSource = dataSource
+    }
+    
+    func generate() -> Node<HTML.BodyContext> {
 
         // TODO: Remove ! cast
-        let output = try! parser.getOutput()
+        let output = try! dataSource.getOutput()
         
         let days = getDaysOfReport(with: output)
         
@@ -32,16 +36,11 @@ final class HeatMapGenerator {
             indexes.append(index)
         }
         
-        let html = HTML(
-            .head(.title("Tractor Report"), .stylesheet("styles.css")
-            ),
-            .body(
-                .div(.h1("Tractor Report")),
-                .wrapped(indexes)
-            )
+        let node = Node.div(
+            .wrapped(indexes)
         )
         
-        return html.render()
+        return node
     }
     
     private func getDaysOfReport(with output: [TractorOutput]) -> [SevenDays] {

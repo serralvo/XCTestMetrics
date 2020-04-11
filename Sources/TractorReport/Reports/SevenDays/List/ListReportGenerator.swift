@@ -3,23 +3,22 @@ import Plot
 
 final class ListReportGenerator {
     
-    func generate() -> String {
-        
-        let parser = OutputFileParser()
+    private let dataSource: ReportDataSource
+    
+    init(withDataSource dataSource: ReportDataSource) {
+        self.dataSource = dataSource
+    }
+    
+    func generate() -> Node<HTML.BodyContext> {
         
         // TODO: Remove ! cast
-        let wrapper = try! parser.getReportWrapper()
+        let wrapper = try! dataSource.getReportWrapper()
         
-        let html = HTML(
-            .head(.title("Tractor Report"), .stylesheet("styles.css")
-            ),
-            .body(
-                .div(.h1("Tractor Report")),
-                .wrapped(wrapper)
-            )
+        let node = Node.div(
+            .wrapped(wrapper)
         )
         
-        return html.render()
+        return node
     }
     
 }

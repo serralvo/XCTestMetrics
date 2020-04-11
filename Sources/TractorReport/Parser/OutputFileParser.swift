@@ -7,37 +7,7 @@ enum OutputFileParserError: Error {
     case cannotGenerateReportWrapper
 }
 
-struct FailureTestReport {
-    let failureTest: FailureTest
-    let numberOfOccurrences: Int
-}
-
-struct ReportWrapper {
-    let numberOfSuccess: Int
-    let failureTests: [FailureTestReport]
-    
-    var numberOfFailures: Int {
-        return failureTests.reduce(0, { count, test in
-            count + test.numberOfOccurrences
-        })
-    }
-    
-    var numberOfTests: Int {
-        return numberOfSuccess + numberOfFailures
-    }
-}
-
-final class OutputFileParser {
-    
-    func getOutput() throws -> [TractorOutput] {
-        do {
-            let folder = try getOutputFolder()
-            let content = getRawContent(for: folder)
-            return getTractorOutput(with: content)
-        } catch {
-            throw error
-        }
-    }
+final class OutputFileParser: ReportDataSource {
     
     func getReportWrapper() throws -> ReportWrapper {
         
@@ -75,6 +45,16 @@ final class OutputFileParser {
             throw OutputFileParserError.cannotGenerateReportWrapper
         }
         
+    }
+    
+    func getOutput() throws -> [TractorOutput] {
+        do {
+            let folder = try getOutputFolder()
+            let content = getRawContent(for: folder)
+            return getTractorOutput(with: content)
+        } catch {
+            throw error
+        }
     }
     
     private func getOutputFolder() throws -> Folder {

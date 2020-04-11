@@ -8,15 +8,11 @@ public class TractorReportGenerator {
     
     public init() {}
     
-    func generateHeatMap() {
-        
-
-        
-    }
-    
     public func generate() {
         
-        let report = HeatMapGenerator()
+        let output = OutputFileParser()
+        let report = SevenDaysReport(withDataSource: output)
+        
         let content = report.generate()
         let htmlData = content.data(using: .utf8)
         
