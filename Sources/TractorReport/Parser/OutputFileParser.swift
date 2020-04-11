@@ -29,6 +29,16 @@ struct ReportWrapper {
 
 final class OutputFileParser {
     
+    func getOutput() throws -> [TractorOutput] {
+        do {
+            let folder = try getOutputFolder()
+            let content = getRawContent(for: folder)
+            return getTractorOutput(with: content)
+        } catch {
+            throw error
+        }
+    }
+    
     func getReportWrapper() throws -> ReportWrapper {
         
         do {
