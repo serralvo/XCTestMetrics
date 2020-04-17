@@ -12,22 +12,18 @@ final class SevenDaysReport {
     func generate() -> String {
         
         let list = ListReportGenerator(withDataSource: dataSource)
-        let heatMap = HeatMapGenerator(withDataSource: dataSource)
-        
         let listNode = list.generate()
-        let heatMapNode = try! heatMap.generate()
         
         let html = HTML(
             .head(.title("Tractor Report"), .stylesheet("styles.css")
             ),
             .body(
                 .div(.h1("Tractor Report")),
-                .div(listNode),
-                .div(heatMapNode)
+                .div(listNode)
             )
         )
         
-        return html.render()
+        return html.render(indentedBy: .tabs(1))
     }
     
 }
