@@ -43,17 +43,29 @@ private extension Node where Context: HTML.BodyContext {
     }
     
     static func summary(_ report: ReportWrapper) -> Self {
-        let failurePercentage = report.numberOfTests / report.numberOfFailures
+        let numberOfTests = "\(report.numberOfTests)"
+        let passedTests = "\(report.numberOfSuccess)"
+        let failedTests = "\(report.numberOfFailures)"
         
-        let numberOfTests = " 🛠 Executed Tests: \(report.numberOfTests)"
-        let success = " ✅ Passed Tests: \(report.numberOfSuccess)"
-        let failures = " 🚫 Failed Tests: \(report.numberOfFailures) - \(failurePercentage)%"
-        
+        // TODO: Create a for each for item div
         return .div(
             .class("summary"),
-            .span("\(numberOfTests)"),
-            .span("\(success)"),
-            .span("\(failures)")
+            .div(.class("highlight"), .p("Tractor Report")),
+            .div(
+                .class("item"),
+                .div(.class("title"), .p("executed tests")),
+                .div(.class("subtitle"), .p("\(numberOfTests)"))
+            ),
+            .div(
+                .class("item"),
+                .div(.class("title"), .p("passed tests")),
+                .div(.class("subtitle"), .p("\(passedTests)"))
+            ),
+            .div(
+                .class("item"),
+                .div(.class("title"), .p("failed tests")),
+                .div(.class("subtitle"), .p("\(failedTests)"))
+            )
         )
     }
 }

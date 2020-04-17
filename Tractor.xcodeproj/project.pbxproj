@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		02C8A799244A726D003A3B63 /* StyleFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02C8A798244A726D003A3B63 /* StyleFile.swift */; };
 		OBJ_153 /* Argument.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_96 /* Argument.swift */; };
 		OBJ_154 /* ArgumentHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_97 /* ArgumentHelp.swift */; };
 		OBJ_155 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_98 /* Errors.swift */; };
@@ -125,7 +126,7 @@
 		OBJ_340 /* ReportDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* ReportDataSource.swift */; };
 		OBJ_341 /* OutputFileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* OutputFileParser.swift */; };
 		OBJ_343 /* ListReportGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_36 /* ListReportGenerator.swift */; };
-		OBJ_344 /* SevenDaysReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* SevenDaysReport.swift */; };
+		OBJ_344 /* HTMLReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_37 /* HTMLReport.swift */; };
 		OBJ_345 /* TractorReportGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_38 /* TractorReportGenerator.swift */; };
 		OBJ_347 /* Plot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Plot::Plot::Product" /* Plot.framework */; };
 		OBJ_348 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Files::Files::Product" /* Files.framework */; };
@@ -320,9 +321,17 @@
 			remoteGlobalIDString = "Tractor::TractorEntity";
 			remoteInfo = TractorEntity;
 		};
+		02C8A796244A6FA3003A3B63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "Tractor::TractorTests";
+			remoteInfo = TractorTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02C8A798244A726D003A3B63 /* StyleFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleFile.swift; sourceTree = "<group>"; };
 		"Files::Files::Product" /* Files.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Files.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_100 /* NameSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameSpecification.swift; sourceTree = "<group>"; };
 		OBJ_101 /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
@@ -368,7 +377,7 @@
 		OBJ_28 /* ReportDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportDataSource.swift; sourceTree = "<group>"; };
 		OBJ_30 /* OutputFileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputFileParser.swift; sourceTree = "<group>"; };
 		OBJ_36 /* ListReportGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListReportGenerator.swift; sourceTree = "<group>"; };
-		OBJ_37 /* SevenDaysReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenDaysReport.swift; sourceTree = "<group>"; };
+		OBJ_37 /* HTMLReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLReport.swift; sourceTree = "<group>"; };
 		OBJ_38 /* TractorReportGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TractorReportGenerator.swift; sourceTree = "<group>"; };
 		OBJ_41 /* TractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TractorTests.swift; sourceTree = "<group>"; };
 		OBJ_42 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
@@ -532,6 +541,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02C8A797244A7256003A3B63 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				02C8A798244A726D003A3B63 /* StyleFile.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		OBJ_10 /* TractorCore */ = {
 			isa = PBXGroup;
 			children = (
@@ -707,18 +724,19 @@
 		OBJ_31 /* Reports */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_32 /* SevenDays */,
+				OBJ_32 /* HTML */,
 			);
 			path = Reports;
 			sourceTree = "<group>";
 		};
-		OBJ_32 /* SevenDays */ = {
+		OBJ_32 /* HTML */ = {
 			isa = PBXGroup;
 			children = (
+				02C8A797244A7256003A3B63 /* Helpers */,
 				OBJ_35 /* List */,
-				OBJ_37 /* SevenDaysReport.swift */,
+				OBJ_37 /* HTMLReport.swift */,
 			);
-			path = SevenDays;
+			path = HTML;
 			sourceTree = "<group>";
 		};
 		OBJ_35 /* List */ = {
@@ -1384,9 +1402,10 @@
 				OBJ_338 /* ReportConfig.swift in Sources */,
 				OBJ_339 /* ReportConfigGenerator.swift in Sources */,
 				OBJ_340 /* ReportDataSource.swift in Sources */,
+				02C8A799244A726D003A3B63 /* StyleFile.swift in Sources */,
 				OBJ_341 /* OutputFileParser.swift in Sources */,
 				OBJ_343 /* ListReportGenerator.swift in Sources */,
-				OBJ_344 /* SevenDaysReport.swift in Sources */,
+				OBJ_344 /* HTMLReport.swift in Sources */,
 				OBJ_345 /* TractorReportGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1474,7 +1493,7 @@
 		OBJ_332 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "Tractor::TractorTests" /* TractorTests */;
-			targetProxy = "Tractor::TractorTests" /* TractorTests */;
+			targetProxy = 02C8A796244A6FA3003A3B63 /* PBXContainerItemProxy */;
 		};
 		OBJ_351 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

@@ -10,6 +10,10 @@ public class Display {
         print("⚠️ Warning: \(message)")
     }
     
+    public static func info(message: String) {
+        print("🚜 \(message)")
+    }
+    
     public static func success(message: String) {
         print("🎉 Success! \(message)")
     }

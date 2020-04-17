@@ -1,7 +1,7 @@
 import Foundation
 import Plot
 
-final class SevenDaysReport {
+final class HTMLReport {
     
     private let dataSource: ReportDataSource
     
@@ -15,10 +15,8 @@ final class SevenDaysReport {
         let listNode = list.generate()
         
         let html = HTML(
-            .head(.title("Tractor Report"), .stylesheet("styles.css")
-            ),
+            .head(.title("Tractor Report"), .stylesheet("styles.css")),
             .body(
-                .div(.h1("Tractor Report")),
                 .div(listNode)
             )
         )
