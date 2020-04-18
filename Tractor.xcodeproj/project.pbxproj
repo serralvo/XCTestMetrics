@@ -549,6 +549,13 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		02C8A79A244A788C003A3B63 /* Slack */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Slack;
+			sourceTree = "<group>";
+		};
 		OBJ_10 /* TractorCore */ = {
 			isa = PBXGroup;
 			children = (
@@ -724,6 +731,7 @@
 		OBJ_31 /* Reports */ = {
 			isa = PBXGroup;
 			children = (
+				02C8A79A244A788C003A3B63 /* Slack */,
 				OBJ_32 /* HTML */,
 			);
 			path = Reports;

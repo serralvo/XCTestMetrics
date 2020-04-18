@@ -6,10 +6,23 @@ import TractorDisplay
 
 public class TractorReportGenerator {
     
+    public enum ReportType {
+        case slack
+        case html
+    }
+    
     public init() {}
     
-    public func generate() {
-        
+    public func generate(withType type: ReportType) {
+        switch type {
+        case .html:
+            generateHTMLReport()
+        case .slack:
+            generateSlackReport()
+        }
+    }
+    
+    private func generateHTMLReport() {
         Display.info(message: "Creating HTML report...")
         
         let output = OutputFileParser()
@@ -26,7 +39,10 @@ public class TractorReportGenerator {
         } catch  {
             Display.error(message: error.localizedDescription)
         }
-
+    }
+    
+    private func generateSlackReport() {
+        
     }
     
 }
