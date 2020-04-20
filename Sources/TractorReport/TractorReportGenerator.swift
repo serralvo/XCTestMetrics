@@ -43,6 +43,14 @@ public class TractorReportGenerator {
     
     private func generateSlackReport() {
         
+        Display.info(message: "Creating Slack report...")
+        
+        let output = OutputFileParser()
+        let slack = SlackReport(withDataSource: output)
+        
+        slack.publish()
+        
+        Display.success(message: "Report has been published. Check it on slack.")
     }
     
 }
