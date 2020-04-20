@@ -7,7 +7,7 @@ import TractorDisplay
 public class TractorReportGenerator {
     
     public enum ReportType {
-        case slack
+        case slack(url: String)
         case html
     }
     
@@ -17,8 +17,8 @@ public class TractorReportGenerator {
         switch type {
         case .html:
             generateHTMLReport()
-        case .slack:
-            generateSlackReport()
+        case .slack(let url):
+            generateSlackReport(rawURL: url)
         }
     }
     
@@ -41,14 +41,16 @@ public class TractorReportGenerator {
         }
     }
     
-    private func generateSlackReport() {
+    private func generateSlackReport(rawURL: String) {
+        
+        guard let url = URL(string: rawURL) else { return }
         
         Display.info(message: "Creating Slack report...")
         
         let output = OutputFileParser()
         let slack = SlackReport(withDataSource: output)
         
-        slack.publish()
+        slack.publish(toURL: url)
         
         Display.success(message: "Report has been published. Check it on slack.")
     }

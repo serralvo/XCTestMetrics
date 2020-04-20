@@ -16,6 +16,28 @@ final class SlackReport {
         self.dataSource = dataSource
     }
     
+    func publish(toURL url: URL) {
+        
+        let report = generate()
+        let data = try! JSONEncoder().encode(report)
+        
+        let request = createRequest(withURL: url, data: data)
+        
+        Display.info(message: "Sending report to Slack...")
+        
+        let http = HTTP()
+        http.sync(request: request)
+    }
+    
+    private func createRequest(withURL url: URL, data httpBody: Data) -> URLRequest {
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = httpBody
+        
+        return request
+    }
+    
     private func generate() -> Report {
         
         let wrapper = try! dataSource.getReportWrapper()
@@ -56,22 +78,6 @@ final class SlackReport {
             result += " \(test.numberOfOccurrences) - \(test.failureTest.name)\n"
         }
         return result
-    }
-    
-    func publish() {
-        
-        let report = generate()
-        let data = try! JSONEncoder().encode(report)
-        
-        var request = URLRequest(url: URL(string: "")!)
-        request.httpMethod = "POST"
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = data
-        
-        Display.info(message: "Sending report to Slack...")
-        
-        let http = HTTP()
-        http.sync(request: request)
     }
     
 }

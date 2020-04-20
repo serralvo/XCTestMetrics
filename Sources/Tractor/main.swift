@@ -23,33 +23,38 @@ extension Tractor {
     }
     
     struct Report: ParsableCommand {
-        static var configuration = CommandConfiguration(abstract: "Generates a report with collected registers.")
-        
-        enum Report: String, ExpressibleByArgument {
-            case html
-            case slack
-        }
-
-        @Option(help: "The type of report to generate.")
-        var type: Report
+        static var configuration = CommandConfiguration(
+            abstract: "Generates a report with collected registers.",
+            subcommands: [SlackReport.self, HTMLReport.self]
+        )
+    }
+    
+    struct HTMLReport: ParsableCommand {
+        static var configuration = CommandConfiguration(abstract: "Generates a HTML report")
+        static var _commandName: String = "html"
         
         func run() throws {
             let report = TractorReportGenerator()
-            
-            switch type {
-            case .html:
-                report.generate(withType: .html)
-            case .slack:
-                report.generate(withType: .slack)
-            }
+            report.generate(withType: .html)
         }
+    }
+    
+    struct SlackReport: ParsableCommand {
+        static var configuration = CommandConfiguration(abstract: "Send the report to Slack.")
+        static var _commandName: String = "slack"
         
+        @Argument() var hookURL: String
+        
+        func run() throws {
+            let report = TractorReportGenerator()
+            report.generate(withType: .slack(url: hookURL))
+        }
     }
         
 }
 
-// Tractor.main(["help"])
-Tractor.main(["report", "--type=slack"])
-// Tractor.main(["report", "--type=html"])
-// Tractor.main(["log", "/Users/fabricioserralvo/Library/Developer/Xcode/DerivedData/FlakyTestsProject-gybqxibuurferncjaxlbxkwsptqj"])
+//Tractor.main(["help"])
+//Tractor.main(["report", "html"])
+//Tractor.main(["report", "slack", "url"])
+//Tractor.main(["log", "/Users/fabricioserralvo/Library/Developer/Xcode/DerivedData/FlakyTestsProject-gybqxibuurferncjaxlbxkwsptqj"])
 
