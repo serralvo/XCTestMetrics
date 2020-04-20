@@ -1,6 +1,8 @@
 # Tractor
 Welcome to **Tractor**, a command line that provides metrics about your project tests, specially the flakys. 
 
+![Tractor Report on Slack](https://github.com/serralvo/Tractor/blob/master/tractor-report.png)
+
 ## Features
 - [x] 🕵️‍♂️ Help to identify flaky tests.
 - [x] 📊 Give the big picture of project tests, number of failures, when it happened, percentage of flakiness.
