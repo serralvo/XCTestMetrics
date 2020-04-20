@@ -1,11 +1,7 @@
 import Foundation
 import TractorCore
 import TractorDisplay
-
-private struct SlackReportAttachment: Encodable {
-    let text: String
-    let color: String
-}
+import TractorEntity
 
 private struct Report: Encodable {
     let text: String
@@ -23,12 +19,43 @@ final class SlackReport {
     private func generate() -> Report {
         
         let wrapper = try! dataSource.getReportWrapper()
+        let output = try! dataSource.getOutput()
         
-        let executed = SlackReportAttachment(text: "🛠 Executed tests: *\(wrapper.numberOfTests)*", color: "#abb7b7")
-        let passed = SlackReportAttachment(text: "✅ Passed tests: *\(wrapper.numberOfSuccess)*", color: "#2ecc71")
-        let failed = SlackReportAttachment(text: "🚫 Failed tests: *\(wrapper.numberOfFailures)*", color: "#d91e18")
+        let builder = SlackReportAttachmentBuilder(source: wrapper)
         
-        return Report(text: "🚜 Tractor Report: ", attachments: [executed, passed, failed])
+        let executed = builder.build(withType: .executed)
+        let passed = builder.build(withType: .passed)
+        let failed = builder.build(withType: .failed)
+        let topFailedTest = builder.build(withType: .topFailure)
+        
+        let date = SlackReportAttachment(text: generateDateRange(with: output), color: "#abb7b7")
+        
+        return Report(
+            text: "🚜 Tractor Report",
+            attachments: [date, executed, passed, topFailedTest, failed]
+        )
+    }
+    
+    private func generateDateRange(with output: [TractorOutput]) -> String {
+        
+        guard let firstDate = output.first?.date, let lastDate = output.last?.date else { return
+            "Invalid data set"
+        }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        
+        return "📅 Results from *\(dateFormatter.string(from: firstDate))* to *\(dateFormatter.string(from: lastDate))*."
+    }
+    
+    private func testsString(with report: ReportWrapper) -> String {
+        let tests = report.failureTests.map { $0 }
+        
+        var result = ""
+        for test in tests {
+            result += " \(test.numberOfOccurrences) - \(test.failureTest.name)\n"
+        }
+        return result
     }
     
     func publish() {
