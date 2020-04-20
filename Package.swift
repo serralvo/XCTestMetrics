@@ -22,7 +22,8 @@ let package = Package(
             "Files",
             "Plot",
             "TractorEntity",
-            "TractorDisplay"
+            "TractorDisplay",
+            "TractorCore"
         ]),
         .target(name: "TractorDisplay", dependencies: []),
         .target(name: "TractorEntity", dependencies: []),
