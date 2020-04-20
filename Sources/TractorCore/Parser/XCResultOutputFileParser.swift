@@ -16,9 +16,9 @@ enum OutputReaderError: Error {
         case .getEmptyData:
             return "Cannot get any data from output.json. Check if it is empty."
         case .cannotGetFailedTestNumberForMetrics:
-            return ""
+            return "Failed to get metrics. Cannot get number of failures."
         case .cannotGetTestNumberForMetrics:
-            return ""
+            return "Failed to get metrics. Cannot get number of executed tests."
         }
     }
 }

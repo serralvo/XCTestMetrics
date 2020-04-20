@@ -123,8 +123,6 @@
 		OBJ_326 /* TractorOutput+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_23 /* TractorOutput+Codable.swift */; };
 		OBJ_327 /* TractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* TractorOutput.swift */; };
 		OBJ_334 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_345 /* ReportConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_27 /* ReportConfig.swift */; };
-		OBJ_346 /* ReportConfigGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* ReportConfigGenerator.swift */; };
 		OBJ_347 /* ReportDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_30 /* ReportDataSource.swift */; };
 		OBJ_348 /* OutputFileParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* OutputFileParser.swift */; };
 		OBJ_349 /* HTMLReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_35 /* HTMLReport.swift */; };
@@ -398,8 +396,6 @@
 		OBJ_21 /* Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Display.swift; sourceTree = "<group>"; };
 		OBJ_23 /* TractorOutput+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TractorOutput+Codable.swift"; sourceTree = "<group>"; };
 		OBJ_24 /* TractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TractorOutput.swift; sourceTree = "<group>"; };
-		OBJ_27 /* ReportConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportConfig.swift; sourceTree = "<group>"; };
-		OBJ_28 /* ReportConfigGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportConfigGenerator.swift; sourceTree = "<group>"; };
 		OBJ_30 /* ReportDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportDataSource.swift; sourceTree = "<group>"; };
 		OBJ_32 /* OutputFileParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputFileParser.swift; sourceTree = "<group>"; };
 		OBJ_35 /* HTMLReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLReport.swift; sourceTree = "<group>"; };
@@ -714,7 +710,6 @@
 		OBJ_25 /* TractorReport */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_26 /* Configuration */,
 				OBJ_29 /* DataSource */,
 				OBJ_31 /* Parser */,
 				OBJ_33 /* Reports */,
@@ -723,15 +718,6 @@
 			name = TractorReport;
 			path = Sources/TractorReport;
 			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_26 /* Configuration */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_27 /* ReportConfig.swift */,
-				OBJ_28 /* ReportConfigGenerator.swift */,
-			);
-			path = Configuration;
-			sourceTree = "<group>";
 		};
 		OBJ_29 /* DataSource */ = {
 			isa = PBXGroup;
@@ -1449,8 +1435,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_345 /* ReportConfig.swift in Sources */,
-				OBJ_346 /* ReportConfigGenerator.swift in Sources */,
 				OBJ_347 /* ReportDataSource.swift in Sources */,
 				OBJ_348 /* OutputFileParser.swift in Sources */,
 				OBJ_349 /* HTMLReport.swift in Sources */,

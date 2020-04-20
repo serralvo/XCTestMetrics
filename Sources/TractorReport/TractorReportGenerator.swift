@@ -43,7 +43,10 @@ public class TractorReportGenerator {
     
     private func generateSlackReport(rawURL: String) {
         
-        guard let url = URL(string: rawURL) else { return }
+        guard let url = URL(string: rawURL) else {
+            Display.error(message: "Invalid Slack hook URL.")
+            return
+        }
         
         Display.info(message: "Creating Slack report...")
         
