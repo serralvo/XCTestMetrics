@@ -29,7 +29,7 @@ The usage of Tractor is based on two steps: the first one is register each build
 ```
 tractor log path-to-derived-data
 ```
-- 🎉 That's it! A folder called `tractor-output` will be created to store all logs.
+- That's it! A `tractor-output` folder will be created to store all logs.
 
 ⚠️ Important, do it for every build of your project, use this tool on your continuous integration system.
 
@@ -40,18 +40,18 @@ First question, which report you want: Slack or HTML?
 - You will need to input a webhook URL:
   - Will be somethink like this: `https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX`
   - [Check here how to create a webhook.](https://api.slack.com/messaging/webhooks)
-- Just run: 
+- Run: 
 ```
 tractor report slack your-web-hook-url
 ```
-- 🎉 That's it! The message with metrics will be send to Slack.
+- That's it! The message with metrics will be send to Slack.
 
 #### HTML
-- Just run:
+- Run:
 ```
 tractor report html
 ```
-- 🎉 That's it! The report file will be stored into `tractor-report` folder.
+- That's it! The report file (index.html) will be stored into `tractor-report` folder.
 
 ## Motivation
 The first thing to do when your codebase has flaky tests is **get metrics about it**. With data you can pick the test that failed more times for example, to fix, re-write or even delete. 
