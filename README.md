@@ -6,18 +6,18 @@ Welcome to **Tractor**, a command line tool that provides metrics about your pro
 
 ![Tractor Report on Slack](https://github.com/serralvo/Tractor/blob/master/tractor-report.png)
 
-## Features ✨
+## Features
 - [x] 🕵️‍♂️ Help to identify flaky tests.
 - [x] 📊 Give the big picture of project tests, number of failures, when it happened, percentage of flakiness.
 - [x] ⚡️ Easy and fast setup.
 
-## Requirements 🏗
+## Requirements
 - Xcode 11 
 
 ## Installation 📦
 Using [Homebrew](http://brew.sh/):
 
-## Usage 🔌
+## Usage
 The usage of Tractor is based on two steps: the first one is register each build result, the second one is display all results using a report.
 
 ### First Step:
@@ -53,13 +53,13 @@ tractor report html
 ```
 - 🎉 That's it! The report file will be stored into `tractor-report` folder.
 
-## Motivation 🧡
+## Motivation
 The first thing to do when your codebase has flaky tests is **get metrics about it**. With data you can pick the test that failed more times for example, to fix, re-write or even delete. 
 
-## License 🗒
+## License
 Tractor is released under the [MIT License](https://opensource.org/licenses/MIT).
 
-## Credits 👨‍💻
+## Credits
 Made with ❤️ by [Fabrício Serralvo](https://twitter.com/serralvo_)
 
 [swift-image]:https://img.shields.io/badge/swift-5.2-orange.svg
