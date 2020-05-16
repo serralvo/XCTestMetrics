@@ -12,7 +12,7 @@ final class TractorTests: XCTestCase {
             return
         }
 
-        let fooBinary = productsDirectory.appendingPathComponent("Tractor")
+        let fooBinary = productsDirectory.appendingPathComponent("XCTestMetrics")
 
         let process = Process()
         process.executableURL = fooBinary

@@ -2,14 +2,14 @@ import Core
 import Report
 import ArgumentParser
 
-struct Tractor: ParsableCommand {
+struct XCTestMetrics: ParsableCommand {
     static var configuration = CommandConfiguration(
         abstract: "The best way to get flaky tests on your project.",
         subcommands: [Log.self, Report.self]
     )
 }
 
-extension Tractor {
+extension XCTestMetrics {
     
     struct Log: ParsableCommand {
         static var configuration = CommandConfiguration(abstract: "Creates a register about last project build.")
@@ -53,8 +53,8 @@ extension Tractor {
         
 }
 
-// Tractor.main(["help"])
-//Tractor.main(["report", "html"])
-Tractor.main(["report", "slack", ""])
-//Tractor.main(["log", "/Users/fabricioserralvo/Library/Developer/Xcode/DerivedData/FlakyTestsProject-gybqxibuurferncjaxlbxkwsptqj"])
+XCTestMetrics.main(["help"])
+// XCTestMetrics.main(["report", "html"])
+XCTestMetrics.main(["report", "slack", ""])
+// XCTestMetrics.main(["log", "/Users/fabricioserralvo/Library/Developer/Xcode/DerivedData/FlakyTestsProject-gybqxibuurferncjaxlbxkwsptqj"])
 

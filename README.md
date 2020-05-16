@@ -1,10 +1,10 @@
-# Tractor 🚜
-Welcome to **Tractor**, a command line tool that provides metrics about your project tests, focusing on the flaky.
+# XCTestMetrics
+Welcome to **XCTestMetrics**, a command line tool that provides metrics about your project tests, focusing on the flaky.
 
 [![Swift Version][swift-image]][swift-url]
 [![License][license-image]][license-url]
 
-![Tractor Report on Slack](https://github.com/serralvo/Tractor/blob/master/tractor-report.png)
+![XCTestMetrics Report on Slack](https://github.com/serralvo/Tractor/blob/master/tractor-report.png)
 
 ## Features
 - [x] 🕵️‍♂️ Help to identify flaky tests.
@@ -18,7 +18,7 @@ Welcome to **Tractor**, a command line tool that provides metrics about your pro
 Using [Homebrew](http://brew.sh/):
 
 ## Usage
-The usage of Tractor is based on two steps: the first one is register each build result, the second one is display all results using a report.
+The usage of XCTestMetrics is based on two steps: the first one is register each build result, the second one is display all results using a report.
 
 ### First Step:
 - Run project tests.
@@ -27,9 +27,9 @@ The usage of Tractor is based on two steps: the first one is register each build
 - Finally, call `log` command using derived data path:
 
 ```
-$ tractor log path-to-derived-data
+$ xc-test-metrics log path-to-derived-data
 ```
-- That's it! A `tractor-output` folder will be created to store all logs.
+- That's it! A `xctestmetrics-output` folder will be created to store all logs.
 
 ⚠️ Important, do it for every build of your project, use this tool on your continuous integration system.
 
@@ -42,22 +42,22 @@ First question, which report you want: Slack or HTML?
   - [Check here how to create a webhook.](https://api.slack.com/messaging/webhooks)
 - Run: 
 ```
-$ tractor report slack your-web-hook-url
+$ xc-test-metrics report slack your-web-hook-url
 ```
 - That's it! The message with metrics will be send to Slack.
 
 #### HTML
 - Run:
 ```
-$ tractor report html
+$ xc-test-metrics report html
 ```
-- That's it! The report file (index.html) will be stored into `tractor-report` folder.
+- That's it! The report file (index.html) will be stored into `xctestmetrics-report` folder.
 
 ## Motivation
 The first thing to do when your codebase has flaky tests is **get metrics about it**. With data you can pick the test that failed more times for example, to fix, re-write or even delete. 
 
 ## License
-Tractor is released under the [MIT License](https://opensource.org/licenses/MIT).
+XCTestMetrics is released under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Credits
 Made with ❤️ by [Fabrício Serralvo](https://twitter.com/serralvo_)

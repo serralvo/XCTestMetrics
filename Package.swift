@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "Tractor",
+    name: "XCTestMetrics",
     dependencies: [
         .package(url: "https://github.com/JohnSundell/Files", from: "4.0.0"),
         .package(url: "https://github.com/JohnSundell/ShellOut.git", from: "2.0.0"),
@@ -27,11 +27,11 @@ let package = Package(
         ]),
         .target(name: "Display", dependencies: []),
         .target(name: "Entity", dependencies: []),
-        .target(name: "Tractor", dependencies: [
+        .target(name: "XCTestMetrics", dependencies: [
             "Core",
             "Report",
             "ArgumentParser"
         ]),
-        .testTarget(name: "TractorTests", dependencies: ["Tractor"]),
+        .testTarget(name: "TractorTests", dependencies: ["XCTestMetrics"]),
     ]
 )
