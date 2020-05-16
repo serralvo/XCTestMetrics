@@ -17,7 +17,7 @@ extension Tractor {
         @Argument() var derivedDataPath: String
         
         func run() throws {
-            let register = TractorRegister(path: derivedDataPath)
+            let register = LogRegister(path: derivedDataPath)
             try register.createTestRegister()
         }
     }
@@ -34,7 +34,7 @@ extension Tractor {
         static var _commandName: String = "html"
         
         func run() throws {
-            let report = TractorReportGenerator()
+            let report = ReportGenerator()
             report.generate(withType: .html)
         }
     }
@@ -46,7 +46,7 @@ extension Tractor {
         @Argument() var hookURL: String
         
         func run() throws {
-            let report = TractorReportGenerator()
+            let report = ReportGenerator()
             report.generate(withType: .slack(url: hookURL))
         }
     }

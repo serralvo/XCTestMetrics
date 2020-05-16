@@ -1,6 +1,6 @@
 import Foundation
 
-public struct TractorOutput: Codable {
+public struct XCTestMetricsOutput: Codable {
     public let testMetrics: TestMetrics
     public let failures: [FailureTest]
     public let date: Date

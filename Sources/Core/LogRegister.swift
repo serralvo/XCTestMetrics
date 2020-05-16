@@ -3,11 +3,11 @@ import Files
 import ShellOut
 import Display
 
-enum TractorRegisterError: Error {
+enum RegisterError: Error {
     case cannotGetResultFilePath
 }
 
-public class TractorRegister {
+public class LogRegister {
     
     private let path: String
 
@@ -35,11 +35,11 @@ public class TractorRegister {
         let xcResultExtension = ".xcresult"
         
         guard let derivedData = try? Folder.init(path: self.path + testFolderPath) else {
-            throw TractorRegisterError.cannotGetResultFilePath
+            throw RegisterError.cannotGetResultFilePath
         }
         
         guard let resultFilePath = derivedData.subfolders.first(where: { $0.name.contains(xcResultExtension) } )?.path else {
-            throw TractorRegisterError.cannotGetResultFilePath
+            throw RegisterError.cannotGetResultFilePath
         }
         
         return resultFilePath
@@ -47,18 +47,18 @@ public class TractorRegister {
     
     
     private func persistOutputJSON() throws {
-        let tractorOutput = try XCResultOutputFileParser().getOutput()
+        let output = try XCResultOutputFileParser().getOutput()
         
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
         
         // TODO: Update this one
         let resultName = formatter.string(from: Date())
-        let persistor = OutputPersistor(with: tractorOutput, fileName: resultName)
+        let persistor = OutputPersistor(with: output, fileName: resultName)
         try persistor.persistJSON()
         // try persistor.commitOutputFile()
         
-        Display.success(message: "Log has been saved. Check it on tractor-output folder.")
+        Display.success(message: "Log has been saved. Check it on xctestmetrics-output folder.")
     }
     
 }

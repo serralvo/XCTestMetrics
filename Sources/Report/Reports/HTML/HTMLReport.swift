@@ -15,7 +15,7 @@ final class HTMLReport {
         let listNode = list.generate()
         
         let html = HTML(
-            .head(.title("Tractor Report"), .stylesheet("styles.css")),
+            .head(.title("XCTestMetrics Report"), .stylesheet("styles.css")),
             .body(
                 .div(listNode)
             )

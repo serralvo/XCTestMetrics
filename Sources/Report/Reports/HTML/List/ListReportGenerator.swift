@@ -50,7 +50,7 @@ private extension Node where Context: HTML.BodyContext {
         // TODO: Create a for each for item div
         return .div(
             .class("summary"),
-            .div(.class("highlight"), .p("Tractor Report")),
+            .div(.class("highlight"), .p("Report")),
             .div(
                 .class("item"),
                 .div(.class("title"), .p("executed tests")),

@@ -53,12 +53,12 @@ final class SlackReport {
         let date = SlackReportAttachment(text: generateDateRange(with: output), color: "#abb7b7")
         
         return Report(
-            text: "🚜 Tractor Report",
+            text: "XCTestMetrics Report",
             attachments: [date, executed, passed, topFailedTest, failed]
         )
     }
     
-    private func generateDateRange(with output: [TractorOutput]) -> String {
+    private func generateDateRange(with output: [XCTestMetricsOutput]) -> String {
         
         guard let firstDate = output.first?.date, let lastDate = output.last?.date else { return
             "Invalid data set"

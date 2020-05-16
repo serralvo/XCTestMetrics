@@ -14,7 +14,7 @@ final class OutputFileParser: ReportDataSource {
         do {
             let folder = try getOutputFolder()
             let content = getRawContent(for: folder)
-            let outputs = getTractorOutput(with: content)
+            let outputs = getOutput(with: content)
             
             // TODO: Move this logic to a expecific one
             let success = outputs.map { $0.testMetrics }.reduce(0, { count, testMetrics in
@@ -47,11 +47,11 @@ final class OutputFileParser: ReportDataSource {
         
     }
     
-    func getOutput() throws -> [TractorOutput] {
+    func getOutput() throws -> [XCTestMetricsOutput] {
         do {
             let folder = try getOutputFolder()
             let content = getRawContent(for: folder)
-            return getTractorOutput(with: content)
+            return getOutput(with: content)
         } catch {
             throw error
         }
@@ -59,7 +59,7 @@ final class OutputFileParser: ReportDataSource {
     
     private func getOutputFolder() throws -> Folder {
         do {
-            let folder = try Folder.current.subfolder(named: "tractor-output")
+            let folder = try Folder.current.subfolder(named: "xctestmetrics-output")
             return folder
         } catch {
             throw OutputFileParserError.outputFolderNotFound
@@ -69,7 +69,7 @@ final class OutputFileParser: ReportDataSource {
     private func getRawContent(for folder: Folder) -> [String] {
         let files = folder.files
         // maybe throw if file is empty
-        let fileNamePrefix = "to-"
+        let fileNamePrefix = "xctm-"
         
         var rawContent: [String] = []
         for file in files where file.name.contains(fileNamePrefix) {
@@ -82,14 +82,14 @@ final class OutputFileParser: ReportDataSource {
         return rawContent
     }
     
-    private func getTractorOutput(with rawContent: [String]) -> [TractorOutput] {
-        var output: [TractorOutput] = []
+    private func getOutput(with rawContent: [String]) -> [XCTestMetricsOutput] {
+        var output: [XCTestMetricsOutput] = []
         
         for raw in rawContent {
             guard let data = raw.data(using: .utf8) else { break }
             
-            if let tractorOutput = try? TractorOutput.decoder.decode(TractorOutput.self, from: data) {
-                output.append(tractorOutput)
+            if let decodedOutput = try? XCTestMetricsOutput.decoder.decode(XCTestMetricsOutput.self, from: data) {
+                output.append(decodedOutput)
             }
         }
         

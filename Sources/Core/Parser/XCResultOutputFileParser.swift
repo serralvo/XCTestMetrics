@@ -29,7 +29,7 @@ final class XCResultOutputFileParser {
     
     init() {}
     
-    func getOutput() throws -> TractorOutput {
+    func getOutput() throws -> XCTestMetricsOutput {
         
         do {
             let data = try readOutputFile()
@@ -38,17 +38,17 @@ final class XCResultOutputFileParser {
             let failures = output.issues.testFailureSummaries?.failures ?? []
             let metrics = try createTestMetrics(with: output.metrics)
             
-            let tractorOutput: TractorOutput
+            let metricsOutput: XCTestMetricsOutput
             if failures.isEmpty == true {
-                tractorOutput = TractorOutput(testMetrics: metrics, failures: [], date: Date())
+                metricsOutput = XCTestMetricsOutput(testMetrics: metrics, failures: [], date: Date())
             } else {
                 let mapped = failures.map {
                     FailureTest(name: $0.testCaseName.value, target: $0.producingTarget.value)
                 }
-                tractorOutput = TractorOutput(testMetrics: metrics, failures: mapped, date: Date())
+                metricsOutput = XCTestMetricsOutput(testMetrics: metrics, failures: mapped, date: Date())
             }
             
-            return tractorOutput
+            return metricsOutput
         } catch {
             throw error
         }

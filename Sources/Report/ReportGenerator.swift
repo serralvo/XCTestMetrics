@@ -4,7 +4,7 @@ import Plot
 import Entity
 import Display
 
-public class TractorReportGenerator {
+public class ReportGenerator {
     
     public enum ReportType {
         case slack(url: String)
@@ -33,9 +33,9 @@ public class TractorReportGenerator {
         let cssData = StyleFile.content.data(using: .utf8)
         
         do {
-            try Folder.current.createFile(at: "tractor-report/report.html", contents: htmlData)
-            try Folder.current.createFile(at: "tractor-report/styles.css", contents: cssData)
-            Display.success(message: "Report has been saved. Check it on tractor-report folder.")
+            try Folder.current.createFile(at: "xctestmetrics-report/report.html", contents: htmlData)
+            try Folder.current.createFile(at: "xctestmetrics-report/styles.css", contents: cssData)
+            Display.success(message: "Report has been saved. Check it on xctestmetrics-report folder.")
         } catch  {
             Display.error(message: error.localizedDescription)
         }

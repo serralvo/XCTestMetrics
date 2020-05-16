@@ -3,7 +3,7 @@ import Entity
 
 protocol ReportDataSource {
     func getReportWrapper() throws -> ReportWrapper
-    func getOutput() throws -> [TractorOutput]
+    func getOutput() throws -> [XCTestMetricsOutput]
 }
 
 struct FailureTestReport {

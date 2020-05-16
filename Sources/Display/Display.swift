@@ -11,11 +11,11 @@ public class Display {
     }
     
     public static func info(message: String) {
-        print("🚜 \(message)")
+        print("ℹ️ \(message)")
     }
     
     public static func success(message: String) {
-        print("🎉 Success! \(message)")
+        print("✅ Success! \(message)")
     }
     
 }

@@ -19,21 +19,21 @@ enum OutputPersistorError: Error {
 
 final class OutputPersistor {
     
-    private let tractorOutputToPersist: TractorOutput
+    private let outputToPersist: XCTestMetricsOutput
     private let outputFileName: String
     
-    init(with output: TractorOutput, fileName: String) {
-        tractorOutputToPersist = output
+    init(with output: XCTestMetricsOutput, fileName: String) {
+        outputToPersist = output
         outputFileName = fileName
     }
     
     func persistJSON() throws {
         do {
-            let encoder = TractorOutput.encoder
-            let fileToSave = try encoder.encode(tractorOutputToPersist)
+            let encoder = XCTestMetricsOutput.encoder
+            let fileToSave = try encoder.encode(outputToPersist)
 
             try Folder.current.createFile(
-                at: "tractor-output/to-\(outputFileName).json",
+                at: "xctestmetrics-output/xctm-\(outputFileName).json",
                 contents: fileToSave
             )
         } catch {
@@ -43,7 +43,7 @@ final class OutputPersistor {
     
     func commitOutputFile() throws {
         do {
-            try shellOut(to: .gitCommit(message: "Added tractor register"))
+            try shellOut(to: .gitCommit(message: "Added XCTestMetrics register"))
             try shellOut(to: .gitPush())
         } catch {
             throw OutputPersistorError.cannotCommitOutputFile

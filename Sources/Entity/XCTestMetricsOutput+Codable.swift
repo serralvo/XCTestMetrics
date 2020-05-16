@@ -1,12 +1,12 @@
 import Foundation
 
-public extension TractorOutput {
+public extension XCTestMetricsOutput {
     
     static var dateFormat: String = "yyyy-MM-dd HH:mm:ss"
     
     static var encoder: JSONEncoder {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = TractorOutput.dateFormat
+        dateFormatter.dateFormat = XCTestMetricsOutput.dateFormat
         
         let encoder = JSONEncoder()
         encoder.dateEncodingStrategy = .formatted(dateFormatter)
@@ -16,7 +16,7 @@ public extension TractorOutput {
     
     static var decoder: JSONDecoder {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = TractorOutput.dateFormat
+        dateFormatter.dateFormat = XCTestMetricsOutput.dateFormat
         
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .formatted(dateFormatter)
