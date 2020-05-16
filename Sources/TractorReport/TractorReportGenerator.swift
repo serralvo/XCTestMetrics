@@ -2,7 +2,7 @@ import Files
 import Foundation
 import Plot
 import TractorEntity
-import TractorDisplay
+import Display
 
 public class TractorReportGenerator {
     

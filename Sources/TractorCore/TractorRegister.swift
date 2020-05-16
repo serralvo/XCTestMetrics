@@ -1,7 +1,7 @@
 import Foundation
 import Files
 import ShellOut
-import TractorDisplay
+import Display
 
 enum TractorRegisterError: Error {
     case cannotGetResultFilePath

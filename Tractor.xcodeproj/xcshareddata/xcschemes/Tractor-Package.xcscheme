@@ -14,37 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Tractor::TractorDisplay"
-               BuildableName = "TractorDisplay.framework"
-               BlueprintName = "TractorDisplay"
-               ReferencedContainer = "container:Tractor.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Tractor::TractorCore"
-               BuildableName = "TractorCore.framework"
-               BlueprintName = "TractorCore"
-               ReferencedContainer = "container:Tractor.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Tractor::TractorReport"
                BuildableName = "TractorReport.framework"
                BlueprintName = "TractorReport"
+               ReferencedContainer = "container:Tractor.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Tractor::Display"
+               BuildableName = "Display.framework"
+               BlueprintName = "Display"
                ReferencedContainer = "container:Tractor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -73,6 +59,20 @@
                BlueprintIdentifier = "Tractor::Tractor"
                BuildableName = "Tractor"
                BlueprintName = "Tractor"
+               ReferencedContainer = "container:Tractor.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Tractor::TractorCore"
+               BuildableName = "TractorCore.framework"
+               BlueprintName = "TractorCore"
                ReferencedContainer = "container:Tractor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

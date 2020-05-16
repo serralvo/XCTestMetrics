@@ -1,6 +1,6 @@
 import Foundation
 import TractorCore
-import TractorDisplay
+import Display
 import TractorEntity
 
 private struct Report: Encodable {

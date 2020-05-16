@@ -16,16 +16,16 @@ let package = Package(
             "Files",
             "ShellOut",
             "TractorEntity",
-            "TractorDisplay"
+            "Display"
         ]),
         .target(name: "TractorReport", dependencies: [
             "Files",
             "Plot",
             "TractorEntity",
-            "TractorDisplay",
+            "Display",
             "TractorCore"
         ]),
-        .target(name: "TractorDisplay", dependencies: []),
+        .target(name: "Display", dependencies: []),
         .target(name: "TractorEntity", dependencies: []),
         .target(name: "Tractor", dependencies: [
             "TractorCore",
