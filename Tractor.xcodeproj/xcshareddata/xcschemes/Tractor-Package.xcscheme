@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Tractor::TractorReport"
-               BuildableName = "TractorReport.framework"
-               BlueprintName = "TractorReport"
-               ReferencedContainer = "container:Tractor.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "Tractor::Entity"
-               BuildableName = "Entity.framework"
-               BlueprintName = "Entity"
+               BlueprintIdentifier = "Tractor::Report"
+               BuildableName = "Report.framework"
+               BlueprintName = "Report"
                ReferencedContainer = "container:Tractor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,6 +31,20 @@
                BlueprintIdentifier = "Tractor::Display"
                BuildableName = "Display.framework"
                BlueprintName = "Display"
+               ReferencedContainer = "container:Tractor.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "Tractor::Entity"
+               BuildableName = "Entity.framework"
+               BlueprintName = "Entity"
                ReferencedContainer = "container:Tractor.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

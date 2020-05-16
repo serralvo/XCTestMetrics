@@ -1,5 +1,5 @@
 import TractorCore
-import TractorReport
+import Report
 import ArgumentParser
 
 struct Tractor: ParsableCommand {

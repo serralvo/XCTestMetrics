@@ -18,7 +18,7 @@ let package = Package(
             "Entity",
             "Display"
         ]),
-        .target(name: "TractorReport", dependencies: [
+        .target(name: "Report", dependencies: [
             "Files",
             "Plot",
             "Entity",
@@ -29,7 +29,7 @@ let package = Package(
         .target(name: "Entity", dependencies: []),
         .target(name: "Tractor", dependencies: [
             "TractorCore",
-            "TractorReport",
+            "Report",
             "ArgumentParser"
         ]),
         .testTarget(name: "TractorTests", dependencies: ["Tractor"]),

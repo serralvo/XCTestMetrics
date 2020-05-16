@@ -58,13 +58,13 @@
             "Files::SwiftPMPackageDescription",
             "Plot::Plot",
             "Plot::SwiftPMPackageDescription",
+            "Tractor::Report",
             "ShellOut::ShellOut",
             "ShellOut::SwiftPMPackageDescription",
             "Tractor::Tractor",
             "Tractor::TractorCore",
             "Tractor::SwiftPMPackageDescription",
             "Tractor::TractorPackageTests::ProductTarget",
-            "Tractor::TractorReport",
             "Tractor::TractorTests",
             "swift-argument-parser::SwiftPMPackageDescription"
          );
@@ -276,10 +276,13 @@
       "OBJ_13" = {
          isa = "PBXGroup";
          children = (
-            "OBJ_14"
+            "OBJ_14",
+            "OBJ_16",
+            "OBJ_18",
+            "OBJ_28"
          );
-         name = "Tractor";
-         path = "Sources/Tractor";
+         name = "Report";
+         path = "Sources/Report";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_130" = {
@@ -341,24 +344,28 @@
       "OBJ_138" = {
          isa = "PBXGroup";
          children = (
+            "swift-argument-parser::ArgumentParser::Product",
+            "Tractor::Tractor::Product",
+            "ShellOut::ShellOut::Product",
+            "Tractor::Report::Product",
             "Tractor::Display::Product",
+            "Tractor::TractorTests::Product",
+            "Plot::Plot::Product",
             "Tractor::Entity::Product",
             "Tractor::TractorCore::Product",
-            "Files::Files::Product",
-            "swift-argument-parser::ArgumentParser::Product",
-            "ShellOut::ShellOut::Product",
-            "Tractor::TractorReport::Product",
-            "Tractor::TractorTests::Product",
-            "Tractor::Tractor::Product",
-            "Plot::Plot::Product"
+            "Files::Files::Product"
          );
          name = "Products";
          path = "";
          sourceTree = "BUILT_PRODUCTS_DIR";
       };
       "OBJ_14" = {
-         isa = "PBXFileReference";
-         path = "main.swift";
+         isa = "PBXGroup";
+         children = (
+            "OBJ_15"
+         );
+         name = "DataSource";
+         path = "DataSource";
          sourceTree = "<group>";
       };
       "OBJ_149" = {
@@ -367,16 +374,9 @@
          sourceTree = "<group>";
       };
       "OBJ_15" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_16",
-            "OBJ_18",
-            "OBJ_20",
-            "OBJ_24"
-         );
-         name = "TractorCore";
-         path = "Sources/TractorCore";
-         sourceTree = "SOURCE_ROOT";
+         isa = "PBXFileReference";
+         path = "ReportDataSource.swift";
+         sourceTree = "<group>";
       };
       "OBJ_150" = {
          isa = "PBXFileReference";
@@ -530,8 +530,8 @@
          children = (
             "OBJ_17"
          );
-         name = "HTTP";
-         path = "HTTP";
+         name = "Parser";
+         path = "Parser";
          sourceTree = "<group>";
       };
       "OBJ_160" = {
@@ -576,7 +576,7 @@
       };
       "OBJ_17" = {
          isa = "PBXFileReference";
-         path = "HTTP.swift";
+         path = "OutputFileParser.swift";
          sourceTree = "<group>";
       };
       "OBJ_170" = {
@@ -622,10 +622,11 @@
       "OBJ_18" = {
          isa = "PBXGroup";
          children = (
-            "OBJ_19"
+            "OBJ_19",
+            "OBJ_25"
          );
-         name = "Output";
-         path = "Output";
+         name = "Reports";
+         path = "Reports";
          sourceTree = "<group>";
       };
       "OBJ_180" = {
@@ -708,8 +709,14 @@
          name = "Debug";
       };
       "OBJ_19" = {
-         isa = "PBXFileReference";
-         path = "OutputPersistor.swift";
+         isa = "PBXGroup";
+         children = (
+            "OBJ_20",
+            "OBJ_21",
+            "OBJ_23"
+         );
+         name = "HTML";
+         path = "HTML";
          sourceTree = "<group>";
       };
       "OBJ_190" = {
@@ -880,14 +887,8 @@
          defaultConfigurationName = "Release";
       };
       "OBJ_20" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_21",
-            "OBJ_22",
-            "OBJ_23"
-         );
-         name = "Parser";
-         path = "Parser";
+         isa = "PBXFileReference";
+         path = "HTMLReport.swift";
          sourceTree = "<group>";
       };
       "OBJ_200" = {
@@ -1006,8 +1007,12 @@
          );
       };
       "OBJ_21" = {
-         isa = "PBXFileReference";
-         path = "ReportModels.swift";
+         isa = "PBXGroup";
+         children = (
+            "OBJ_22"
+         );
+         name = "Helpers";
+         path = "Helpers";
          sourceTree = "<group>";
       };
       "OBJ_210" = {
@@ -1211,7 +1216,7 @@
       };
       "OBJ_22" = {
          isa = "PBXFileReference";
-         path = "XCResultOutputFileParser.swift";
+         path = "StyleFile.swift";
          sourceTree = "<group>";
       };
       "OBJ_220" = {
@@ -1255,8 +1260,12 @@
          fileRef = "OBJ_58";
       };
       "OBJ_23" = {
-         isa = "PBXFileReference";
-         path = "XCResultProcessor.swift";
+         isa = "PBXGroup";
+         children = (
+            "OBJ_24"
+         );
+         name = "List";
+         path = "List";
          sourceTree = "<group>";
       };
       "OBJ_230" = {
@@ -1301,7 +1310,7 @@
       };
       "OBJ_24" = {
          isa = "PBXFileReference";
-         path = "TractorRegister.swift";
+         path = "ListReportGenerator.swift";
          sourceTree = "<group>";
       };
       "OBJ_240" = {
@@ -1348,13 +1357,11 @@
          isa = "PBXGroup";
          children = (
             "OBJ_26",
-            "OBJ_28",
-            "OBJ_30",
-            "OBJ_40"
+            "OBJ_27"
          );
-         name = "TractorReport";
-         path = "Sources/TractorReport";
-         sourceTree = "SOURCE_ROOT";
+         name = "Slack";
+         path = "Slack";
+         sourceTree = "<group>";
       };
       "OBJ_250" = {
          isa = "PBXBuildFile";
@@ -1397,12 +1404,8 @@
          fileRef = "OBJ_88";
       };
       "OBJ_26" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_27"
-         );
-         name = "DataSource";
-         path = "DataSource";
+         isa = "PBXFileReference";
+         path = "SlackReport.swift";
          sourceTree = "<group>";
       };
       "OBJ_260" = {
@@ -1483,7 +1486,7 @@
       };
       "OBJ_27" = {
          isa = "PBXFileReference";
-         path = "ReportDataSource.swift";
+         path = "SlackReportAttachmentBuilder.swift";
          sourceTree = "<group>";
       };
       "OBJ_270" = {
@@ -1510,11 +1513,13 @@
             HEADER_SEARCH_PATHS = (
                "$(inherited)"
             );
-            INFOPLIST_FILE = "Tractor.xcodeproj/ShellOut_Info.plist";
+            INFOPLIST_FILE = "Tractor.xcodeproj/Report_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
                "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
             );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
             OTHER_CFLAGS = (
                "$(inherited)"
             );
@@ -1524,15 +1529,17 @@
             OTHER_SWIFT_FLAGS = (
                "$(inherited)"
             );
-            PRODUCT_BUNDLE_IDENTIFIER = "ShellOut";
+            PRODUCT_BUNDLE_IDENTIFIER = "Report";
             PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
             PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
             SKIP_INSTALL = "YES";
             SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
                "$(inherited)"
             );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "ShellOut";
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "Report";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
          };
          name = "Debug";
       };
@@ -1547,11 +1554,13 @@
             HEADER_SEARCH_PATHS = (
                "$(inherited)"
             );
-            INFOPLIST_FILE = "Tractor.xcodeproj/ShellOut_Info.plist";
+            INFOPLIST_FILE = "Tractor.xcodeproj/Report_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
                "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
             );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
             OTHER_CFLAGS = (
                "$(inherited)"
             );
@@ -1561,251 +1570,146 @@
             OTHER_SWIFT_FLAGS = (
                "$(inherited)"
             );
-            PRODUCT_BUNDLE_IDENTIFIER = "ShellOut";
+            PRODUCT_BUNDLE_IDENTIFIER = "Report";
             PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
             PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
             SKIP_INSTALL = "YES";
             SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
                "$(inherited)"
             );
-            SWIFT_VERSION = "4.2";
-            TARGET_NAME = "ShellOut";
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "Report";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
          };
          name = "Release";
       };
       "OBJ_275" = {
          isa = "PBXSourcesBuildPhase";
          files = (
-            "OBJ_276"
+            "OBJ_276",
+            "OBJ_277",
+            "OBJ_278",
+            "OBJ_279",
+            "OBJ_280",
+            "OBJ_281",
+            "OBJ_282",
+            "OBJ_283"
          );
       };
       "OBJ_276" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_134";
+         fileRef = "OBJ_15";
       };
       "OBJ_277" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-         );
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_17";
+      };
+      "OBJ_278" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_20";
       };
       "OBJ_279" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_280",
-            "OBJ_281"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_22";
       };
       "OBJ_28" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_29"
-         );
-         name = "Parser";
-         path = "Parser";
+         isa = "PBXFileReference";
+         path = "TractorReportGenerator.swift";
          sourceTree = "<group>";
       };
       "OBJ_280" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4.2",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
-               "-package-description-version",
-               "4.2.0"
-            );
-            SWIFT_VERSION = "4.2";
-         };
-         name = "Debug";
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_24";
       };
       "OBJ_281" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "4.2",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
-               "-package-description-version",
-               "4.2.0"
-            );
-            SWIFT_VERSION = "4.2";
-         };
-         name = "Release";
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_26";
       };
       "OBJ_282" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_283"
-         );
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_27";
       };
       "OBJ_283" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_133";
+         fileRef = "OBJ_28";
       };
-      "OBJ_285" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_286",
-            "OBJ_287"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
-      };
-      "OBJ_286" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "Tractor.xcodeproj/Tractor_Info.plist";
-            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-               "@executable_path"
-            );
-            MACOSX_DEPLOYMENT_TARGET = "10.10";
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
-            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
-            SWIFT_VERSION = "5.0";
-            TARGET_NAME = "Tractor";
-            TVOS_DEPLOYMENT_TARGET = "9.0";
-            WATCHOS_DEPLOYMENT_TARGET = "2.0";
-         };
-         name = "Debug";
-      };
-      "OBJ_287" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "Tractor.xcodeproj/Tractor_Info.plist";
-            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-               "@executable_path"
-            );
-            MACOSX_DEPLOYMENT_TARGET = "10.10";
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
-            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
-            SWIFT_VERSION = "5.0";
-            TARGET_NAME = "Tractor";
-            TVOS_DEPLOYMENT_TARGET = "9.0";
-            WATCHOS_DEPLOYMENT_TARGET = "2.0";
-         };
-         name = "Release";
-      };
-      "OBJ_288" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_289"
-         );
-      };
-      "OBJ_289" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_14";
-      };
-      "OBJ_29" = {
-         isa = "PBXFileReference";
-         path = "OutputFileParser.swift";
-         sourceTree = "<group>";
-      };
-      "OBJ_290" = {
+      "OBJ_284" = {
          isa = "PBXFrameworksBuildPhase";
          files = (
-            "OBJ_291",
-            "OBJ_292",
-            "OBJ_293",
-            "OBJ_294",
-            "OBJ_295",
-            "OBJ_296",
-            "OBJ_297",
-            "OBJ_298"
+            "OBJ_285",
+            "OBJ_286",
+            "OBJ_287",
+            "OBJ_288",
+            "OBJ_289",
+            "OBJ_290"
          );
       };
-      "OBJ_291" = {
-         isa = "PBXBuildFile";
-         fileRef = "swift-argument-parser::ArgumentParser::Product";
-      };
-      "OBJ_292" = {
-         isa = "PBXBuildFile";
-         fileRef = "Tractor::TractorReport::Product";
-      };
-      "OBJ_293" = {
+      "OBJ_285" = {
          isa = "PBXBuildFile";
          fileRef = "Plot::Plot::Product";
       };
-      "OBJ_294" = {
+      "OBJ_286" = {
          isa = "PBXBuildFile";
          fileRef = "Tractor::TractorCore::Product";
       };
-      "OBJ_295" = {
+      "OBJ_287" = {
          isa = "PBXBuildFile";
          fileRef = "ShellOut::ShellOut::Product";
       };
-      "OBJ_296" = {
+      "OBJ_288" = {
          isa = "PBXBuildFile";
          fileRef = "Files::Files::Product";
       };
-      "OBJ_297" = {
+      "OBJ_289" = {
          isa = "PBXBuildFile";
          fileRef = "Tractor::Display::Product";
       };
-      "OBJ_298" = {
+      "OBJ_29" = {
+         isa = "PBXGroup";
+         children = (
+            "OBJ_30"
+         );
+         name = "Tractor";
+         path = "Sources/Tractor";
+         sourceTree = "SOURCE_ROOT";
+      };
+      "OBJ_290" = {
          isa = "PBXBuildFile";
          fileRef = "Tractor::Entity::Product";
       };
-      "OBJ_299" = {
+      "OBJ_291" = {
          isa = "PBXTargetDependency";
-         target = "swift-argument-parser::ArgumentParser";
+         target = "Plot::Plot";
+      };
+      "OBJ_292" = {
+         isa = "PBXTargetDependency";
+         target = "Tractor::TractorCore";
+      };
+      "OBJ_294" = {
+         isa = "PBXTargetDependency";
+         target = "ShellOut::ShellOut";
+      };
+      "OBJ_296" = {
+         isa = "PBXTargetDependency";
+         target = "Files::Files";
+      };
+      "OBJ_297" = {
+         isa = "PBXTargetDependency";
+         target = "Tractor::Display";
+      };
+      "OBJ_298" = {
+         isa = "PBXTargetDependency";
+         target = "Tractor::Entity";
+      };
+      "OBJ_299" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_300",
+            "OBJ_301"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
       };
       "OBJ_3" = {
          isa = "XCBuildConfiguration";
@@ -1850,67 +1754,182 @@
          name = "Debug";
       };
       "OBJ_30" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_31",
-            "OBJ_37"
-         );
-         name = "Reports";
-         path = "Reports";
+         isa = "PBXFileReference";
+         path = "main.swift";
          sourceTree = "<group>";
       };
       "OBJ_300" = {
-         isa = "PBXTargetDependency";
-         target = "Tractor::TractorReport";
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "Tractor.xcodeproj/ShellOut_Info.plist";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "ShellOut";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "4.2";
+            TARGET_NAME = "ShellOut";
+         };
+         name = "Debug";
+      };
+      "OBJ_301" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "Tractor.xcodeproj/ShellOut_Info.plist";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "ShellOut";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "4.2";
+            TARGET_NAME = "ShellOut";
+         };
+         name = "Release";
       };
       "OBJ_302" = {
-         isa = "PBXTargetDependency";
-         target = "Plot::Plot";
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_303"
+         );
       };
       "OBJ_303" = {
-         isa = "PBXTargetDependency";
-         target = "Tractor::TractorCore";
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_134";
       };
-      "OBJ_305" = {
-         isa = "PBXTargetDependency";
-         target = "ShellOut::ShellOut";
+      "OBJ_304" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+         );
       };
       "OBJ_306" = {
-         isa = "PBXTargetDependency";
-         target = "Files::Files";
-      };
-      "OBJ_307" = {
-         isa = "PBXTargetDependency";
-         target = "Tractor::Display";
-      };
-      "OBJ_308" = {
-         isa = "PBXTargetDependency";
-         target = "Tractor::Entity";
-      };
-      "OBJ_309" = {
          isa = "XCConfigurationList";
          buildConfigurations = (
-            "OBJ_310",
-            "OBJ_311"
+            "OBJ_307",
+            "OBJ_308"
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
+      };
+      "OBJ_307" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "4.2",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "4.2.0"
+            );
+            SWIFT_VERSION = "4.2";
+         };
+         name = "Debug";
+      };
+      "OBJ_308" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "4.2",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "4.2.0"
+            );
+            SWIFT_VERSION = "4.2";
+         };
+         name = "Release";
+      };
+      "OBJ_309" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_310"
+         );
       };
       "OBJ_31" = {
          isa = "PBXGroup";
          children = (
             "OBJ_32",
-            "OBJ_33",
-            "OBJ_35"
+            "OBJ_34",
+            "OBJ_36",
+            "OBJ_40"
          );
-         name = "HTML";
-         path = "HTML";
-         sourceTree = "<group>";
+         name = "TractorCore";
+         path = "Sources/TractorCore";
+         sourceTree = "SOURCE_ROOT";
       };
       "OBJ_310" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_133";
+      };
+      "OBJ_312" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_313",
+            "OBJ_314"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_313" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
-            ENABLE_TESTABILITY = "YES";
             FRAMEWORK_SEARCH_PATHS = (
                "$(inherited)",
                "$(PLATFORM_DIR)/Developer/Library/Frameworks"
@@ -1918,11 +1937,12 @@
             HEADER_SEARCH_PATHS = (
                "$(inherited)"
             );
-            INFOPLIST_FILE = "Tractor.xcodeproj/TractorCore_Info.plist";
+            INFOPLIST_FILE = "Tractor.xcodeproj/Tractor_Info.plist";
             IPHONEOS_DEPLOYMENT_TARGET = "8.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+               "@executable_path"
             );
             MACOSX_DEPLOYMENT_TARGET = "10.10";
             OTHER_CFLAGS = (
@@ -1934,24 +1954,21 @@
             OTHER_SWIFT_FLAGS = (
                "$(inherited)"
             );
-            PRODUCT_BUNDLE_IDENTIFIER = "TractorCore";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
             SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
                "$(inherited)"
             );
+            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
+            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
             SWIFT_VERSION = "5.0";
-            TARGET_NAME = "TractorCore";
+            TARGET_NAME = "Tractor";
             TVOS_DEPLOYMENT_TARGET = "9.0";
             WATCHOS_DEPLOYMENT_TARGET = "2.0";
          };
          name = "Debug";
       };
-      "OBJ_311" = {
+      "OBJ_314" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
-            ENABLE_TESTABILITY = "YES";
             FRAMEWORK_SEARCH_PATHS = (
                "$(inherited)",
                "$(PLATFORM_DIR)/Developer/Library/Frameworks"
@@ -1959,11 +1976,12 @@
             HEADER_SEARCH_PATHS = (
                "$(inherited)"
             );
-            INFOPLIST_FILE = "Tractor.xcodeproj/TractorCore_Info.plist";
+            INFOPLIST_FILE = "Tractor.xcodeproj/Tractor_Info.plist";
             IPHONEOS_DEPLOYMENT_TARGET = "8.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+               "@executable_path"
             );
             MACOSX_DEPLOYMENT_TARGET = "10.10";
             OTHER_CFLAGS = (
@@ -1975,407 +1993,394 @@
             OTHER_SWIFT_FLAGS = (
                "$(inherited)"
             );
-            PRODUCT_BUNDLE_IDENTIFIER = "TractorCore";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
             SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
                "$(inherited)"
             );
+            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
+            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
             SWIFT_VERSION = "5.0";
-            TARGET_NAME = "TractorCore";
+            TARGET_NAME = "Tractor";
             TVOS_DEPLOYMENT_TARGET = "9.0";
             WATCHOS_DEPLOYMENT_TARGET = "2.0";
          };
          name = "Release";
       };
-      "OBJ_312" = {
+      "OBJ_315" = {
          isa = "PBXSourcesBuildPhase";
          files = (
-            "OBJ_313",
-            "OBJ_314",
-            "OBJ_315",
-            "OBJ_316",
-            "OBJ_317",
-            "OBJ_318"
+            "OBJ_316"
          );
-      };
-      "OBJ_313" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_17";
-      };
-      "OBJ_314" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_19";
-      };
-      "OBJ_315" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_21";
       };
       "OBJ_316" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_22";
+         fileRef = "OBJ_30";
       };
       "OBJ_317" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_23";
-      };
-      "OBJ_318" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_24";
-      };
-      "OBJ_319" = {
          isa = "PBXFrameworksBuildPhase";
          files = (
+            "OBJ_318",
+            "OBJ_319",
             "OBJ_320",
             "OBJ_321",
             "OBJ_322",
-            "OBJ_323"
+            "OBJ_323",
+            "OBJ_324",
+            "OBJ_325"
          );
       };
+      "OBJ_318" = {
+         isa = "PBXBuildFile";
+         fileRef = "swift-argument-parser::ArgumentParser::Product";
+      };
+      "OBJ_319" = {
+         isa = "PBXBuildFile";
+         fileRef = "Tractor::Report::Product";
+      };
       "OBJ_32" = {
-         isa = "PBXFileReference";
-         path = "HTMLReport.swift";
+         isa = "PBXGroup";
+         children = (
+            "OBJ_33"
+         );
+         name = "HTTP";
+         path = "HTTP";
          sourceTree = "<group>";
       };
       "OBJ_320" = {
          isa = "PBXBuildFile";
-         fileRef = "ShellOut::ShellOut::Product";
+         fileRef = "Plot::Plot::Product";
       };
       "OBJ_321" = {
          isa = "PBXBuildFile";
-         fileRef = "Files::Files::Product";
+         fileRef = "Tractor::TractorCore::Product";
       };
       "OBJ_322" = {
          isa = "PBXBuildFile";
-         fileRef = "Tractor::Display::Product";
+         fileRef = "ShellOut::ShellOut::Product";
       };
       "OBJ_323" = {
          isa = "PBXBuildFile";
-         fileRef = "Tractor::Entity::Product";
+         fileRef = "Files::Files::Product";
       };
       "OBJ_324" = {
-         isa = "PBXTargetDependency";
-         target = "ShellOut::ShellOut";
+         isa = "PBXBuildFile";
+         fileRef = "Tractor::Display::Product";
       };
       "OBJ_325" = {
-         isa = "PBXTargetDependency";
-         target = "Files::Files";
+         isa = "PBXBuildFile";
+         fileRef = "Tractor::Entity::Product";
       };
       "OBJ_326" = {
          isa = "PBXTargetDependency";
-         target = "Tractor::Display";
+         target = "swift-argument-parser::ArgumentParser";
       };
       "OBJ_327" = {
          isa = "PBXTargetDependency";
-         target = "Tractor::Entity";
+         target = "Tractor::Report";
+      };
+      "OBJ_328" = {
+         isa = "PBXTargetDependency";
+         target = "Plot::Plot";
       };
       "OBJ_329" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_330",
-            "OBJ_331"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
+         isa = "PBXTargetDependency";
+         target = "Tractor::TractorCore";
       };
       "OBJ_33" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_34"
-         );
-         name = "Helpers";
-         path = "Helpers";
+         isa = "PBXFileReference";
+         path = "HTTP.swift";
          sourceTree = "<group>";
       };
       "OBJ_330" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "5",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
-               "-package-description-version",
-               "5.1.0"
-            );
-            SWIFT_VERSION = "5.0";
-         };
-         name = "Debug";
+         isa = "PBXTargetDependency";
+         target = "ShellOut::ShellOut";
       };
       "OBJ_331" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "5",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
-               "-package-description-version",
-               "5.1.0"
-            );
-            SWIFT_VERSION = "5.0";
-         };
-         name = "Release";
+         isa = "PBXTargetDependency";
+         target = "Files::Files";
       };
       "OBJ_332" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_333"
-         );
+         isa = "PBXTargetDependency";
+         target = "Tractor::Display";
       };
       "OBJ_333" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_6";
+         isa = "PBXTargetDependency";
+         target = "Tractor::Entity";
       };
-      "OBJ_335" = {
+      "OBJ_334" = {
          isa = "XCConfigurationList";
          buildConfigurations = (
-            "OBJ_336",
-            "OBJ_337"
+            "OBJ_335",
+            "OBJ_336"
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
+      };
+      "OBJ_335" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "Tractor.xcodeproj/TractorCore_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "TractorCore";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "TractorCore";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
       };
       "OBJ_336" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
-         };
-         name = "Debug";
-      };
-      "OBJ_337" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
+            ENABLE_TESTABILITY = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "Tractor.xcodeproj/TractorCore_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            PRODUCT_BUNDLE_IDENTIFIER = "TractorCore";
+            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+            SKIP_INSTALL = "YES";
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "TractorCore";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
          };
          name = "Release";
       };
+      "OBJ_337" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
+            "OBJ_338",
+            "OBJ_339",
+            "OBJ_340",
+            "OBJ_341",
+            "OBJ_342",
+            "OBJ_343"
+         );
+      };
       "OBJ_338" = {
-         isa = "PBXTargetDependency";
-         target = "Tractor::TractorTests";
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_33";
+      };
+      "OBJ_339" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_35";
       };
       "OBJ_34" = {
-         isa = "PBXFileReference";
-         path = "StyleFile.swift";
+         isa = "PBXGroup";
+         children = (
+            "OBJ_35"
+         );
+         name = "Output";
+         path = "Output";
          sourceTree = "<group>";
       };
       "OBJ_340" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_37";
+      };
+      "OBJ_341" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_38";
+      };
+      "OBJ_342" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_39";
+      };
+      "OBJ_343" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_40";
+      };
+      "OBJ_344" = {
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_345",
+            "OBJ_346",
+            "OBJ_347",
+            "OBJ_348"
+         );
+      };
+      "OBJ_345" = {
+         isa = "PBXBuildFile";
+         fileRef = "ShellOut::ShellOut::Product";
+      };
+      "OBJ_346" = {
+         isa = "PBXBuildFile";
+         fileRef = "Files::Files::Product";
+      };
+      "OBJ_347" = {
+         isa = "PBXBuildFile";
+         fileRef = "Tractor::Display::Product";
+      };
+      "OBJ_348" = {
+         isa = "PBXBuildFile";
+         fileRef = "Tractor::Entity::Product";
+      };
+      "OBJ_349" = {
+         isa = "PBXTargetDependency";
+         target = "ShellOut::ShellOut";
+      };
+      "OBJ_35" = {
+         isa = "PBXFileReference";
+         path = "OutputPersistor.swift";
+         sourceTree = "<group>";
+      };
+      "OBJ_350" = {
+         isa = "PBXTargetDependency";
+         target = "Files::Files";
+      };
+      "OBJ_351" = {
+         isa = "PBXTargetDependency";
+         target = "Tractor::Display";
+      };
+      "OBJ_352" = {
+         isa = "PBXTargetDependency";
+         target = "Tractor::Entity";
+      };
+      "OBJ_354" = {
          isa = "XCConfigurationList";
          buildConfigurations = (
-            "OBJ_341",
-            "OBJ_342"
+            "OBJ_355",
+            "OBJ_356"
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
       };
-      "OBJ_341" = {
+      "OBJ_355" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "Tractor.xcodeproj/TractorReport_Info.plist";
-            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            MACOSX_DEPLOYMENT_TARGET = "10.10";
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
+            LD = "/usr/bin/true";
             OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "TractorReport";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5.1.0"
             );
             SWIFT_VERSION = "5.0";
-            TARGET_NAME = "TractorReport";
-            TVOS_DEPLOYMENT_TARGET = "9.0";
-            WATCHOS_DEPLOYMENT_TARGET = "2.0";
          };
          name = "Debug";
       };
-      "OBJ_342" = {
+      "OBJ_356" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
-            ENABLE_TESTABILITY = "YES";
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "Tractor.xcodeproj/TractorReport_Info.plist";
-            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx"
-            );
-            MACOSX_DEPLOYMENT_TARGET = "10.10";
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
+            LD = "/usr/bin/true";
             OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
-            );
-            PRODUCT_BUNDLE_IDENTIFIER = "TractorReport";
-            PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
-            PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-            SKIP_INSTALL = "YES";
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5.1.0"
             );
             SWIFT_VERSION = "5.0";
-            TARGET_NAME = "TractorReport";
-            TVOS_DEPLOYMENT_TARGET = "9.0";
-            WATCHOS_DEPLOYMENT_TARGET = "2.0";
          };
          name = "Release";
       };
-      "OBJ_343" = {
+      "OBJ_357" = {
          isa = "PBXSourcesBuildPhase";
          files = (
-            "OBJ_344",
-            "OBJ_345",
-            "OBJ_346",
-            "OBJ_347",
-            "OBJ_348",
-            "OBJ_349",
-            "OBJ_350",
-            "OBJ_351"
-         );
-      };
-      "OBJ_344" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_27";
-      };
-      "OBJ_345" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_29";
-      };
-      "OBJ_346" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_32";
-      };
-      "OBJ_347" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_34";
-      };
-      "OBJ_348" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_36";
-      };
-      "OBJ_349" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_38";
-      };
-      "OBJ_35" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_36"
-         );
-         name = "List";
-         path = "List";
-         sourceTree = "<group>";
-      };
-      "OBJ_350" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_39";
-      };
-      "OBJ_351" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_40";
-      };
-      "OBJ_352" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-            "OBJ_353",
-            "OBJ_354",
-            "OBJ_355",
-            "OBJ_356",
-            "OBJ_357",
             "OBJ_358"
          );
       };
-      "OBJ_353" = {
-         isa = "PBXBuildFile";
-         fileRef = "Plot::Plot::Product";
-      };
-      "OBJ_354" = {
-         isa = "PBXBuildFile";
-         fileRef = "Tractor::TractorCore::Product";
-      };
-      "OBJ_355" = {
-         isa = "PBXBuildFile";
-         fileRef = "ShellOut::ShellOut::Product";
-      };
-      "OBJ_356" = {
-         isa = "PBXBuildFile";
-         fileRef = "Files::Files::Product";
-      };
-      "OBJ_357" = {
-         isa = "PBXBuildFile";
-         fileRef = "Tractor::Display::Product";
-      };
       "OBJ_358" = {
          isa = "PBXBuildFile";
-         fileRef = "Tractor::Entity::Product";
-      };
-      "OBJ_359" = {
-         isa = "PBXTargetDependency";
-         target = "Plot::Plot";
+         fileRef = "OBJ_6";
       };
       "OBJ_36" = {
-         isa = "PBXFileReference";
-         path = "ListReportGenerator.swift";
+         isa = "PBXGroup";
+         children = (
+            "OBJ_37",
+            "OBJ_38",
+            "OBJ_39"
+         );
+         name = "Parser";
+         path = "Parser";
          sourceTree = "<group>";
       };
       "OBJ_360" = {
-         isa = "PBXTargetDependency";
-         target = "Tractor::TractorCore";
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_361",
+            "OBJ_362"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
       };
       "OBJ_361" = {
-         isa = "PBXTargetDependency";
-         target = "ShellOut::ShellOut";
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Debug";
       };
       "OBJ_362" = {
-         isa = "PBXTargetDependency";
-         target = "Files::Files";
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Release";
       };
       "OBJ_363" = {
          isa = "PBXTargetDependency";
-         target = "Tractor::Display";
-      };
-      "OBJ_364" = {
-         isa = "PBXTargetDependency";
-         target = "Tractor::Entity";
+         target = "Tractor::TractorTests";
       };
       "OBJ_365" = {
          isa = "XCConfigurationList";
@@ -2476,13 +2481,8 @@
          fileRef = "OBJ_43";
       };
       "OBJ_37" = {
-         isa = "PBXGroup";
-         children = (
-            "OBJ_38",
-            "OBJ_39"
-         );
-         name = "Slack";
-         path = "Slack";
+         isa = "PBXFileReference";
+         path = "ReportModels.swift";
          sourceTree = "<group>";
       };
       "OBJ_370" = {
@@ -2508,7 +2508,7 @@
       };
       "OBJ_373" = {
          isa = "PBXBuildFile";
-         fileRef = "Tractor::TractorReport::Product";
+         fileRef = "Tractor::Report::Product";
       };
       "OBJ_374" = {
          isa = "PBXBuildFile";
@@ -2536,7 +2536,7 @@
       };
       "OBJ_38" = {
          isa = "PBXFileReference";
-         path = "SlackReport.swift";
+         path = "XCResultOutputFileParser.swift";
          sourceTree = "<group>";
       };
       "OBJ_380" = {
@@ -2549,7 +2549,7 @@
       };
       "OBJ_382" = {
          isa = "PBXTargetDependency";
-         target = "Tractor::TractorReport";
+         target = "Tractor::Report";
       };
       "OBJ_383" = {
          isa = "PBXTargetDependency";
@@ -2577,7 +2577,7 @@
       };
       "OBJ_39" = {
          isa = "PBXFileReference";
-         path = "SlackReportAttachmentBuilder.swift";
+         path = "XCResultProcessor.swift";
          sourceTree = "<group>";
       };
       "OBJ_390" = {
@@ -2679,7 +2679,7 @@
       };
       "OBJ_40" = {
          isa = "PBXFileReference";
-         path = "TractorReportGenerator.swift";
+         path = "TractorRegister.swift";
          sourceTree = "<group>";
       };
       "OBJ_41" = {
@@ -2923,8 +2923,8 @@
             "OBJ_8",
             "OBJ_10",
             "OBJ_13",
-            "OBJ_15",
-            "OBJ_25"
+            "OBJ_29",
+            "OBJ_31"
          );
          name = "Sources";
          path = "";
@@ -3159,10 +3159,10 @@
       };
       "ShellOut::ShellOut" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_272";
+         buildConfigurationList = "OBJ_299";
          buildPhases = (
-            "OBJ_275",
-            "OBJ_277"
+            "OBJ_302",
+            "OBJ_304"
          );
          dependencies = (
          );
@@ -3178,9 +3178,9 @@
       };
       "ShellOut::SwiftPMPackageDescription" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_279";
+         buildConfigurationList = "OBJ_306";
          buildPhases = (
-            "OBJ_282"
+            "OBJ_309"
          );
          dependencies = (
          );
@@ -3226,11 +3226,36 @@
          path = "Entity.framework";
          sourceTree = "BUILT_PRODUCTS_DIR";
       };
+      "Tractor::Report" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_272";
+         buildPhases = (
+            "OBJ_275",
+            "OBJ_284"
+         );
+         dependencies = (
+            "OBJ_291",
+            "OBJ_292",
+            "OBJ_294",
+            "OBJ_296",
+            "OBJ_297",
+            "OBJ_298"
+         );
+         name = "Report";
+         productName = "Report";
+         productReference = "Tractor::Report::Product";
+         productType = "com.apple.product-type.framework";
+      };
+      "Tractor::Report::Product" = {
+         isa = "PBXFileReference";
+         path = "Report.framework";
+         sourceTree = "BUILT_PRODUCTS_DIR";
+      };
       "Tractor::SwiftPMPackageDescription" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_329";
+         buildConfigurationList = "OBJ_354";
          buildPhases = (
-            "OBJ_332"
+            "OBJ_357"
          );
          dependencies = (
          );
@@ -3240,20 +3265,20 @@
       };
       "Tractor::Tractor" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_285";
+         buildConfigurationList = "OBJ_312";
          buildPhases = (
-            "OBJ_288",
-            "OBJ_290"
+            "OBJ_315",
+            "OBJ_317"
          );
          dependencies = (
-            "OBJ_299",
-            "OBJ_300",
-            "OBJ_302",
-            "OBJ_303",
-            "OBJ_305",
-            "OBJ_306",
-            "OBJ_307",
-            "OBJ_308"
+            "OBJ_326",
+            "OBJ_327",
+            "OBJ_328",
+            "OBJ_329",
+            "OBJ_330",
+            "OBJ_331",
+            "OBJ_332",
+            "OBJ_333"
          );
          name = "Tractor";
          productName = "Tractor";
@@ -3267,16 +3292,16 @@
       };
       "Tractor::TractorCore" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_309";
+         buildConfigurationList = "OBJ_334";
          buildPhases = (
-            "OBJ_312",
-            "OBJ_319"
+            "OBJ_337",
+            "OBJ_344"
          );
          dependencies = (
-            "OBJ_324",
-            "OBJ_325",
-            "OBJ_326",
-            "OBJ_327"
+            "OBJ_349",
+            "OBJ_350",
+            "OBJ_351",
+            "OBJ_352"
          );
          name = "TractorCore";
          productName = "TractorCore";
@@ -3290,39 +3315,14 @@
       };
       "Tractor::TractorPackageTests::ProductTarget" = {
          isa = "PBXAggregateTarget";
-         buildConfigurationList = "OBJ_335";
+         buildConfigurationList = "OBJ_360";
          buildPhases = (
          );
          dependencies = (
-            "OBJ_338"
+            "OBJ_363"
          );
          name = "TractorPackageTests";
          productName = "TractorPackageTests";
-      };
-      "Tractor::TractorReport" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_340";
-         buildPhases = (
-            "OBJ_343",
-            "OBJ_352"
-         );
-         dependencies = (
-            "OBJ_359",
-            "OBJ_360",
-            "OBJ_361",
-            "OBJ_362",
-            "OBJ_363",
-            "OBJ_364"
-         );
-         name = "TractorReport";
-         productName = "TractorReport";
-         productReference = "Tractor::TractorReport::Product";
-         productType = "com.apple.product-type.framework";
-      };
-      "Tractor::TractorReport::Product" = {
-         isa = "PBXFileReference";
-         path = "TractorReport.framework";
-         sourceTree = "BUILT_PRODUCTS_DIR";
       };
       "Tractor::TractorTests" = {
          isa = "PBXNativeTarget";
