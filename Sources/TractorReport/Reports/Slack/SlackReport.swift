@@ -1,7 +1,7 @@
 import Foundation
 import TractorCore
 import Display
-import TractorEntity
+import Entity
 
 private struct Report: Encodable {
     let text: String

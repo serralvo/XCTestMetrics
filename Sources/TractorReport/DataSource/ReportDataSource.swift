@@ -1,5 +1,5 @@
 import Foundation
-import TractorEntity
+import Entity
 
 protocol ReportDataSource {
     func getReportWrapper() throws -> ReportWrapper

@@ -1,7 +1,7 @@
 import Foundation
 import Files
 import ShellOut
-import TractorEntity
+import Entity
 
 enum OutputPersistorError: Error {
     case cannotPersistFile

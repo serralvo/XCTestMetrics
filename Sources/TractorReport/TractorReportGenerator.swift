@@ -1,7 +1,7 @@
 import Files
 import Foundation
 import Plot
-import TractorEntity
+import Entity
 import Display
 
 public class TractorReportGenerator {
