@@ -14,7 +14,7 @@ Welcome to **Tractor**, a command line tool that provides metrics about your pro
 ## Requirements
 - Xcode 11 
 
-## Installation 📦
+## Installation
 Using [Homebrew](http://brew.sh/):
 
 ## Usage
@@ -27,7 +27,7 @@ The usage of Tractor is based on two steps: the first one is register each build
 - Finally, call `log` command using derived data path:
 
 ```
-tractor log path-to-derived-data
+$ tractor log path-to-derived-data
 ```
 - That's it! A `tractor-output` folder will be created to store all logs.
 
@@ -42,14 +42,14 @@ First question, which report you want: Slack or HTML?
   - [Check here how to create a webhook.](https://api.slack.com/messaging/webhooks)
 - Run: 
 ```
-tractor report slack your-web-hook-url
+$ tractor report slack your-web-hook-url
 ```
 - That's it! The message with metrics will be send to Slack.
 
 #### HTML
 - Run:
 ```
-tractor report html
+$ tractor report html
 ```
 - That's it! The report file (index.html) will be stored into `tractor-report` folder.
 
