@@ -5,12 +5,9 @@ import Entity
 
 enum OutputPersistorError: Error {
     case cannotPersistFile
-    case cannotCommitOutputFile
     
     var localizedDescription: String {
         switch self {
-        case .cannotCommitOutputFile:
-            return "Cannot commit output file. Check git permissions."
         case .cannotPersistFile:
             return "Cannot save output file. Check disk permissions."
         }
@@ -38,15 +35,6 @@ final class OutputPersistor {
             )
         } catch {
             throw OutputPersistorError.cannotPersistFile
-        }
-    }
-    
-    func commitOutputFile() throws {
-        do {
-            try shellOut(to: .gitCommit(message: "Added XCTestMetrics register"))
-            try shellOut(to: .gitPush())
-        } catch {
-            throw OutputPersistorError.cannotCommitOutputFile
         }
     }
     
