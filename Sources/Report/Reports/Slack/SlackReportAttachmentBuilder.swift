@@ -1,8 +1,8 @@
 import Foundation
 
-struct SlackReportAttachment: Encodable {
-    let text: String
-    let color: String
+struct SlackReportField: Encodable {
+    let title: String
+    let value: String
 }
 
 final class SlackReportAttachmentBuilder {
@@ -20,24 +20,24 @@ final class SlackReportAttachmentBuilder {
         self.source = source
     }
     
-    func build(withType type: ReportType) -> SlackReportAttachment {
+    func build(withType type: ReportType) -> SlackReportField {
         switch type {
         case .executed:
-            return SlackReportAttachment(text: "🛠 Executed tests: *\(source.numberOfTests)*", color: "#abb7b7")
+            return SlackReportField(title: "Executed tests", value: "\(source.numberOfTests)")
         case .passed:
-            return SlackReportAttachment(text: "✅ Passed tests: *\(source.numberOfSuccess)*", color: "#2ecc71")
+            return SlackReportField(title: "Passed tests", value: "\(source.numberOfSuccess)")
         case .failed:
             guard source.numberOfFailures > 0 else {
-                return SlackReportAttachment(text: "🎉 No test failed. Congrats!", color: "#2ecc71")
+                return SlackReportField(title: "Failed tests", value: "🎉 No test failed. Congrats")
             }
             
-            return SlackReportAttachment(text: "🚫 Failed tests: *\(source.numberOfFailures)*", color: "#d91e18")
+            return SlackReportField(title: "Failed tests", value: "\(source.numberOfFailures)")
         case .topFailure:
             guard let first = source.failureTests.first else {
-                return SlackReportAttachment(text: "🎉 No test failed. Congrats!", color: "#2ecc71")
+                return SlackReportField(title: "Test with the highest number of failures", value: "🎉 No test failed. Congrats")
             }
             
-            return SlackReportAttachment(text: "⚠️ Test with the highest number of failures: *\(first.failureTest.name)* (\(first.numberOfOccurrences) times)", color: "#f4d03f")
+            return SlackReportField(title: "Test with the highest number of failures", value: "\(first.failureTest.name) (\(first.numberOfOccurrences) times)")
         }
         
     }

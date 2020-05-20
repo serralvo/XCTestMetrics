@@ -3,9 +3,21 @@ import Core
 import Display
 import Entity
 
+private struct Attachment: Encodable {
+    let color: String
+    let title: String
+    let titleLink: String
+    let fields: [SlackReportField]
+    let footer: String
+    
+    enum CodingKeys: String, CodingKey {
+        case color, title, text, fields, footer
+        case titleLink = "title_link"
+    }
+}
+
 private struct Report: Encodable {
-    let text: String
-    let attachments: [SlackReportAttachment]
+    let attachments: [Attachment]
 }
 
 final class SlackReport {
@@ -49,13 +61,16 @@ final class SlackReport {
         let passed = builder.build(withType: .passed)
         let failed = builder.build(withType: .failed)
         let topFailedTest = builder.build(withType: .topFailure)
-        
-        let date = SlackReportAttachment(text: generateDateRange(with: output), color: "#abb7b7")
-        
-        return Report(
-            text: "XCTestMetrics Report",
-            attachments: [date, executed, passed, topFailedTest, failed]
+                
+        let attachment = Attachment(
+            color: "#36a64f",
+            title: "XCTestMetrics Report",
+            titleLink: "https://github.com/serralvo/XCTestMetrics",
+            fields: [executed, passed, failed, topFailedTest],
+            footer: generateDateRange(with: output)
         )
+        
+        return Report(attachments: [attachment])
     }
     
     private func generateDateRange(with output: [XCTestMetricsOutput]) -> String {
@@ -67,7 +82,7 @@ final class SlackReport {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy/MM/dd"
         
-        return "📅 Results from *\(dateFormatter.string(from: firstDate))* to *\(dateFormatter.string(from: lastDate))*."
+        return "Results from *\(dateFormatter.string(from: firstDate))* to *\(dateFormatter.string(from: lastDate))*."
     }
     
     private func testsString(with report: ReportWrapper) -> String {
