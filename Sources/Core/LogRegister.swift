@@ -50,13 +50,11 @@ public class LogRegister {
         let output = try XCResultOutputFileParser().getOutput()
         
         let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        formatter.dateFormat = "yyyy-MM-dd HH.mm.ss"
         
-        // TODO: Update this one
         let resultName = formatter.string(from: Date())
         let persistor = OutputPersistor(with: output, fileName: resultName)
         try persistor.persistJSON()
-        // try persistor.commitOutputFile()
         
         Display.success(message: "Log has been saved. Check it on xctestmetrics-output folder.")
     }
