@@ -28,11 +28,11 @@ public class ReportGenerator {
         let output = OutputFileParser()
         let report = HTMLReport(withDataSource: output)
         
-        let content = report.generate()
-        let htmlData = content.data(using: .utf8)
-        let cssData = StyleFile.content.data(using: .utf8)
-        
         do {
+            let content = try report.generate()
+            let htmlData = content.data(using: .utf8)
+            let cssData = StyleFile.content.data(using: .utf8)
+            
             try Folder.current.createFile(at: "xctestmetrics-report/report.html", contents: htmlData)
             try Folder.current.createFile(at: "xctestmetrics-report/styles.css", contents: cssData)
             Display.success(message: "Report has been saved. Check it on xctestmetrics-report folder.")
@@ -53,9 +53,12 @@ public class ReportGenerator {
         let output = OutputFileParser()
         let slack = SlackReport(withDataSource: output)
         
-        slack.publish(toURL: url)
-        
-        Display.success(message: "Report has been published. Check it on slack.")
+        do {
+            try slack.publish(toURL: url)
+            Display.success(message: "Report has been published. Check it on slack.")
+        } catch {
+            Display.error(message: error.localizedDescription)
+        }
     }
     
 }

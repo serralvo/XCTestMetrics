@@ -1,6 +1,10 @@
 import Foundation
 import Plot
 
+enum ListReportGeneratorError: Error {
+    case cannotGetDataSource
+}
+
 final class ListReportGenerator {
     
     private let dataSource: ReportDataSource
@@ -9,16 +13,14 @@ final class ListReportGenerator {
         self.dataSource = dataSource
     }
     
-    func generate() -> Node<HTML.BodyContext> {
-        
-        // TODO: Remove ! cast
-        let wrapper = try! dataSource.getReportWrapper()
-        
-        let node = Node.div(
-            .wrapped(wrapper)
-        )
-        
-        return node
+    func generate() throws -> Node<HTML.BodyContext> {
+        do {
+            let wrapper = try dataSource.getReportWrapper()
+            let node = Node.div(.wrapped(wrapper))
+            return node
+        } catch {
+            throw ListReportGeneratorError.cannotGetDataSource
+        }
     }
     
 }

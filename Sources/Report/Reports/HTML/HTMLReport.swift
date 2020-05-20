@@ -9,16 +9,13 @@ final class HTMLReport {
         self.dataSource = dataSource
     }
     
-    func generate() -> String {
-        
+    func generate() throws -> String {
         let list = ListReportGenerator(withDataSource: dataSource)
-        let listNode = list.generate()
+        let listNode = try list.generate()
         
         let html = HTML(
             .head(.title("XCTestMetrics Report"), .stylesheet("styles.css")),
-            .body(
-                .div(listNode)
-            )
+            .body(.div(listNode))
         )
         
         return html.render(indentedBy: .tabs(1))

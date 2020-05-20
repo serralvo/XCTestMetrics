@@ -3,6 +3,10 @@ import Core
 import Display
 import Entity
 
+enum SlackReportError: Error {
+    case cannotGetDataSource
+}
+
 private struct Attachment: Encodable {
     let color: String
     let title: String
@@ -11,7 +15,7 @@ private struct Attachment: Encodable {
     let footer: String
     
     enum CodingKeys: String, CodingKey {
-        case color, title, text, fields, footer
+        case color, title, fields, footer
         case titleLink = "title_link"
     }
 }
@@ -28,10 +32,9 @@ final class SlackReport {
         self.dataSource = dataSource
     }
     
-    func publish(toURL url: URL) {
-        
-        let report = generate()
-        let data = try! JSONEncoder().encode(report)
+    func publish(toURL url: URL) throws {
+        let report = try generate()
+        let data = try JSONEncoder().encode(report)
         
         let request = createRequest(withURL: url, data: data)
         
@@ -50,27 +53,35 @@ final class SlackReport {
         return request
     }
     
-    private func generate() -> Report {
-        
-        let wrapper = try! dataSource.getReportWrapper()
-        let output = try! dataSource.getOutput()
-        
+    private func generate() throws -> Report {
+        do {
+            let wrapper = try dataSource.getReportWrapper()
+            let output = try dataSource.getOutput()
+         
+            let attachment = Attachment(
+                color: "#36a64f", // TODO: Get color based on flakyness percentage
+                title: "XCTestMetrics Report",
+                titleLink: "https://github.com/serralvo/XCTestMetrics",
+                fields: generateFields(with: wrapper),
+                footer: generateDateRange(with: output)
+            )
+            
+            return Report(attachments: [attachment])
+            
+        } catch {
+            throw SlackReportError.cannotGetDataSource
+        }
+    }
+    
+    private func generateFields(with wrapper: ReportWrapper) -> [SlackReportField] {
         let builder = SlackReportAttachmentBuilder(source: wrapper)
         
         let executed = builder.build(withType: .executed)
         let passed = builder.build(withType: .passed)
         let failed = builder.build(withType: .failed)
         let topFailedTest = builder.build(withType: .topFailure)
-                
-        let attachment = Attachment(
-            color: "#36a64f",
-            title: "XCTestMetrics Report",
-            titleLink: "https://github.com/serralvo/XCTestMetrics",
-            fields: [executed, passed, failed, topFailedTest],
-            footer: generateDateRange(with: output)
-        )
         
-        return Report(attachments: [attachment])
+        return [executed, passed, failed, topFailedTest]
     }
     
     private func generateDateRange(with output: [XCTestMetricsOutput]) -> String {
@@ -86,6 +97,7 @@ final class SlackReport {
     }
     
     private func testsString(with report: ReportWrapper) -> String {
+        // TODO: please refactor this one
         let tests = report.failureTests.map { $0 }
         
         var result = ""
