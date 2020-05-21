@@ -7,9 +7,9 @@ Welcome to **XCTestMetrics**, a command line tool that provides metrics about yo
 ![XCTestMetrics Report on Slack](https://github.com/serralvo/Tractor/blob/master/tractor-report.png)
 
 ## Features
-- [x] 🕵️‍♂️ Help to identify flaky tests.
-- [x] 📊 Give the big picture of project tests, number of failures, when it happened, percentage of flakiness.
-- [x] ⚡️ Easy and fast setup.
+- [x] Help to identify flaky tests.
+- [x] Give the big picture of project tests, number of failures, when it happened, percentage of flakiness.
+- [x] Easy and fast setup.
 
 ## Requirements
 - Xcode 11 
@@ -24,12 +24,16 @@ The usage of XCTestMetrics is based on two steps: the first one is register each
 - Run project tests.
 - Get the path of your project inside `DerivedData` folder. 
   - Will be something like this: `~/Library/Developer/Xcode/DerivedData/YourProject-gybqxixuerfernzjaklbxkwwstqj`
-- Finally, call `log` command using derived data path:
+- Call `log` command using derived data path:
 
 ```
 $ xc-test-metrics log path-to-derived-data
 ```
-- That's it! A `xctestmetrics-output` folder will be created to store all logs.
+- The log will be added to `xctestmetrics-output` folder.
+```
+$ git add xctestmetrics-output/.
+$ git commit -m "Adds xctestmetrics log" 
+```
 
 ⚠️ Important, do it for every build of your project, use this tool on your continuous integration system.
 
