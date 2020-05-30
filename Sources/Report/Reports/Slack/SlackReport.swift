@@ -80,8 +80,9 @@ final class SlackReport {
         let passed = builder.build(withType: .passed)
         let failed = builder.build(withType: .failed)
         let topFailedTest = builder.build(withType: .topFailure)
-        
-        return [executed, passed, failed, topFailedTest]
+        let failures = builder.build(withType: .listOfFailures)
+
+        return [executed, passed, failed, topFailedTest, failures]
     }
     
     private func generateDateRange(with output: [XCTestMetricsOutput]) -> String {
@@ -95,16 +96,5 @@ final class SlackReport {
         
         return "Results from *\(dateFormatter.string(from: firstDate))* to *\(dateFormatter.string(from: lastDate))*."
     }
-    
-    private func testsString(with report: ReportWrapper) -> String {
-        // TODO: please refactor this one
-        let tests = report.failureTests.map { $0 }
-        
-        var result = ""
-        for test in tests {
-            result += " \(test.numberOfOccurrences) - \(test.failureTest.name)\n"
-        }
-        return result
-    }
-    
+
 }

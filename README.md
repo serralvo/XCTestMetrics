@@ -30,6 +30,7 @@ The usage of XCTestMetrics is based on two steps: the first one is register each
 $ xc-test-metrics log path-to-derived-data
 ```
 - The log will be added to `xctestmetrics-output` folder.
+- Commit the log file.
 ```
 $ git add xctestmetrics-output/.
 $ git commit -m "Adds xctestmetrics log" 

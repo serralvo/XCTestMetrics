@@ -12,6 +12,7 @@ final class SlackReportAttachmentBuilder {
         case passed
         case failed
         case topFailure
+        case listOfFailures
     }
     
     private let source: ReportWrapper
@@ -38,6 +39,14 @@ final class SlackReportAttachmentBuilder {
             }
             
             return SlackReportField(title: "Test with the highest number of failures", value: "\(first.failureTest.name) (\(first.numberOfOccurrences) times)")
+        case .listOfFailures:
+            let failures = source.failureTests.map { $0 }
+            var failuresAsString = ""
+            for failure in failures {
+                failuresAsString += "\(failure.failureTest.name) - (\(failure.numberOfOccurrences) times)\n"
+            }
+
+            return SlackReportField(title: "List of failures", value: failuresAsString)
         }
         
     }
