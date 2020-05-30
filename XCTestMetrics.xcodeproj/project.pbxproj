@@ -286,7 +286,7 @@
          isa = "PBXFileReference";
          explicitFileType = "sourcecode.swift";
          name = "Package.swift";
-         path = "/Users/fabricioserralvo/Desktop/Flaky/FlakyTestsProject/Tractor/Tractor/.build/checkouts/swift-argument-parser/Package.swift";
+         path = "/Users/fabricioserralvo/Desktop/Flaky/FlakyTestsProject/Tractor/XCTestMetrics/.build/checkouts/swift-argument-parser/Package.swift";
          sourceTree = "<group>";
       };
       "OBJ_132" = {
@@ -303,7 +303,7 @@
          isa = "PBXFileReference";
          explicitFileType = "sourcecode.swift";
          name = "Package.swift";
-         path = "/Users/fabricioserralvo/Desktop/Flaky/FlakyTestsProject/Tractor/Tractor/.build/checkouts/ShellOut/Package.swift";
+         path = "/Users/fabricioserralvo/Desktop/Flaky/FlakyTestsProject/Tractor/XCTestMetrics/.build/checkouts/ShellOut/Package.swift";
          sourceTree = "<group>";
       };
       "OBJ_134" = {
@@ -325,7 +325,7 @@
          isa = "PBXFileReference";
          explicitFileType = "sourcecode.swift";
          name = "Package.swift";
-         path = "/Users/fabricioserralvo/Desktop/Flaky/FlakyTestsProject/Tractor/Tractor/.build/checkouts/Files/Package.swift";
+         path = "/Users/fabricioserralvo/Desktop/Flaky/FlakyTestsProject/Tractor/XCTestMetrics/.build/checkouts/Files/Package.swift";
          sourceTree = "<group>";
       };
       "OBJ_137" = {
@@ -336,16 +336,16 @@
       "OBJ_138" = {
          isa = "PBXGroup";
          children = (
-            "XCTestMetrics::Display::Product",
+            "XCTestMetrics::Core::Product",
             "XCTestMetrics::Report::Product",
             "XCTestMetrics::TractorTests::Product",
-            "Plot::Plot::Product",
-            "XCTestMetrics::XCTestMetrics::Product",
-            "ShellOut::ShellOut::Product",
-            "XCTestMetrics::Core::Product",
+            "XCTestMetrics::Display::Product",
+            "Files::Files::Product",
             "swift-argument-parser::ArgumentParser::Product",
             "XCTestMetrics::Entity::Product",
-            "Files::Files::Product"
+            "ShellOut::ShellOut::Product",
+            "Plot::Plot::Product",
+            "XCTestMetrics::XCTestMetrics::Product"
          );
          name = "Products";
          path = "";
@@ -379,7 +379,7 @@
       };
       "OBJ_151" = {
          isa = "PBXFileReference";
-         path = "tractor-report.png";
+         path = "report-image.png";
          sourceTree = "<group>";
       };
       "OBJ_153" = {
@@ -3075,7 +3075,7 @@
          isa = "PBXFileReference";
          explicitFileType = "sourcecode.swift";
          name = "Package.swift";
-         path = "/Users/fabricioserralvo/Desktop/Flaky/FlakyTestsProject/Tractor/Tractor/.build/checkouts/plot/Package.swift";
+         path = "/Users/fabricioserralvo/Desktop/Flaky/FlakyTestsProject/Tractor/XCTestMetrics/.build/checkouts/plot/Package.swift";
          sourceTree = "<group>";
       };
       "OBJ_95" = {

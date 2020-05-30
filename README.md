@@ -4,7 +4,7 @@ Welcome to **XCTestMetrics**, a command line tool that provides metrics about yo
 [![Swift Version][swift-image]][swift-url]
 [![License][license-image]][license-url]
 
-![XCTestMetrics Report on Slack](https://github.com/serralvo/Tractor/blob/master/tractor-report.png)
+![XCTestMetrics Report on Slack](https://github.com/serralvo/Tractor/blob/master/report-image.png)
 
 ## Features
 - [x] Help to identify flaky tests.

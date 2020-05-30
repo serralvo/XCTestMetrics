@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "XCTestMetrics::Entity"
-               BuildableName = "Entity.framework"
-               BlueprintName = "Entity"
-               ReferencedContainer = "container:XCTestMetrics.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "XCTestMetrics::Display"
-               BuildableName = "Display.framework"
-               BlueprintName = "Display"
+               BlueprintIdentifier = "XCTestMetrics::Report"
+               BuildableName = "Report.framework"
+               BlueprintName = "Report"
                ReferencedContainer = "container:XCTestMetrics.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -56,9 +42,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "XCTestMetrics::Report"
-               BuildableName = "Report.framework"
-               BlueprintName = "Report"
+               BlueprintIdentifier = "XCTestMetrics::Entity"
+               BuildableName = "Entity.framework"
+               BlueprintName = "Entity"
                ReferencedContainer = "container:XCTestMetrics.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -73,6 +59,20 @@
                BlueprintIdentifier = "XCTestMetrics::Core"
                BuildableName = "Core.framework"
                BlueprintName = "Core"
+               ReferencedContainer = "container:XCTestMetrics.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "XCTestMetrics::Display"
+               BuildableName = "Display.framework"
+               BlueprintName = "Display"
                ReferencedContainer = "container:XCTestMetrics.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
