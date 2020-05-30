@@ -62,10 +62,10 @@
             "XCTestMetrics::Report",
             "ShellOut::ShellOut",
             "ShellOut::SwiftPMPackageDescription",
-            "XCTestMetrics::TractorTests",
             "XCTestMetrics::XCTestMetrics",
             "XCTestMetrics::SwiftPMPackageDescription",
             "XCTestMetrics::XCTestMetricsPackageTests::ProductTarget",
+            "XCTestMetrics::XCTestMetricsTests",
             "swift-argument-parser::SwiftPMPackageDescription"
          );
       };
@@ -338,14 +338,14 @@
          children = (
             "XCTestMetrics::Core::Product",
             "XCTestMetrics::Report::Product",
-            "XCTestMetrics::TractorTests::Product",
+            "Plot::Plot::Product",
+            "swift-argument-parser::ArgumentParser::Product",
+            "ShellOut::ShellOut::Product",
             "XCTestMetrics::Display::Product",
             "Files::Files::Product",
-            "swift-argument-parser::ArgumentParser::Product",
+            "XCTestMetrics::XCTestMetrics::Product",
             "XCTestMetrics::Entity::Product",
-            "ShellOut::ShellOut::Product",
-            "Plot::Plot::Product",
-            "XCTestMetrics::XCTestMetrics::Product"
+            "XCTestMetrics::XCTestMetricsTests::Product"
          );
          name = "Products";
          path = "";
@@ -2101,8 +2101,6 @@
       "OBJ_332" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
-            CLANG_ENABLE_MODULES = "YES";
-            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
             FRAMEWORK_SEARCH_PATHS = (
                "$(inherited)",
                "$(PLATFORM_DIR)/Developer/Library/Frameworks"
@@ -2110,12 +2108,12 @@
             HEADER_SEARCH_PATHS = (
                "$(inherited)"
             );
-            INFOPLIST_FILE = "XCTestMetrics.xcodeproj/TractorTests_Info.plist";
+            INFOPLIST_FILE = "XCTestMetrics.xcodeproj/XCTestMetrics_Info.plist";
             IPHONEOS_DEPLOYMENT_TARGET = "8.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
-               "@loader_path/../Frameworks",
-               "@loader_path/Frameworks"
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+               "@executable_path"
             );
             MACOSX_DEPLOYMENT_TARGET = "10.10";
             OTHER_CFLAGS = (
@@ -2130,8 +2128,10 @@
             SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
                "$(inherited)"
             );
+            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
+            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
             SWIFT_VERSION = "5.0";
-            TARGET_NAME = "TractorTests";
+            TARGET_NAME = "XCTestMetrics";
             TVOS_DEPLOYMENT_TARGET = "9.0";
             WATCHOS_DEPLOYMENT_TARGET = "2.0";
          };
@@ -2140,8 +2140,6 @@
       "OBJ_333" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
-            CLANG_ENABLE_MODULES = "YES";
-            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
             FRAMEWORK_SEARCH_PATHS = (
                "$(inherited)",
                "$(PLATFORM_DIR)/Developer/Library/Frameworks"
@@ -2149,12 +2147,12 @@
             HEADER_SEARCH_PATHS = (
                "$(inherited)"
             );
-            INFOPLIST_FILE = "XCTestMetrics.xcodeproj/TractorTests_Info.plist";
+            INFOPLIST_FILE = "XCTestMetrics.xcodeproj/XCTestMetrics_Info.plist";
             IPHONEOS_DEPLOYMENT_TARGET = "8.0";
             LD_RUNPATH_SEARCH_PATHS = (
                "$(inherited)",
-               "@loader_path/../Frameworks",
-               "@loader_path/Frameworks"
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
+               "@executable_path"
             );
             MACOSX_DEPLOYMENT_TARGET = "10.10";
             OTHER_CFLAGS = (
@@ -2169,8 +2167,10 @@
             SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
                "$(inherited)"
             );
+            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
+            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
             SWIFT_VERSION = "5.0";
-            TARGET_NAME = "TractorTests";
+            TARGET_NAME = "XCTestMetrics";
             TVOS_DEPLOYMENT_TARGET = "9.0";
             WATCHOS_DEPLOYMENT_TARGET = "2.0";
          };
@@ -2179,38 +2179,37 @@
       "OBJ_334" = {
          isa = "PBXSourcesBuildPhase";
          files = (
-            "OBJ_335",
-            "OBJ_336"
+            "OBJ_335"
          );
       };
       "OBJ_335" = {
          isa = "PBXBuildFile";
-         fileRef = "OBJ_43";
+         fileRef = "OBJ_40";
       };
       "OBJ_336" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_44";
-      };
-      "OBJ_337" = {
          isa = "PBXFrameworksBuildPhase";
          files = (
+            "OBJ_337",
             "OBJ_338",
             "OBJ_339",
             "OBJ_340",
             "OBJ_341",
             "OBJ_342",
             "OBJ_343",
-            "OBJ_344",
-            "OBJ_345"
+            "OBJ_344"
          );
       };
-      "OBJ_338" = {
+      "OBJ_337" = {
          isa = "PBXBuildFile";
          fileRef = "swift-argument-parser::ArgumentParser::Product";
       };
-      "OBJ_339" = {
+      "OBJ_338" = {
          isa = "PBXBuildFile";
          fileRef = "XCTestMetrics::Report::Product";
+      };
+      "OBJ_339" = {
+         isa = "PBXBuildFile";
+         fileRef = "Plot::Plot::Product";
       };
       "OBJ_34" = {
          isa = "PBXGroup";
@@ -2223,39 +2222,43 @@
       };
       "OBJ_340" = {
          isa = "PBXBuildFile";
-         fileRef = "Plot::Plot::Product";
+         fileRef = "XCTestMetrics::Core::Product";
       };
       "OBJ_341" = {
          isa = "PBXBuildFile";
-         fileRef = "XCTestMetrics::Core::Product";
+         fileRef = "ShellOut::ShellOut::Product";
       };
       "OBJ_342" = {
          isa = "PBXBuildFile";
-         fileRef = "ShellOut::ShellOut::Product";
+         fileRef = "Files::Files::Product";
       };
       "OBJ_343" = {
          isa = "PBXBuildFile";
-         fileRef = "Files::Files::Product";
+         fileRef = "XCTestMetrics::Display::Product";
       };
       "OBJ_344" = {
          isa = "PBXBuildFile";
-         fileRef = "XCTestMetrics::Display::Product";
-      };
-      "OBJ_345" = {
-         isa = "PBXBuildFile";
          fileRef = "XCTestMetrics::Entity::Product";
       };
-      "OBJ_346" = {
-         isa = "PBXTargetDependency";
-         target = "XCTestMetrics::XCTestMetrics";
-      };
-      "OBJ_348" = {
+      "OBJ_345" = {
          isa = "PBXTargetDependency";
          target = "swift-argument-parser::ArgumentParser";
       };
-      "OBJ_349" = {
+      "OBJ_346" = {
          isa = "PBXTargetDependency";
          target = "XCTestMetrics::Report";
+      };
+      "OBJ_347" = {
+         isa = "PBXTargetDependency";
+         target = "Plot::Plot";
+      };
+      "OBJ_348" = {
+         isa = "PBXTargetDependency";
+         target = "XCTestMetrics::Core";
+      };
+      "OBJ_349" = {
+         isa = "PBXTargetDependency";
+         target = "ShellOut::ShellOut";
       };
       "OBJ_35" = {
          isa = "PBXFileReference";
@@ -2264,120 +2267,74 @@
       };
       "OBJ_350" = {
          isa = "PBXTargetDependency";
-         target = "Plot::Plot";
+         target = "Files::Files";
       };
       "OBJ_351" = {
          isa = "PBXTargetDependency";
-         target = "XCTestMetrics::Core";
+         target = "XCTestMetrics::Display";
       };
       "OBJ_352" = {
          isa = "PBXTargetDependency";
-         target = "ShellOut::ShellOut";
-      };
-      "OBJ_353" = {
-         isa = "PBXTargetDependency";
-         target = "Files::Files";
-      };
-      "OBJ_354" = {
-         isa = "PBXTargetDependency";
-         target = "XCTestMetrics::Display";
-      };
-      "OBJ_355" = {
-         isa = "PBXTargetDependency";
          target = "XCTestMetrics::Entity";
       };
-      "OBJ_356" = {
+      "OBJ_354" = {
          isa = "XCConfigurationList";
          buildConfigurations = (
-            "OBJ_357",
-            "OBJ_358"
+            "OBJ_355",
+            "OBJ_356"
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
       };
-      "OBJ_357" = {
+      "OBJ_355" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "XCTestMetrics.xcodeproj/XCTestMetrics_Info.plist";
-            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-               "@executable_path"
-            );
-            MACOSX_DEPLOYMENT_TARGET = "10.10";
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
+            LD = "/usr/bin/true";
             OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5.1.0"
             );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
-            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
             SWIFT_VERSION = "5.0";
-            TARGET_NAME = "XCTestMetrics";
-            TVOS_DEPLOYMENT_TARGET = "9.0";
-            WATCHOS_DEPLOYMENT_TARGET = "2.0";
          };
          name = "Debug";
       };
-      "OBJ_358" = {
+      "OBJ_356" = {
          isa = "XCBuildConfiguration";
          buildSettings = {
-            FRAMEWORK_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
-            );
-            HEADER_SEARCH_PATHS = (
-               "$(inherited)"
-            );
-            INFOPLIST_FILE = "XCTestMetrics.xcodeproj/XCTestMetrics_Info.plist";
-            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
-            LD_RUNPATH_SEARCH_PATHS = (
-               "$(inherited)",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx",
-               "@executable_path"
-            );
-            MACOSX_DEPLOYMENT_TARGET = "10.10";
-            OTHER_CFLAGS = (
-               "$(inherited)"
-            );
-            OTHER_LDFLAGS = (
-               "$(inherited)"
-            );
+            LD = "/usr/bin/true";
             OTHER_SWIFT_FLAGS = (
-               "$(inherited)"
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5.1.0"
             );
-            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
-               "$(inherited)"
-            );
-            SWIFT_FORCE_DYNAMIC_LINK_STDLIB = "YES";
-            SWIFT_FORCE_STATIC_LINK_STDLIB = "NO";
             SWIFT_VERSION = "5.0";
-            TARGET_NAME = "XCTestMetrics";
-            TVOS_DEPLOYMENT_TARGET = "9.0";
-            WATCHOS_DEPLOYMENT_TARGET = "2.0";
          };
          name = "Release";
       };
-      "OBJ_359" = {
+      "OBJ_357" = {
          isa = "PBXSourcesBuildPhase";
          files = (
-            "OBJ_360"
+            "OBJ_358"
          );
+      };
+      "OBJ_358" = {
+         isa = "PBXBuildFile";
+         fileRef = "OBJ_6";
       };
       "OBJ_36" = {
          isa = "PBXGroup";
@@ -2390,53 +2347,126 @@
          sourceTree = "<group>";
       };
       "OBJ_360" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_40";
+         isa = "XCConfigurationList";
+         buildConfigurations = (
+            "OBJ_361",
+            "OBJ_362"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
       };
       "OBJ_361" = {
-         isa = "PBXFrameworksBuildPhase";
-         files = (
-            "OBJ_362",
-            "OBJ_363",
-            "OBJ_364",
-            "OBJ_365",
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Debug";
+      };
+      "OBJ_362" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+         };
+         name = "Release";
+      };
+      "OBJ_363" = {
+         isa = "PBXTargetDependency";
+         target = "XCTestMetrics::XCTestMetricsTests";
+      };
+      "OBJ_365" = {
+         isa = "XCConfigurationList";
+         buildConfigurations = (
             "OBJ_366",
-            "OBJ_367",
-            "OBJ_368",
+            "OBJ_367"
+         );
+         defaultConfigurationIsVisible = "0";
+         defaultConfigurationName = "Release";
+      };
+      "OBJ_366" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_MODULES = "YES";
+            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "XCTestMetrics.xcodeproj/XCTestMetricsTests_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "@loader_path/../Frameworks",
+               "@loader_path/Frameworks"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "XCTestMetricsTests";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Debug";
+      };
+      "OBJ_367" = {
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            CLANG_ENABLE_MODULES = "YES";
+            EMBEDDED_CONTENT_CONTAINS_SWIFT = "YES";
+            FRAMEWORK_SEARCH_PATHS = (
+               "$(inherited)",
+               "$(PLATFORM_DIR)/Developer/Library/Frameworks"
+            );
+            HEADER_SEARCH_PATHS = (
+               "$(inherited)"
+            );
+            INFOPLIST_FILE = "XCTestMetrics.xcodeproj/XCTestMetricsTests_Info.plist";
+            IPHONEOS_DEPLOYMENT_TARGET = "8.0";
+            LD_RUNPATH_SEARCH_PATHS = (
+               "$(inherited)",
+               "@loader_path/../Frameworks",
+               "@loader_path/Frameworks"
+            );
+            MACOSX_DEPLOYMENT_TARGET = "10.10";
+            OTHER_CFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_LDFLAGS = (
+               "$(inherited)"
+            );
+            OTHER_SWIFT_FLAGS = (
+               "$(inherited)"
+            );
+            SWIFT_ACTIVE_COMPILATION_CONDITIONS = (
+               "$(inherited)"
+            );
+            SWIFT_VERSION = "5.0";
+            TARGET_NAME = "XCTestMetricsTests";
+            TVOS_DEPLOYMENT_TARGET = "9.0";
+            WATCHOS_DEPLOYMENT_TARGET = "2.0";
+         };
+         name = "Release";
+      };
+      "OBJ_368" = {
+         isa = "PBXSourcesBuildPhase";
+         files = (
             "OBJ_369"
          );
       };
-      "OBJ_362" = {
-         isa = "PBXBuildFile";
-         fileRef = "swift-argument-parser::ArgumentParser::Product";
-      };
-      "OBJ_363" = {
-         isa = "PBXBuildFile";
-         fileRef = "XCTestMetrics::Report::Product";
-      };
-      "OBJ_364" = {
-         isa = "PBXBuildFile";
-         fileRef = "Plot::Plot::Product";
-      };
-      "OBJ_365" = {
-         isa = "PBXBuildFile";
-         fileRef = "XCTestMetrics::Core::Product";
-      };
-      "OBJ_366" = {
-         isa = "PBXBuildFile";
-         fileRef = "ShellOut::ShellOut::Product";
-      };
-      "OBJ_367" = {
-         isa = "PBXBuildFile";
-         fileRef = "Files::Files::Product";
-      };
-      "OBJ_368" = {
-         isa = "PBXBuildFile";
-         fileRef = "XCTestMetrics::Display::Product";
-      };
       "OBJ_369" = {
          isa = "PBXBuildFile";
-         fileRef = "XCTestMetrics::Entity::Product";
+         fileRef = "OBJ_44";
       };
       "OBJ_37" = {
          isa = "PBXFileReference";
@@ -2444,45 +2474,53 @@
          sourceTree = "<group>";
       };
       "OBJ_370" = {
-         isa = "PBXTargetDependency";
-         target = "swift-argument-parser::ArgumentParser";
+         isa = "PBXFrameworksBuildPhase";
+         files = (
+            "OBJ_371",
+            "OBJ_372",
+            "OBJ_373",
+            "OBJ_374",
+            "OBJ_375",
+            "OBJ_376",
+            "OBJ_377",
+            "OBJ_378"
+         );
       };
       "OBJ_371" = {
-         isa = "PBXTargetDependency";
-         target = "XCTestMetrics::Report";
+         isa = "PBXBuildFile";
+         fileRef = "swift-argument-parser::ArgumentParser::Product";
       };
       "OBJ_372" = {
-         isa = "PBXTargetDependency";
-         target = "Plot::Plot";
+         isa = "PBXBuildFile";
+         fileRef = "XCTestMetrics::Report::Product";
       };
       "OBJ_373" = {
-         isa = "PBXTargetDependency";
-         target = "XCTestMetrics::Core";
+         isa = "PBXBuildFile";
+         fileRef = "Plot::Plot::Product";
       };
       "OBJ_374" = {
-         isa = "PBXTargetDependency";
-         target = "ShellOut::ShellOut";
+         isa = "PBXBuildFile";
+         fileRef = "XCTestMetrics::Core::Product";
       };
       "OBJ_375" = {
-         isa = "PBXTargetDependency";
-         target = "Files::Files";
+         isa = "PBXBuildFile";
+         fileRef = "ShellOut::ShellOut::Product";
       };
       "OBJ_376" = {
-         isa = "PBXTargetDependency";
-         target = "XCTestMetrics::Display";
+         isa = "PBXBuildFile";
+         fileRef = "Files::Files::Product";
       };
       "OBJ_377" = {
-         isa = "PBXTargetDependency";
-         target = "XCTestMetrics::Entity";
+         isa = "PBXBuildFile";
+         fileRef = "XCTestMetrics::Display::Product";
+      };
+      "OBJ_378" = {
+         isa = "PBXBuildFile";
+         fileRef = "XCTestMetrics::Entity::Product";
       };
       "OBJ_379" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_380",
-            "OBJ_381"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
+         isa = "PBXTargetDependency";
+         target = "XCTestMetrics::XCTestMetrics";
       };
       "OBJ_38" = {
          isa = "PBXFileReference";
@@ -2490,79 +2528,45 @@
          sourceTree = "<group>";
       };
       "OBJ_380" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "5",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
-               "-package-description-version",
-               "5.1.0"
-            );
-            SWIFT_VERSION = "5.0";
-         };
-         name = "Debug";
+         isa = "PBXTargetDependency";
+         target = "swift-argument-parser::ArgumentParser";
       };
       "OBJ_381" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "5",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
-               "-package-description-version",
-               "5.1.0"
-            );
-            SWIFT_VERSION = "5.0";
-         };
-         name = "Release";
+         isa = "PBXTargetDependency";
+         target = "XCTestMetrics::Report";
       };
       "OBJ_382" = {
-         isa = "PBXSourcesBuildPhase";
-         files = (
-            "OBJ_383"
-         );
+         isa = "PBXTargetDependency";
+         target = "Plot::Plot";
       };
       "OBJ_383" = {
-         isa = "PBXBuildFile";
-         fileRef = "OBJ_6";
+         isa = "PBXTargetDependency";
+         target = "XCTestMetrics::Core";
+      };
+      "OBJ_384" = {
+         isa = "PBXTargetDependency";
+         target = "ShellOut::ShellOut";
       };
       "OBJ_385" = {
+         isa = "PBXTargetDependency";
+         target = "Files::Files";
+      };
+      "OBJ_386" = {
+         isa = "PBXTargetDependency";
+         target = "XCTestMetrics::Display";
+      };
+      "OBJ_387" = {
+         isa = "PBXTargetDependency";
+         target = "XCTestMetrics::Entity";
+      };
+      "OBJ_389" = {
          isa = "XCConfigurationList";
          buildConfigurations = (
-            "OBJ_386",
-            "OBJ_387"
+            "OBJ_390",
+            "OBJ_391"
          );
          defaultConfigurationIsVisible = "0";
          defaultConfigurationName = "Release";
-      };
-      "OBJ_386" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-         };
-         name = "Debug";
-      };
-      "OBJ_387" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-         };
-         name = "Release";
-      };
-      "OBJ_388" = {
-         isa = "PBXTargetDependency";
-         target = "XCTestMetrics::TractorTests";
       };
       "OBJ_39" = {
          isa = "PBXGroup";
@@ -2574,13 +2578,24 @@
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_390" = {
-         isa = "XCConfigurationList";
-         buildConfigurations = (
-            "OBJ_391",
-            "OBJ_392"
-         );
-         defaultConfigurationIsVisible = "0";
-         defaultConfigurationName = "Release";
+         isa = "XCBuildConfiguration";
+         buildSettings = {
+            LD = "/usr/bin/true";
+            OTHER_SWIFT_FLAGS = (
+               "-swift-version",
+               "5",
+               "-I",
+               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
+               "-target",
+               "x86_64-apple-macosx10.10",
+               "-sdk",
+               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
+               "-package-description-version",
+               "5.1.0"
+            );
+            SWIFT_VERSION = "5.0";
+         };
+         name = "Debug";
       };
       "OBJ_391" = {
          isa = "XCBuildConfiguration";
@@ -2600,35 +2615,15 @@
             );
             SWIFT_VERSION = "5.0";
          };
-         name = "Debug";
-      };
-      "OBJ_392" = {
-         isa = "XCBuildConfiguration";
-         buildSettings = {
-            LD = "/usr/bin/true";
-            OTHER_SWIFT_FLAGS = (
-               "-swift-version",
-               "5",
-               "-I",
-               "$(TOOLCHAIN_DIR)/usr/lib/swift/pm/4_2",
-               "-target",
-               "x86_64-apple-macosx10.10",
-               "-sdk",
-               "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk",
-               "-package-description-version",
-               "5.1.0"
-            );
-            SWIFT_VERSION = "5.0";
-         };
          name = "Release";
       };
-      "OBJ_393" = {
+      "OBJ_392" = {
          isa = "PBXSourcesBuildPhase";
          files = (
-            "OBJ_394"
+            "OBJ_393"
          );
       };
-      "OBJ_394" = {
+      "OBJ_393" = {
          isa = "PBXBuildFile";
          fileRef = "OBJ_131";
       };
@@ -2687,21 +2682,24 @@
       "OBJ_42" = {
          isa = "PBXGroup";
          children = (
-            "OBJ_43",
-            "OBJ_44"
+            "OBJ_43"
          );
-         name = "TractorTests";
-         path = "Tests/TractorTests";
+         name = "XCTestMetricsTests";
+         path = "Tests/XCTestMetricsTests";
          sourceTree = "SOURCE_ROOT";
       };
       "OBJ_43" = {
-         isa = "PBXFileReference";
-         path = "TractorTests.swift";
+         isa = "PBXGroup";
+         children = (
+            "OBJ_44"
+         );
+         name = "Core";
+         path = "Core";
          sourceTree = "<group>";
       };
       "OBJ_44" = {
          isa = "PBXFileReference";
-         path = "XCTestManifests.swift";
+         path = "OutputPersistorTests.swift";
          sourceTree = "<group>";
       };
       "OBJ_45" = {
@@ -3276,9 +3274,9 @@
       };
       "XCTestMetrics::SwiftPMPackageDescription" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_379";
+         buildConfigurationList = "OBJ_354";
          buildPhases = (
-            "OBJ_382"
+            "OBJ_357"
          );
          dependencies = (
          );
@@ -3286,50 +3284,22 @@
          productName = "XCTestMetricsPackageDescription";
          productType = "com.apple.product-type.framework";
       };
-      "XCTestMetrics::TractorTests" = {
+      "XCTestMetrics::XCTestMetrics" = {
          isa = "PBXNativeTarget";
          buildConfigurationList = "OBJ_331";
          buildPhases = (
             "OBJ_334",
-            "OBJ_337"
+            "OBJ_336"
          );
          dependencies = (
+            "OBJ_345",
             "OBJ_346",
+            "OBJ_347",
             "OBJ_348",
             "OBJ_349",
             "OBJ_350",
             "OBJ_351",
-            "OBJ_352",
-            "OBJ_353",
-            "OBJ_354",
-            "OBJ_355"
-         );
-         name = "TractorTests";
-         productName = "TractorTests";
-         productReference = "XCTestMetrics::TractorTests::Product";
-         productType = "com.apple.product-type.bundle.unit-test";
-      };
-      "XCTestMetrics::TractorTests::Product" = {
-         isa = "PBXFileReference";
-         path = "TractorTests.xctest";
-         sourceTree = "BUILT_PRODUCTS_DIR";
-      };
-      "XCTestMetrics::XCTestMetrics" = {
-         isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_356";
-         buildPhases = (
-            "OBJ_359",
-            "OBJ_361"
-         );
-         dependencies = (
-            "OBJ_370",
-            "OBJ_371",
-            "OBJ_372",
-            "OBJ_373",
-            "OBJ_374",
-            "OBJ_375",
-            "OBJ_376",
-            "OBJ_377"
+            "OBJ_352"
          );
          name = "XCTestMetrics";
          productName = "XCTestMetrics";
@@ -3343,14 +3313,42 @@
       };
       "XCTestMetrics::XCTestMetricsPackageTests::ProductTarget" = {
          isa = "PBXAggregateTarget";
-         buildConfigurationList = "OBJ_385";
+         buildConfigurationList = "OBJ_360";
          buildPhases = (
          );
          dependencies = (
-            "OBJ_388"
+            "OBJ_363"
          );
          name = "XCTestMetricsPackageTests";
          productName = "XCTestMetricsPackageTests";
+      };
+      "XCTestMetrics::XCTestMetricsTests" = {
+         isa = "PBXNativeTarget";
+         buildConfigurationList = "OBJ_365";
+         buildPhases = (
+            "OBJ_368",
+            "OBJ_370"
+         );
+         dependencies = (
+            "OBJ_379",
+            "OBJ_380",
+            "OBJ_381",
+            "OBJ_382",
+            "OBJ_383",
+            "OBJ_384",
+            "OBJ_385",
+            "OBJ_386",
+            "OBJ_387"
+         );
+         name = "XCTestMetricsTests";
+         productName = "XCTestMetricsTests";
+         productReference = "XCTestMetrics::XCTestMetricsTests::Product";
+         productType = "com.apple.product-type.bundle.unit-test";
+      };
+      "XCTestMetrics::XCTestMetricsTests::Product" = {
+         isa = "PBXFileReference";
+         path = "XCTestMetricsTests.xctest";
+         sourceTree = "BUILT_PRODUCTS_DIR";
       };
       "swift-argument-parser::ArgumentParser" = {
          isa = "PBXNativeTarget";
@@ -3373,9 +3371,9 @@
       };
       "swift-argument-parser::SwiftPMPackageDescription" = {
          isa = "PBXNativeTarget";
-         buildConfigurationList = "OBJ_390";
+         buildConfigurationList = "OBJ_389";
          buildPhases = (
-            "OBJ_393"
+            "OBJ_392"
          );
          dependencies = (
          );

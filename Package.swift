@@ -32,6 +32,6 @@ let package = Package(
             "Report",
             "ArgumentParser"
         ]),
-        .testTarget(name: "TractorTests", dependencies: ["XCTestMetrics"]),
+        .testTarget(name: "XCTestMetricsTests", dependencies: ["XCTestMetrics", "Core"]),
     ]
 )

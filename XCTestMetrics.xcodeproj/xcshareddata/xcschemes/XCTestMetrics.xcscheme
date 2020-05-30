@@ -26,15 +26,16 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "XCTestMetrics::TractorTests"
-               BuildableName = "TractorTests.xctest"
-               BlueprintName = "TractorTests"
+               BlueprintIdentifier = "XCTestMetrics::XCTestMetricsTests"
+               BuildableName = "XCTestMetricsTests.xctest"
+               BlueprintName = "XCTestMetricsTests"
                ReferencedContainer = "container:XCTestMetrics.xcodeproj">
             </BuildableReference>
          </TestableReference>

@@ -14,17 +14,17 @@ enum OutputPersistorError: Error {
     }
 }
 
-final class OutputPersistor {
+public final class OutputPersistor {
     
     private let outputToPersist: XCTestMetricsOutput
     private let outputFileName: String
     
-    init(with output: XCTestMetricsOutput, fileName: String) {
+    public init(with output: XCTestMetricsOutput, fileName: String) {
         outputToPersist = output
         outputFileName = fileName
     }
     
-    func persistJSON() throws {
+    public func persistJSON() throws {
         do {
             let encoder = XCTestMetricsOutput.encoder
             let fileToSave = try encoder.encode(outputToPersist)
