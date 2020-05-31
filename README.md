@@ -1,8 +1,10 @@
 # XCTestMetrics
-Welcome to **XCTestMetrics**, a command line tool that provides metrics about your project tests, focusing on the flaky.
+Welcome to **XCTestMetrics**, a command line tool that provides metrics about your project tests.
 
 [![Swift Version][swift-image]][swift-url]
 [![License][license-image]][license-url]
+![Swift](https://github.com/serralvo/XCTestMetrics/workflows/Swift/badge.svg?branch=master)
+![Swift](https://github.com/serralvo/XCTestMetrics/workflows/Swift/badge.svg?branch=master&event=release)
 
 ![XCTestMetrics Report on Slack](https://github.com/serralvo/Tractor/blob/master/report-image.png)
 
