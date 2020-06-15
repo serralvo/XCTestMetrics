@@ -1,13 +1,14 @@
 import Foundation
-import Core
 import Entity
 import Files
 import XCTest
 
+@testable import Core
+
 final class OutputPersistorTests: XCTestCase {
  
     func test_persistJSON_shouldSaveFileOnExpectedFolder() {
-        let output = XCTestMetricsOutput(testMetrics: TestMetrics.init(count: 0, failedCount: 0), failures: [])
+        let output = XCTestMetricsOutput(testMetrics: .init(count: 0, failedCount: 0), failures: [])
         let fileName = "file-name"
         
         let sut = OutputPersistor(with: output, fileName: fileName)
