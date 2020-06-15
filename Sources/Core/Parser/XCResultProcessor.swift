@@ -11,14 +11,16 @@ final class XCResultProcessor {
     
     private static let temporaryOutputFileNameWithExtension = "output.json"
     private let resultFilePath: String
+    private let shell: ShellExecutableProtocol
     
-    init(resultFilePath: String) {
+    init(resultFilePath: String, shell: ShellExecutableProtocol = ShellExecutable()) {
         self.resultFilePath = resultFilePath
+        self.shell = shell
     }
     
     func persistOutputFile() throws {
         do {
-            try shellOut(to: ["xcrun xcresulttool get --format json --path \(resultFilePath) > \(XCResultProcessor.temporaryOutputFileNameWithExtension)"])
+            try self.shell.run(withCommands: ["xcrun xcresulttool get --format json --path \(resultFilePath) > \(XCResultProcessor.temporaryOutputFileNameWithExtension)"])
         } catch {
             // TODO: Use error one to throw
             throw XCResultProcessorError.cannotExecuteCommand
