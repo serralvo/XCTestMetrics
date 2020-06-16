@@ -53,8 +53,4 @@ extension XCTestMetrics {
         
 }
 
-XCTestMetrics.main(["help"])
-// XCTestMetrics.main(["report", "html"])
-XCTestMetrics.main(["report", "slack", ""])
-// XCTestMetrics.main(["log", "/Users/fabricioserralvo/Library/Developer/Xcode/DerivedData/FlakyTestsProject-gybqxibuurferncjaxlbxkwsptqj"])
-
+XCTestMetrics.main()
