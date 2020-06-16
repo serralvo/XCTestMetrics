@@ -5,7 +5,7 @@ build:
 	swift build -c release --disable-sandbox
 
 install: build
-	install ".build/release/xctestmetrics" "$(bindir)"
+	install ".build/release/XCTestMetrics" "$(bindir)"
 	
 uninstall:
 	rm -rf "$(bindir)/xctestmetrics"
