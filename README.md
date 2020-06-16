@@ -9,8 +9,8 @@ Welcome to **XCTestMetrics**, a command line tool that provides metrics about yo
 ![XCTestMetrics Report on Slack](https://github.com/serralvo/Tractor/blob/master/report-image.png)
 
 ## Features
+- [x] Get metrics about your project tests, like number of failures, when it happened, percentage of flakiness.
 - [x] Help to identify flaky tests.
-- [x] Give the big picture of project tests, number of failures, when it happened, percentage of flakiness.
 - [x] Easy and fast setup.
 
 ## Requirements
@@ -59,6 +59,14 @@ $ xc-test-metrics report slack your-web-hook-url
 $ xc-test-metrics report html
 ```
 - That's it! The report file (index.html) will be stored into `xctestmetrics-report` folder.
+
+If you want remove  `xctestmetrics-output` after report generation:
+
+```
+$ git rm -r xctestmetrics-output/
+$ git add . 
+$ git commit -m "Removes xctestmetrics-output folder"
+```
 
 ## Motivation
 The first thing to do when your codebase has flaky tests is **get metrics about it**. With data you can pick the test that failed more times for example, to fix, re-write or even delete. 
