@@ -6,6 +6,10 @@ import XCTest
 @testable import Core
 
 final class OutputPersistorTests: XCTestCase {
+    
+    override class func tearDown() {
+        try? Folder.current.subfolder(named: "xctestmetrics-output").delete()
+    }
  
     func test_persistJSON_shouldSaveFileOnExpectedFolder() {
         let output = XCTestMetricsOutput(testMetrics: .init(count: 0, failedCount: 0), failures: [])

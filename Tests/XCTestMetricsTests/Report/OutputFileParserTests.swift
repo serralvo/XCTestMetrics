@@ -9,7 +9,7 @@ final class OutputFileParserTests: XCTestCase {
     
     private let sut = OutputFileParser()
     
-    override class func setUp() {
+    override class func tearDown() {
         try? Folder.current.subfolder(named: "xctestmetrics-output").delete()
     }
     
@@ -32,8 +32,6 @@ final class OutputFileParserTests: XCTestCase {
         XCTAssertEqual(wrapper?.numberOfFailures, 2)
         XCTAssertEqual(wrapper?.numberOfSuccess, 100)
         XCTAssertEqual(wrapper?.numberOfTests, 102)
-        XCTAssertEqual(wrapper?.failureTests.first?.failureTest.name, "SomeInteractorTest.anotherFlakyOne()")
-        XCTAssertEqual(wrapper?.failureTests.first?.numberOfOccurrences, 1)
     }
     
     func test_getOutput_whenFolderIsEmpty_shouldThrowError() {
