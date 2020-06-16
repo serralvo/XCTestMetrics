@@ -16,6 +16,14 @@ Welcome to **XCTestMetrics**, a command-line tool that provides metrics about yo
 ## Requirements
 - Xcode 11 
 
+## Installation 
+
+### Homebrew:
+```
+$ brew tap serralvo/XCTestMetrics https://github.com/serralvo/XCTestMetrics.git
+$ brew install serralvo/XCTestMetrics/xctestmetrics
+```
+
 ## Usage
 The usage of XCTestMetrics is based on two steps: the first one is to register each test result, the second one is to display all results using a report.
 
