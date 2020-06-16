@@ -4,7 +4,7 @@ import ArgumentParser
 
 struct XCTestMetrics: ParsableCommand {
     static var configuration = CommandConfiguration(
-        abstract: "The best way to get flaky tests on your project.",
+        abstract: "Command-line tool that provides metrics about your project tests.",
         subcommands: [Log.self, Report.self]
     )
 }
@@ -12,7 +12,7 @@ struct XCTestMetrics: ParsableCommand {
 extension XCTestMetrics {
     
     struct Log: ParsableCommand {
-        static var configuration = CommandConfiguration(abstract: "Creates a register about last project build.")
+        static var configuration = CommandConfiguration(abstract: "Creates a register about last project test.")
         
         @Argument() var derivedDataPath: String
         

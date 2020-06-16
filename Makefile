@@ -1,4 +1,5 @@
-bindir = /usr/local/bin
+prefix ?= /usr/local
+bindir = $(prefix)/bin
 
 build:
 	swift build -c release --disable-sandbox
@@ -11,3 +12,5 @@ uninstall:
 
 clean:
 	rm -rf .build
+
+.PHONY: build install uninstall clean
