@@ -1,16 +1,37 @@
+SHELL = /bin/bash
+
 prefix ?= /usr/local
-bindir = $(prefix)/bin
+bindir ?= $(prefix)/bin
+libdir ?= $(prefix)/lib
+srcdir = Sources
 
-build:
-	swift build -c release --disable-sandbox
+REPODIR = $(shell pwd)
+BUILDDIR = $(REPODIR)/.build
+SOURCES = $(wildcard $(srcdir)/**/*.swift)
 
-install: build
-	install ".build/release/XCTestMetrics" "$(bindir)"
-	
+.DEFAULT_GOAL = all
+
+.PHONY: all
+all: xctestmetrics
+
+xctestmetrics: $(SOURCES)
+	@swift build \
+		-c release \
+		--disable-sandbox
+
+.PHONY: install
+install: xctestmetrics
+	@install -d "$(bindir)" "$(libdir)"
+	@install "$(BUILDDIR)/release/XCTestMetrics" "$(bindir)"
+
+.PHONY: uninstall
 uninstall:
-	rm -rf "$(bindir)/xctestmetrics"
+	@rm -rf "$(bindir)/xctestmetrics"
 
-clean:
-	rm -rf .build
+.PHONY: clean
+distclean:
+	@rm -f $(BUILDDIR)/release
 
-.PHONY: build install uninstall clean
+.PHONY: clean
+clean: distclean
+	@rm -rf $(BUILDDIR)
