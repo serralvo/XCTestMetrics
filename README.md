@@ -1,5 +1,5 @@
 # XCTestMetrics
-Welcome to **XCTestMetrics**, a command line tool that provides metrics about your project tests.
+Welcome to **XCTestMetrics**, a command-line tool that provides metrics about your project tests.
 
 [![Swift Version][swift-image]][swift-url]
 [![License][license-image]][license-url]
@@ -9,18 +9,15 @@ Welcome to **XCTestMetrics**, a command line tool that provides metrics about yo
 ![XCTestMetrics Report on Slack](https://github.com/serralvo/Tractor/blob/master/report-image.png)
 
 ## Features
-- [x] Get metrics about your project tests, like number of failures, when it happened, percentage of flakiness.
+- [x] Get metrics about your project tests, like the number of failures, when it happened, the percentage of flakiness.
 - [x] Help to identify flaky tests.
 - [x] Easy and fast setup.
 
 ## Requirements
 - Xcode 11 
 
-## Installation
-Using [Homebrew](http://brew.sh/):
-
 ## Usage
-The usage of XCTestMetrics is based on two steps: the first one is register each build result, the second one is display all results using a report.
+The usage of XCTestMetrics is based on two steps: the first one is to register each test result, the second one is to display all results using a report.
 
 ### First Step:
 - Run project tests.
@@ -41,17 +38,16 @@ $ git commit -m "Adds xctestmetrics log"
 ⚠️ Important, do it for every build of your project, use this tool on your continuous integration system.
 
 ### Second Step:
-First question, which report you want: Slack or HTML?
 
 #### Slack
 - You will need to input a webhook URL:
-  - Will be somethink like this: `https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX`
+  - Will be something like this: `https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX`
   - [Check here how to create a webhook.](https://api.slack.com/messaging/webhooks)
 - Run: 
 ```
 $ xc-test-metrics report slack your-web-hook-url
 ```
-- That's it! The message with metrics will be send to Slack.
+- That's it! The message with metrics will be sent to Slack.
 
 #### HTML
 - Run:
@@ -67,9 +63,6 @@ $ git rm -r xctestmetrics-output/
 $ git add . 
 $ git commit -m "Removes xctestmetrics-output folder"
 ```
-
-## Motivation
-The first thing to do when your codebase has flaky tests is **get metrics about it**. With data you can pick the test that failed more times for example, to fix, re-write or even delete. 
 
 ## License
 XCTestMetrics is released under the [MIT License](https://opensource.org/licenses/MIT).
