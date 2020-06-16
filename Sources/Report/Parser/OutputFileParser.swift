@@ -16,7 +16,7 @@ final class OutputFileParser: ReportDataSource {
             let content = getRawContent(for: folder)
             let outputs = getOutput(with: content)
             
-            // TODO: Move this logic to a expecific one
+            // TODO: Move this logic to a expecific one and please refactor
             let success = outputs.map { $0.testMetrics }.reduce(0, { count, testMetrics in
                 count + testMetrics.count
             })

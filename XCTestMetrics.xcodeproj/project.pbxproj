@@ -22,6 +22,8 @@
 
 /* Begin PBXBuildFile section */
 		020327D22497DDBB007B202B /* XCResultProcessorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_49 /* XCResultProcessorTests.swift */; };
+		020327D42497E57A007B202B /* XCResultOutputFileParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020327D32497E57A007B202B /* XCResultOutputFileParserTests.swift */; };
+		020327D6249857F2007B202B /* OutputFileParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020327D5249857F2007B202B /* OutputFileParserTests.swift */; };
 		OBJ_164 /* Argument.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_105 /* Argument.swift */; };
 		OBJ_165 /* ArgumentHelp.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_106 /* ArgumentHelp.swift */; };
 		OBJ_166 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_107 /* Errors.swift */; };
@@ -352,6 +354,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		020327D32497E57A007B202B /* XCResultOutputFileParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCResultOutputFileParserTests.swift; sourceTree = "<group>"; };
+		020327D5249857F2007B202B /* OutputFileParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputFileParserTests.swift; sourceTree = "<group>"; };
 		"Files::Files::Product" /* Files.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Files.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		OBJ_10 /* HTTP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTP.swift; sourceTree = "<group>"; };
 		OBJ_100 /* String+Escaping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Escaping.swift"; sourceTree = "<group>"; };
@@ -844,6 +848,7 @@
 				OBJ_46 /* OutputPersistorTests.swift */,
 				OBJ_47 /* Spies */,
 				OBJ_49 /* XCResultProcessorTests.swift */,
+				020327D32497E57A007B202B /* XCResultOutputFileParserTests.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -875,6 +880,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_51 /* SlackReportAttachmentBuilderTests.swift */,
+				020327D5249857F2007B202B /* OutputFileParserTests.swift */,
 			);
 			path = Report;
 			sourceTree = "<group>";
@@ -1495,9 +1501,11 @@
 			buildActionMask = 0;
 			files = (
 				020327D22497DDBB007B202B /* XCResultProcessorTests.swift in Sources */,
+				020327D6249857F2007B202B /* OutputFileParserTests.swift in Sources */,
 				OBJ_377 /* OutputPersistorTests.swift in Sources */,
 				OBJ_378 /* ShellExecutableProtocolSpy.swift in Sources */,
 				OBJ_380 /* SlackReportAttachmentBuilderTests.swift in Sources */,
+				020327D42497E57A007B202B /* XCResultOutputFileParserTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

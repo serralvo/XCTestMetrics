@@ -34,6 +34,7 @@ final class XCResultOutputFileParser {
         do {
             let data = try readOutputFile()
             
+            // TODO: Extract this one into some structure
             let output = try JSONDecoder().decode(Output.self, from: data)
             let failures = output.issues.testFailureSummaries?.failures ?? []
             let metrics = try createTestMetrics(with: output.metrics)
