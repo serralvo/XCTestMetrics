@@ -3,6 +3,9 @@ import Report
 import ArgumentParser
 
 struct XCTestMetrics: ParsableCommand {
+    
+    static var _commandName: String = "xctestmetrics"
+    
     static var configuration = CommandConfiguration(
         abstract: "Command-line tool that provides metrics about your project tests.",
         subcommands: [Log.self, Report.self]
