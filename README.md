@@ -10,7 +10,7 @@ Welcome to **XCTestMetrics**, a command-line tool that provides metrics about yo
 
 ## Features
 - [x] Get metrics about your project tests, like the number of failures, when it happened, the percentage of flakiness.
-- [x] Help to identify flaky tests.
+- [x] Identify flaky tests.
 - [x] Easy and fast setup.
 
 ## Requirements
@@ -34,7 +34,7 @@ The usage of XCTestMetrics is based on two steps: the first one is to register e
 - Call `log` command using derived data path:
 
 ```
-$ xc-test-metrics log path-to-derived-data
+$ xctestmetrics log path-to-derived-data
 ```
 - The log will be added to `xctestmetrics-output` folder.
 - Commit the log file.
@@ -53,14 +53,14 @@ $ git commit -m "Adds xctestmetrics log"
   - [Check here how to create a webhook.](https://api.slack.com/messaging/webhooks)
 - Run: 
 ```
-$ xc-test-metrics report slack your-web-hook-url
+$ xctestmetrics report slack your-web-hook-url
 ```
 - That's it! The message with metrics will be sent to Slack.
 
 #### HTML
 - Run:
 ```
-$ xc-test-metrics report html
+$ xctestmetrics report html
 ```
 - That's it! The report file (index.html) will be stored into `xctestmetrics-report` folder.
 
