@@ -1,4 +1,4 @@
-# XCTestMetrics
+![XCTestMetrics Logo](https://github.com/serralvo/Tractor/blob/master/logo.png)
 Welcome to **XCTestMetrics**, a command-line tool that provides metrics about your project tests.
 
 [![Swift Version][swift-image]][swift-url]
@@ -8,26 +8,30 @@ Welcome to **XCTestMetrics**, a command-line tool that provides metrics about yo
 
 ![XCTestMetrics Report on Slack](https://github.com/serralvo/Tractor/blob/master/report-image.png)
 
-## Features
+# Features
 - [x] Get metrics about your project tests, like the number of failures, when it happened, the percentage of flakiness.
 - [x] Identify flaky tests.
 - [x] Easy and fast setup.
 
-## Requirements
+# Requirements
 - Xcode 11 
 
-## Installation 
+# Installation 
 
-### Homebrew:
+## Homebrew
 ```
 $ brew tap serralvo/XCTestMetrics https://github.com/serralvo/XCTestMetrics.git
 $ brew install serralvo/XCTestMetrics/xctestmetrics
 ```
+## CocoaPods
+```
+pod 'XCTestMetrics'
+```
 
-## Usage
+# Usage
 The usage of XCTestMetrics is based on two steps: the first one is to register each test result, the second one is to display all results using a report.
 
-### First Step:
+## First Step:
 - Run project tests.
 - Get the path of your project inside `DerivedData` folder. 
   - Will be something like this: `~/Library/Developer/Xcode/DerivedData/YourProject-gybqxixuerfernzjaklbxkwwstqj`
@@ -45,9 +49,9 @@ $ git commit -m "Adds xctestmetrics log"
 
 ⚠️ Important, do it for every build of your project, use this tool on your continuous integration system.
 
-### Second Step:
+## Second Step:
 
-#### Slack
+### Slack
 - You will need to input a webhook URL:
   - Will be something like this: `https://hooks.slack.com/services/T00000000/B00000000/XXXXXXXXXXXXXXXXXXXXXXXX`
   - [Check here how to create a webhook.](https://api.slack.com/messaging/webhooks)
@@ -57,7 +61,7 @@ $ xctestmetrics report slack your-web-hook-url
 ```
 - That's it! The message with metrics will be sent to Slack.
 
-#### HTML
+### HTML
 - Run:
 ```
 $ xctestmetrics report html
@@ -72,10 +76,10 @@ $ git add .
 $ git commit -m "Removes xctestmetrics-output folder"
 ```
 
-## License
+# License
 XCTestMetrics is released under the [MIT License](https://opensource.org/licenses/MIT).
 
-## Credits
+# Credits
 Made with ❤️ by [Fabrício Serralvo](https://twitter.com/serralvo_)
 
 [swift-image]:https://img.shields.io/badge/swift-5.2-orange.svg
