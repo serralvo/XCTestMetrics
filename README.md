@@ -16,7 +16,7 @@
     </a>
 </p>
 
-<p align="center">Welcome to <strong>XCTestMetrics<strong>, a command-line tool that provides metrics about your project tests.</p>
+<p align="center">Welcome to <strong>XCTestMetrics</strong>, a command-line tool that provides metrics about your project tests.</p>
 
 ![XCTestMetrics Report on Slack](https://github.com/serralvo/Tractor/blob/master/report-image.png)
 
