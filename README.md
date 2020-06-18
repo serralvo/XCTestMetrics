@@ -1,10 +1,22 @@
-![XCTestMetrics Logo](https://github.com/serralvo/Tractor/blob/master/logo.png)
-Welcome to **XCTestMetrics**, a command-line tool that provides metrics about your project tests.
+<p align="center">
+  <img src="logo.png" width="315" max-width="50%" alt=“XCTestMetrics Logo”/>
+</p>
+<p align="center">
+    <a href="https://swift.org">
+      <img src="https://img.shields.io/badge/swift-5.2-orange.svg" />
+    </a>
+    <a href="https://github.com/serralvo/XCTestMetrics/workflows/Swift/badge.svg?branch=master">
+      <img src="https://github.com/serralvo/XCTestMetrics/workflows/Swift/badge.svg?branch=master"/>
+    </a>
+    <a href="https://github.com/serralvo/XCTestMetrics/blob/master/LICENSE">
+      <img src="https://img.shields.io/badge/License-MIT-blue.svg"/>
+    </a>
+    <a href="https://twitter.com/serralvo_">
+      <img src="https://img.shields.io/badge/contact-@serralvo_-blue.svg?style=flat"/>
+    </a>
+</p>
 
-[![Swift Version][swift-image]][swift-url]
-[![License][license-image]][license-url]
-![Swift](https://github.com/serralvo/XCTestMetrics/workflows/Swift/badge.svg?branch=master)
-![Swift](https://github.com/serralvo/XCTestMetrics/workflows/Swift/badge.svg?branch=master&event=release)
+<p align="center">Welcome to <strong>XCTestMetrics<strong>, a command-line tool that provides metrics about your project tests.</p>
 
 ![XCTestMetrics Report on Slack](https://github.com/serralvo/Tractor/blob/master/report-image.png)
 
@@ -81,8 +93,3 @@ XCTestMetrics is released under the [MIT License](https://opensource.org/license
 
 # Credits
 Made with ❤️ by [Fabrício Serralvo](https://twitter.com/serralvo_)
-
-[swift-image]:https://img.shields.io/badge/swift-5.2-orange.svg
-[swift-url]: https://swift.org/
-[license-image]: https://img.shields.io/badge/License-MIT-blue.svg
-[license-url]: LICENSE
