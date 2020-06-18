@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'XCTestMetrics'
-  s.version          = '0.0.7'
+  s.version          = '0.0.8'
   s.summary          = 'A command-line tool that provides metrics about your project tests.'
   s.homepage         = 'https://github.com/serralvo/XCTestMetrics'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
